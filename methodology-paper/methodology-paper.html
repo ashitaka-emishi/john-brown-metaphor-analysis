@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Andrew Hammer">
+<meta name="dcterms.date" content="2026-07-16">
+<meta name="keywords" content="artificial intelligence, scholarly method, reproducible research, digital humanities, research compendium, human-in-the-loop, interpretive scholarship">
+
+<title>The Scholarly Build System</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="methodology-paper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="methodology-paper_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="methodology-paper_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="methodology-paper_files/libs/quarto-html/popper.min.js"></script>
+<script src="methodology-paper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="methodology-paper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="methodology-paper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="methodology-paper_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="methodology-paper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="methodology-paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="methodology-paper_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Scholarly Build System</h1>
+<p class="subtitle lead">A Governed Human-AI Method for Reproducible Interpretive Research</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Andrew Hammer </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 16, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">Abstract</div>
+    <p>This paper proposes and evaluates a governed human-AI scholarly build system for interpretive research. The model treats a scholarly paper as the visible synthesis of a traceable repository of sources, evidence, claims, counterevidence, reviews, decisions, and publication artifacts. It is tested through a single case study: an AI-assisted research project on Lincoln’s Gettysburg Address. The case supports modest claims. The system improved traceability, error detection, auditability, and explicit human authority. It also imposed documentation burden, depended on human judgment, and did not remove unresolved source limitations. The conclusion is not that AI can automate scholarship, but that AI can help maintain a governed research apparatus when authority, evidence, uncertainty, and publication decisions remain human.</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">Keywords</div>
+    <p>artificial intelligence, scholarly method, reproducible research, digital humanities, research compendium, human-in-the-loop, interpretive scholarship</p>
+  </div>
+</div>
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Interpretive scholarship often presents its finished argument more clearly than the process by which that argument came to be warranted. A published essay may show citations, footnotes, and prose reasoning, but the underlying movement from question to corpus, source to passage, passage to observation, observation to interpretation, and interpretation to claim often remains distributed across drafts, notes, spreadsheets, memory, and tacit judgment. Artificial intelligence does not solve that problem. Used carelessly, it intensifies it: fluent prose can make fragile evidence look settled, fabricate citations, flatten uncertainty, and blur the line between a source’s language and a model’s inference.</p>
+<p>This paper proposes a different use of AI in interpretive scholarship. The central claim is that AI should not be treated as an accountable scholar or as a machine that authorizes interpretation. It can, however, serve as a subordinate research and engineering assistant inside a governed scholarly build system. In such a system, the paper is not the only research object. It is a publication view generated from a larger version-controlled artifact chain: question, corpus, source, passage, observation, interpretation, claim, counterevidence, review, decision, and output.</p>
+<p>The model is evaluated through a single case study: a repository-based project on how Lincoln’s Gettysburg Address transforms soldiers’ deaths into public obligation. That historical project produced an approved public working-paper package, but the methodology paper does not treat that success as universal validation. The case is one humanities project, conducted by one scholar with one AI assistant in one repository. Its value is diagnostic rather than statistical. It shows what the method made easier, what it caught, what it failed to solve, and what burdens it introduced.</p>
+<p>The argument is deliberately modest. A scholarly build system can improve traceability, accountability, reproducibility, and reviewability. It cannot make interpretation mechanical. It cannot turn validation tests into historical truth. It cannot eliminate human judgment. Its promise lies in making those judgments more visible and more revisable.</p>
+</section>
+<section id="related-practices" class="level1">
+<h1>Related Practices</h1>
+<section id="reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="reproducible-research">Reproducible Research</h2>
+<p>The proposed method draws from reproducible research, especially the idea that documents, data, code, and computational steps should be packaged together so that readers can inspect how a result was produced. Gentleman and Temple Lang describe reproducible research as a way of joining text, data, and computation inside a distributable compendium <span class="citation" data-cites="gentlemanTempleLang2007">(<a href="#ref-gentlemanTempleLang2007" role="doc-biblioref">Gentleman and Temple Lang 2007</a>)</span>. That idea is powerful for quantitative work because a reader can rerun computations or inspect the code that produced a figure.</p>
+<p>Interpretive humanities research differs from statistical analysis. The core operation is not always computation; often it is judgment about language, context, genre, ambiguity, and evidence. Yet the reproducible-research impulse still matters. The relevant question becomes: what would it mean to make an interpretive claim reproducible? Not that another scholar must reach the same conclusion, but that another scholar can inspect the source text, the passage selection, the observation, the alternative reading, the confidence level, and the decision history that led to the claim.</p>
+</section>
+<section id="research-compendia" class="level2">
+<h2 class="anchored" data-anchor-id="research-compendia">Research Compendia</h2>
+<p>Research compendia extend reproducible practice by organizing data, code, documentation, and outputs in a structured package. Marwick, Boettiger, and Mullen argue that package-like organization can make analytical work easier to inspect, reuse, and teach <span class="citation" data-cites="marwickBoettigerMullen2018">(<a href="#ref-marwickBoettigerMullen2018" role="doc-biblioref">Marwick et al. 2018</a>)</span>. The scholarly build system adapts this orientation to an interpretive repository. Instead of only packaging data and code, the repository packages evidence, claims, counterevidence, reviews, human approvals, validation checks, and publication artifacts.</p>
+<p>This adaptation is not trivial. A research compendium can make a computation rerunnable, but interpretive scholarship also requires making uncertainty legible. The repository must record not only the sources used but also blocked sources, derivative transcriptions, OCR limits, manuscript variants, and counterarguments. A humanities compendium that contains only polished evidence would be too clean. The case study suggests that failures and caveats are not noise in the system; they are part of the scholarly record.</p>
+</section>
+<section id="executable-and-dynamic-documents" class="level2">
+<h2 class="anchored" data-anchor-id="executable-and-dynamic-documents">Executable and Dynamic Documents</h2>
+<p>Literate programming and dynamic-document traditions also inform the model. Knuth’s account of literate programming places human explanation and machine execution in the same textual system <span class="citation" data-cites="knuth1984">(<a href="#ref-knuth1984" role="doc-biblioref">Knuth 1984</a>)</span>. Modern tools such as Quarto extend that family of practices by rendering documents from source files into publication formats. In the case study, Quarto rendered the historical paper and the public project website, while repository checks validated source and claim structures.</p>
+<p>The methodology does not require every humanities paper to become executable in the computational sense. Instead, it borrows the discipline of source files, rendered outputs, and repeatable commands. The paper remains prose, but its claims are connected to structured evidence and its outputs are rendered from version-controlled source.</p>
+</section>
+<section id="argument-mapping-and-provenance" class="level2">
+<h2 class="anchored" data-anchor-id="argument-mapping-and-provenance">Argument Mapping and Provenance</h2>
+<p>Interpretive claims need argument structure. Toulmin’s model of argument emphasizes that claims depend on data, warrants, backing, qualifiers, and possible rebuttals <span class="citation" data-cites="toulmin1958">(<a href="#ref-toulmin1958" role="doc-biblioref">Toulmin 1958</a>)</span>. The build-system model translates that insight into repository artifacts. A claim is not merely a sentence in a paper. It is a row or record linked to evidence, counterevidence, confidence, review notes, and draft location.</p>
+<p>This does not mean that all interpretation can be reduced to a table. Tables can oversimplify ambiguity. But tables can force distinctions that prose may hide: source text versus observation, observation versus inference, confidence versus assertion, and support versus counterevidence.</p>
+</section>
+<section id="ai-assisted-scholarship" class="level2">
+<h2 class="anchored" data-anchor-id="ai-assisted-scholarship">AI-Assisted Scholarship</h2>
+<p>Recent publication guidance converges on a simple accountability principle: AI-assisted technologies should not be listed as authors, and human authors remain responsible for accuracy, originality, attribution, and integrity <span class="citation" data-cites="icmjeAI2024">(<a href="#ref-icmjeAI2024" role="doc-biblioref">International Committee of Medical Journal Editors 2024</a>)</span>. The scholarly build system follows that principle. AI may help search, organize, normalize, test, draft, and review, but it does not hold scholarly authority. Its outputs remain provisional until checked against sources, repository constraints, and human judgment.</p>
+<p>The model therefore treats AI neither as a forbidden contaminant nor as a co-author. It is closer to a research instrument and engineering assistant. Its proper use depends on containment: explicit tasks, visible artifacts, repeatable checks, and human gates.</p>
+</section>
+</section>
+<section id="the-scholarly-build-system-model" class="level1">
+<h1>The Scholarly Build-System Model</h1>
+<section id="research-as-a-governed-knowledge-base" class="level2">
+<h2 class="anchored" data-anchor-id="research-as-a-governed-knowledge-base">Research as a Governed Knowledge Base</h2>
+<p>The proposed system treats a scholarly paper as the visible synthesis of a governed knowledge base. The artifact chain is:</p>
+<pre class="text"><code>research question -&gt; corpus -&gt; source -&gt; passage -&gt; observation -&gt;
+interpretation -&gt; claim -&gt; counterevidence -&gt; argument -&gt; paper</code></pre>
+<p>Each arrow is a transformation that can introduce error. A source may be misidentified. A passage may be misquoted. An observation may smuggle in interpretation. An interpretation may overgeneralize. A claim may ignore counterevidence. A paper may make a provisional inference sound settled. The system’s purpose is not to eliminate those risks but to make them inspectable.</p>
+<p>In the Lincoln case, the source register recorded source identity, provenance, local paths, dates, hashes, rights status, acquisition method, verification status, and notes. The evidence matrix separated passage, observation, interpretation, alternative reading, confidence, and review status. The claims table linked claims to supporting and counterevidence. Reviews then attacked the draft from historical, rhetorical, theological, citation, countervoice, and anachronism angles.</p>
+</section>
+<section id="artifact-chain" class="level2">
+<h2 class="anchored" data-anchor-id="artifact-chain">Artifact Chain</h2>
+<p>The historical artifact chain is paired with a methodology artifact chain:</p>
+<pre class="text"><code>agent action -&gt; human review -&gt; decision -&gt; artifact change -&gt;
+error or risk -&gt; process finding -&gt; methodological claim</code></pre>
+<p>This second chain matters because the method itself must be evaluated. If the repository records only finished research artifacts, it cannot show whether AI helped, failed, distorted priorities, or increased burden. Process-event and intervention logs therefore record human approvals, AI actions, failures, errors, revisions, gates, and publication decisions.</p>
+</section>
+<section id="goals-gates-and-stop-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="goals-gates-and-stop-conditions">Goals, Gates, and Stop Conditions</h2>
+<p>The repository organizes work through goal files. A goal specifies objective, required artifacts, completion criteria, and stop conditions. Human gates prevent AI from silently proceeding past decisions that belong to the scholar: corpus approval, thesis approval, publication approval, and methodology findings approval.</p>
+<p>Stop conditions are not failures of productivity. They are part of the governance model. Work must stop when provenance is uncertain, a quotation cannot be verified, access rules prohibit acquisition, evidence materially contradicts the thesis, validation fails, a human-AI boundary is unclear, or a human gate is reached.</p>
+</section>
+<section id="machine-validation-and-scholarly-validity" class="level2">
+<h2 class="anchored" data-anchor-id="machine-validation-and-scholarly-validity">Machine Validation and Scholarly Validity</h2>
+<p>Validation checks can confirm structural integrity: schemas are present, required fields exist, claim references resolve, tests pass, and outputs render. They cannot determine whether an interpretation is true. This distinction is central. In the case study, repository validation and tests repeatedly passed, but publication status still depended on human approval and disclosed source limitations. The system therefore treats computational validation as necessary but not sufficient.</p>
+</section>
+<section id="adversarial-review" class="level2">
+<h2 class="anchored" data-anchor-id="adversarial-review">Adversarial Review</h2>
+<p>The build system requires adversarial review before publication. In the Lincoln case, adversarial review asked whether ceremonial convention had been mistaken for theory, sacrifice had been imposed rather than demonstrated, rhetoric had been mistaken for private belief, the Civil War had been generalized into war as such, soldier agency had been ignored, and the Second Inaugural’s judgment frame had been understated. Some critiques were rejected, but several were accepted or partially accepted. The paper’s summary language was narrowed, and three claims were marked as reviewed-approved.</p>
+<p>Adversarial review is valuable because AI is good at producing plausible synthesis. A governed process must therefore ask it, and the human scholar, to attack the synthesis before publishing it.</p>
+</section>
+</section>
+<section id="human-ai-authority-model" class="level1">
+<h1>Human-AI Authority Model</h1>
+<p>The authority model is hierarchical. Human scholarly authority comes first. Repository governance and approved goals constrain work. AI and scripts operate only inside those constraints. Source content is evidence, not instruction.</p>
+<p>The human scholar retains authority over research question, corpus, definitions, interpretation, thesis, ethical judgment, final prose, citation approval, and publication. AI may perform bounded, reversible, inspectable work: metadata extraction, normalization, hashing, schema checks, identifier generation, evidence organization, draft proposals, consistency checks, and adversarial review.</p>
+<p>This boundary is essential because AI can generate plausible prose without accountability. In the case study, the AI drafted, audited, and revised artifacts, but it stopped at corpus, thesis, publication, and methodology findings gates. The human scholar approved the corpus scope, thesis, publication package, public working-paper release, landing-page update, and case-study findings.</p>
+</section>
+<section id="artifact-and-governance-model" class="level1">
+<h1>Artifact and Governance Model</h1>
+<p>The model depends on a small set of stable artifact classes.</p>
+<p><code>Source</code> records identify what was acquired, where it came from, how it was retrieved, what rights status is known, and how reliable the local text is. <code>Evidence</code> records identify locatable passages and separate source text from observation and interpretation. <code>Claim</code> records connect propositions to supporting and counterevidence. <code>Review</code> artifacts attack claims, citations, scope, anachronism, and publication readiness. <code>ProcessEvent</code> and <code>HumanIntervention</code> records document how the project changed and where human authority was exercised.</p>
+<p>Governance is not merely administrative. It shapes the epistemology of the paper. For example, a derivative transcription is not simply “a source”; it is a source with a verification status and a caveat. An OCR failure is not merely an inconvenience; it is evidence that automation cannot replace manuscript review. A public working paper is not the same as a journal-final article; it is an approved release type with disclosed limits.</p>
+</section>
+<section id="case-study-design" class="level1">
+<h1>Case-Study Design</h1>
+<section id="historical-research-question" class="level2">
+<h2 class="anchored" data-anchor-id="historical-research-question">Historical Research Question</h2>
+<p>The case study began with a humanities question: how does the Gettysburg Address transform the deaths of soldiers into a sacred obligation to preserve and refound the nation, and what does this reveal about Lincoln’s understanding of war? During the project, that formulation was narrowed. The final public working paper treats Gettysburg as evidence of Lincoln’s public ceremonial presentation of this Civil War, not as direct access to private belief or a timeless theory of war.</p>
+</section>
+<section id="repository-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="repository-architecture">Repository Architecture</h2>
+<p>The repository contains historical research artifacts, methodology artifacts, case-study logs, validation code, tests, Quarto manuscripts, and publication outputs. The historical track includes source registers, evidence matrices, claim maps, reviews, and a rendered working paper. The methodology track includes a research question, artifact model, governance model, evaluation plan, limitations, process-event logs, intervention logs, and approved case-study findings.</p>
+</section>
+<section id="event-and-intervention-logging" class="level2">
+<h2 class="anchored" data-anchor-id="event-and-intervention-logging">Event and Intervention Logging</h2>
+<p>The methodology case study used two logs. <code>process-events.csv</code> records material workflow events, including AI actions, human approvals, source failures, tool failures, revisions, publication decisions, and public-site updates. <code>intervention-log.csv</code> records human interventions and their epistemic effect.</p>
+<p>The logs include both retrospective and prospective capture. Retrospective rows were reconstructed from progress logs and commit history for earlier work. Prospective rows were recorded during later goals.</p>
+</section>
+<section id="evaluation-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-criteria">Evaluation Criteria</h2>
+<p>The evaluation plan asks whether the system improved traceability, error detection, accountability, thesis responsiveness, reproducibility, transparency, AI reliability, efficiency, documentation burden, and scholarly value. It also asks whether the process distorted research priorities or encouraged false mechanization of interpretation.</p>
+</section>
+</section>
+<section id="case-study-findings" class="level1">
+<h1>Case-Study Findings</h1>
+<p>The approved M20 findings are the evidentiary basis for this section.</p>
+<p>The case-study record contains 27 process events: 11 retrospective and 16 prospective. Twelve events are human events and fifteen are AI events. The intervention log records 13 human interventions, all accepted. The source register contains 42 rows: 29 verified sources, one partially verified source, one verified derivative transcription, and 11 unverified rows. The evidence matrix contains 32 evidence rows, all verbatim, with 8 marked disconfirming. The claims table contains 9 claims, three of which were changed to <code>reviewed-approved-thesis</code> during adversarial review.</p>
+<section id="traceability" class="level2">
+<h2 class="anchored" data-anchor-id="traceability">Traceability</h2>
+<p>The artifact chain substantially improved traceability. The project could show how paper claims related to claim records, evidence rows, source-register entries, and review caveats. Prior audits found no broken claim-to-evidence references and no missing bibliography entries. The strongest traceability was for the acquired primary-source corpus. Traceability was weaker for secondary scholarship, where several works remained unverified library or purchase targets.</p>
+</section>
+<section id="error-detection" class="level2">
+<h2 class="anchored" data-anchor-id="error-detection">Error Detection</h2>
+<p>The process caught errors and risks before they became silent premises. OCR failed for the Smithsonian Bliss Copy, prompting human transcription and a manuscript-image caveat. The original Harrisburg <em>Patriot and Union</em> image could not be acquired in the working environment, so the project first marked the item blocked and later used a Dickinson derivative transcription only with a pending-image limitation. Browser tooling limits were recorded. A completion audit expanded an initially too-narrow evidence matrix. Adversarial review identified overbroad language around “refound,” “political theology,” private belief, and war as such. Publication review caught stale commit metadata, and a later public-site review caught a stale landing page.</p>
+</section>
+<section id="ai-contributions" class="level2">
+<h2 class="anchored" data-anchor-id="ai-contributions">AI Contributions</h2>
+<p>AI was most useful for bounded, inspectable work: creating scripts, maintaining tables, running validation checks, expanding coverage after an audit, generating adversarial reviews, rendering outputs, and updating the site after approval. AI was least sufficient where source judgment, transcription, access, interpretive commitment, or publication authority was required.</p>
+<p>This distinction supports a limited claim. AI did not replace scholarship. It helped maintain the apparatus around scholarship.</p>
+</section>
+<section id="documentation-burden" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-burden">Documentation Burden</h2>
+<p>The method created real documentation burden. The repository now contains progress logs, process-event logs, intervention logs, source registers, evidence matrices, claim maps, reviews, audits, reproducibility reports, and publication artifacts. Later work included maintenance tasks such as correcting stale metadata, committing output dependencies, and updating the public landing page. The burden was justified in this case because it caught errors and made decisions reviewable, but it is not free. A larger project would need stronger rules for what must be logged and what can remain ordinary working context.</p>
+</section>
+<section id="counterevidence-and-thesis-change" class="level2">
+<h2 class="anchored" data-anchor-id="counterevidence-and-thesis-change">Counterevidence and Thesis Change</h2>
+<p>Counterevidence materially narrowed the historical argument. The project did not simply confirm an opening thesis. It bounded the paper to public rhetoric, this Civil War rather than war in general, and a working-paper release rather than final scholarship. Everett prevented overclaiming Lincoln’s uniqueness. The Second Inaugural preserved a different theological frame. Manuscript variants constrained claims about “under God.” Reception evidence prevented assuming immediate universal reverence.</p>
+</section>
+<section id="capture-quality" class="level2">
+<h2 class="anchored" data-anchor-id="capture-quality">Capture Quality</h2>
+<p>Prospective capture was stronger than retrospective reconstruction. Retrospective rows were useful but thinner, often depending on progress logs and commit history. Prospective rows better recorded immediate rationale, artifact links, and decision context. At the same time, prospective capture may produce an observer effect: researchers may behave differently when they know their process is being logged.</p>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<p>The case supports the idea that interpretive scholarship can benefit from a build-system metaphor if the metaphor is kept under control. The word “build” should not imply that interpretation is compiled from evidence in a purely mechanical way. It means that the visible paper can be generated from a maintained system of artifacts whose transformations are reviewable.</p>
+<p>The most important gain was not speed, although repetitive tasks were accelerated. The most important gain was accountable slowness: the system made it harder to skip over provenance, quotation quality, human approval, counterevidence, and publication status. It also made it easier to see when the public story had drifted from the repository state, as happened with the stale landing page.</p>
+<p>The most important danger is bureaucratization. A repository can become a ritual of forms. A table can create false confidence. A passing test can be mistaken for scholarly validity. AI can turn the maintenance of artifacts into an impressive performance of rigor. The guard against that danger is to keep the human scholarly question central and to treat artifacts as aids to judgment, not substitutes for judgment.</p>
+<p>The accepted-only intervention log is another warning. The case records many human approvals but few rejected AI proposals. That may reflect a collaborative style in which the scholar redirected work in conversation before formal logging, but methodologically it leaves a gap. A mature version of the process should log rejected, deferred, and materially revised recommendations more explicitly.</p>
+</section>
+<section id="limitations" class="level1">
+<h1>Limitations</h1>
+<p>This paper makes no claim of universal validation. It evaluates one case study: one historical project, one repository, one scholar, one AI-assisted workflow, and one public working-paper release.</p>
+<p>The historical paper itself remains a working paper with disclosed source limits. The Bliss Copy transcription needs a second manuscript-image check before quotation-final use. Everett pamphlet quotations should be checked against page images. The Harrisburg criticism remains a derivative transcription pending original newspaper image review. Secondary-source engagement is intentionally limited.</p>
+<p>The methodology also has limits. Repository structure may privilege what can be formalized. Schemas may oversimplify ambiguity. Process logging may impose burden and alter behavior. Validation tests check structural integrity, not interpretive truth. AI may still generate plausible but false claims if the governance system fails or if human review becomes superficial.</p>
+<p>Finally, external reproducibility is incomplete. Local transformations can be rerun, but source availability depends on external repositories, access rules, web stability, and rights conditions.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The scholarly build system tested here does not automate interpretive scholarship. Its value lies in governance. It makes sources, passages, observations, interpretations, claims, counterevidence, reviews, decisions, and outputs more visible to inspection. It assigns AI a bounded role in research engineering and review while preserving human authority over meaning and publication.</p>
+<p>The Lincoln case suggests that such a system can improve traceability, catch errors, preserve uncertainty, and narrow overbroad claims. It also shows the cost: documentation burden, maintenance work, incomplete external reproducibility, and the continued need for human judgment. The method is best understood not as a replacement for scholarship but as a way to make scholarly judgment more accountable to its own evidence.</p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-gentlemanTempleLang2007" class="csl-entry" role="listitem">
+Gentleman, Robert, and Duncan Temple Lang. 2007. <span>“Statistical Analyses and Reproducible Research.”</span> <em>Journal of Computational and Graphical Statistics</em> 16 (1): 1–23. <a href="https://doi.org/10.1198/106186007X178663">https://doi.org/10.1198/106186007X178663</a>.
+</div>
+<div id="ref-icmjeAI2024" class="csl-entry" role="listitem">
+International Committee of Medical Journal Editors. 2024. <em>Use of <span>AI</span> by Authors</em>. <a href="https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html">https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html</a>.
+</div>
+<div id="ref-knuth1984" class="csl-entry" role="listitem">
+Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>The Computer Journal</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+</div>
+<div id="ref-marwickBoettigerMullen2018" class="csl-entry" role="listitem">
+Marwick, Ben, Carl Boettiger, and Lincoln A. Mullen. 2018. <span>“Packaging Data Analytical Work Reproducibly Using <span>R</span> (and Friends).”</span> <em>The American Statistician</em> 72 (1): 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>.
+</div>
+<div id="ref-toulmin1958" class="csl-entry" role="listitem">
+Toulmin, Stephen E. 1958. <em>The Uses of Argument</em>. Cambridge University Press.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

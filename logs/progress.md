@@ -342,3 +342,27 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed after approval.
 - `.venv/bin/pytest` passed after approval: 10 tests passed.
 - `git diff --check` passed after approval.
+
+## 2026-07-16 - Methodology M30 methodology-paper draft
+
+- Checkpoint scope: draft the methodology paper from approved methodology
+  findings and case-study evidence.
+- Read `goals/methodology/M30-draft-methodology-paper.md`,
+  `methodology/case-study-findings.md`, the methodology model artifacts, and
+  the existing methodology-paper scaffold.
+- Drafted `methodology-paper/methodology-paper.qmd` with the required sections:
+  introduction, related practices, scholarly build-system model, human-AI
+  authority model, artifact and governance model, case-study design,
+  case-study findings, discussion, limitations, and conclusion.
+- Added verified related-practices bibliography entries to
+  `methodology-paper/references.bib` for reproducible research, research
+  compendia, literate programming, argument structure, and AI authorship
+  accountability.
+- The draft does not claim universal validation from one case, distinguishes
+  retrospective from prospective evidence, includes failures and documentation
+  burden, and preserves the rule that AI is not an accountable scholar.
+- `quarto render methodology-paper/methodology-paper.qmd` passed and produced
+  `methodology-paper/methodology-paper.html` with Quarto support files.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
