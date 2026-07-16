@@ -1,0 +1,6 @@
+This review checks whether the evidence coding can carry the argument without
+flattening uncertainty. Its purpose is to test the structure of the evidence
+matrix, verify that counterevidence and caveats remain visible, and identify
+coding risks before the table is used as support for claims.
+
+{{< include ../research/reviews/coding-review.md >}}

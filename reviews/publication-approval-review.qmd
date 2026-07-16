@@ -1,0 +1,6 @@
+This review is the final approval-focused audit for the historical working
+paper package. Its purpose is to decide whether the package can be released
+publicly as a transparent working paper, while making clear that this approval
+does not cover journal-final, quotation-final, or limitation-free publication.
+
+{{< include ../research/reviews/publication-approval-review.md >}}

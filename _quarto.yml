@@ -3,11 +3,16 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - working-paper.qmd
+    - workflow.qmd
+    - evidence.qmd
     - publication-audit.qmd
     - reproducibility-report.qmd
+    - reviews/*.qmd
   resources:
     - outputs/**
     - methodology-paper/methodology-paper.html
+    - methodology-paper/methodology-paper_files/**
 
 website:
   title: "Lincoln, Gettysburg, and the Nature of War"
@@ -16,8 +21,50 @@ website:
   repo-url: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
   repo-actions: [source, issue]
   navbar:
+    left:
+      - text: "Home"
+        href: index.html
+      - text: "Paper"
+        href: working-paper.html
+      - text: "Workflow"
+        href: workflow.html
+      - text: "Evidence"
+        href: evidence.html
+      - text: "Reviews"
+        menu:
+          - text: "Review Index"
+            href: reviews/
+          - text: "Historical Review"
+            href: reviews/historical-review.html
+          - text: "Rhetorical Review"
+            href: reviews/rhetorical-review.html
+          - text: "Theological-Language Review"
+            href: reviews/theological-language-review.html
+          - text: "Source and Citation Review"
+            href: reviews/source-and-citation-review.html
+          - text: "Critical Countervoice Review"
+            href: reviews/critical-countervoice-review.html
+          - text: "Anachronism Review"
+            href: reviews/anachronism-review.html
+          - text: "Disconfirmation Review"
+            href: reviews/disconfirmation-review.html
+          - text: "Coding Review"
+            href: reviews/coding-review.html
+          - text: "Draft Source Audit"
+            href: reviews/draft-source-audit.html
+          - text: "Publication Approval Review"
+            href: reviews/publication-approval-review.html
+      - text: "Reports"
+        menu:
+          - text: "Publication Audit"
+            href: publication-audit.html
+          - text: "Reproducibility Report"
+            href: reproducibility-report.html
+          - text: "Evidence Appendix CSV"
+            href: outputs/evidence-appendix.csv
     right:
-      - text: "GitHub"
+      - icon: github
+        aria-label: "GitHub repository"
         href: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
   page-footer:
     center: "A source-grounded scholarly research project"
@@ -25,6 +72,7 @@ website:
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     link-external-newwindow: true
 

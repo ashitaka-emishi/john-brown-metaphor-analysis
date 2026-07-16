@@ -1,0 +1,6 @@
+This review tests whether the paper reads Lincoln's ceremonial rhetoric too
+aggressively. Its purpose is to distinguish ordinary dedication-speech
+conventions from interpretive claims about sacrifice, obligation, democratic
+survival, and Lincoln's relation to Everett's longer oration.
+
+{{< include ../research/reviews/rhetorical-review.md >}}

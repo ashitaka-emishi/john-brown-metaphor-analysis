@@ -462,3 +462,48 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check -- . ':(exclude)_site/**'` passed.
+
+## 2026-07-16 - Site review and evidence expansion
+
+- Checkpoint scope: add individual audit result pages, add a table view of the
+  evidence appendix, reorganize the Quarto site navigation, and stop at a
+  human review control point before committal.
+- Read the current Quarto config, landing page, publication reports, evidence
+  appendix, and review documents in `research/reviews/`.
+- Added `reviews/index.qmd` and individual rendered review pages for the
+  historical, rhetorical, theological-language, source and citation, critical
+  countervoice, anachronism, disconfirmation, coding, draft-source, and
+  publication-approval reviews.
+- Added `evidence.qmd` with a compact table view of the 32 evidence rows and a
+  link to the full evidence appendix CSV.
+- Updated `_quarto.yml` with rendered review/evidence pages, organized navbar
+  entries, and site CSS.
+- Updated `index.qmd` into a hub linking the working paper, evidence, reviews,
+  publication reports, and methodology paper.
+- Added `styles.css` for the evidence table and homepage site-map layout.
+- Human control point: stop before commit until the scholar reviews and
+  approves the site changes.
+- `quarto render .` passed and rendered 15 site pages.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- Local generated-page checks confirmed the homepage hub, evidence table,
+  review index, and individual review pages are present in `_site/`.
+- Stop condition reached: human review control point before committal.
+- Added `workflow.qmd` as a reader-facing summary of the research method and
+  workflow, distinct from the more technical methodology paper.
+- Updated `_quarto.yml` and `index.qmd` to link the workflow overview from the
+  navigation and homepage.
+- Added `working-paper.qmd` and `methodology.qmd` as site-native pages so the
+  default paper and methodology routes retain the website header and GitHub
+  repository link.
+- Updated navigation and internal links to point to the site-native pages while
+  preserving direct links to the rendered artifact files from those pages.
+- Folded the methodology wrapper back into `workflow.qmd`: the workflow page is
+  now the summary page, and it links deeper to the detailed methodology paper.
+- Removed `methodology.qmd` from the rendered top-level site navigation.
+- Updated the GitHub navbar item to use an icon-only link with an accessible
+  label.
+- Scholar reviewed the local preview and approved commit and push.
+- `quarto render .` passed and rendered 17 site pages after review changes.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.

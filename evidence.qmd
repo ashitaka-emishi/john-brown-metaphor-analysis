@@ -1,0 +1,62 @@
+---
+title: "Evidence Table"
+description: "Table view of the evidence appendix used by the working paper."
+---
+
+The evidence appendix contains 32 rows exported from the evidence matrix. Each
+row separates source passage, observation, interpretation, alternative reading,
+confidence, disconfirmation status, and review status. This page presents a
+compact table for browsing; the full CSV remains available for download.
+
+- [Download the evidence appendix CSV](outputs/evidence-appendix.csv)
+- [Read the working paper](working-paper.html)
+- [Review the audit results](reviews/)
+
+## Summary
+
+| Measure | Count |
+|---|---:|
+| Evidence rows | 32 |
+| High-confidence rows | 21 |
+| Medium-confidence rows | 11 |
+| Disconfirming rows | 8 |
+| Non-disconfirming rows | 24 |
+
+## Evidence Rows
+
+::: {.evidence-table}
+| ID | Source | Locator | Theme | Frames | Disconf. | Confidence | Review |
+|---|---|---|---|---|---|---|---|
+| OBS-0001 | SRC-0005 | Bliss Copy, page 3, lines 40-44 | founding ontology | test; none; legitimation; unification | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0002 | SRC-0005 | Bliss Copy, page 3, lines 45-48 | war as test | test; none; legitimation; mobilization | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0003 | SRC-0005 | Bliss Copy, page 3, lines 48-54 | death as national life | preservation; sacrifice; gift; exchange; mourning; legitimation; mobilization | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0004 | SRC-0005 | Bliss Copy, page 4, lines 61-65 | consecrated ground | sacrifice; preservation; consecration; mourning; legitimation | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0005 | SRC-0005 | Bliss Copy, page 4, lines 67-75 | survivor obligation | preservation; transformation; debt; devotion; mobilization; unification | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0006 | SRC-0005 | Bliss Copy, pages 4-5, lines 76-86 | rebirth and democratic survival | transformation; preservation; debt; consecration; mobilization; emancipation; reconstruction | no | high | checked-normalized; manuscript-image second pass recommended |
+| OBS-0007 | SRC-0001 | Nicolay Copy, page one/page 2, lines 49-73 | Nicolay variant | test; preservation; transformation; loss; exchange; mourning; mobilization | no | medium | checked-normalized; LOC page-image review recommended |
+| OBS-0008 | SRC-0002 | Hay Copy, lines 35-51 | Hay variant | preservation; transformation; sacrifice; gift; exchange; consecration; mourning; mobilization | no | medium | checked-normalized; LOC page-image review recommended |
+| OBS-0009 | SRC-0003 | Everett Copy transcript, lines 230-232 | under God variant | transformation; preservation; debt; mobilization; reconstruction | no | medium | checked-normalized; raw page includes institutional annotations |
+| OBS-0010 | SRC-0004 | Cornell/Bancroft transcript, line 44 | under God variant | transformation; preservation; debt; mobilization; reconstruction | no | medium | checked-normalized; raw page includes institutional context |
+| OBS-0011 | SRC-0007 | Wills invitation, lines 24-29 | ceremonial commission | none; none; mourning; legitimation | no | high | checked-normalized |
+| OBS-0012 | SRC-0006 | Everett oration, page 33-34, lines 1338-1345 | Everett comparison sacrifice | preservation; sacrifice; gift; exchange; mourning; legitimation | no | high | OCR checked; page-image review recommended |
+| OBS-0013 | SRC-0006 | Everett oration, page 84, lines 1376-1395 | Everett comparison war lesson | necessity; instrument; none; mobilization; legitimation | yes | high | OCR checked; page-image review recommended |
+| OBS-0014 | SRC-0006 | National Cemetery account, page 8, lines 337-354 | bodily reality context | none; destruction; loss; mourning | yes | high | OCR checked; page-image review recommended |
+| OBS-0015 | SRC-0018 | Special Session Message, lines 61-63 | comparative Lincoln democratic test | test; preservation; none; legitimation; mobilization | no | high | checked-normalized |
+| OBS-0016 | SRC-0023 | Conkling letter, lines 64-67 | comparative Lincoln emancipation and obligation | instrument; preservation; transformation; gift; obligation; emancipation; mobilization | no | high | checked-normalized |
+| OBS-0017 | SRC-0020 | Meditation on the Divine Will, line 67 | comparative Lincoln providence | judgment; none; theological reflection | yes | medium | checked-normalized |
+| OBS-0018 | SRC-0027 | Second Inaugural Address, lines 26-28 | comparative Lincoln judgment | judgment; preservation; debt; loss; mourning; reconstruction | yes | high | checked-normalized |
+| OBS-0019 | SRC-0011 | Dickinson derivative transcription, lines 13-20 | critical reception | necessity; judgment; loss; counter-mobilization | yes | medium | derivative-transcription; original image pending |
+| OBS-0020 | SRC-0041 | New-York Daily Tribune OCR, lines 110-117 and 251-258 | reception frame | none; none; public reporting | no | medium | OCR noisy; page-image review required |
+| OBS-0021 | SRC-0013 | Lyceum Address, lines 133-138 | comparative Lincoln inheritance | preservation; debt; legitimation; mobilization | no | medium | checked-normalized; excerpted source |
+| OBS-0022 | SRC-0014 | House Divided Speech, lines 39-46 | comparative Lincoln slavery crisis | test; preservation; none; legitimation; mobilization | no | medium | checked-normalized |
+| OBS-0023 | SRC-0015 | Cooper Union Address, line 69 | comparative Lincoln founding authority | none; none; legitimation | no | medium | checked-normalized |
+| OBS-0024 | SRC-0016 | First Inaugural Address, lines 84-91 | comparative Lincoln war avoidance | necessity; loss; conciliation | yes | high | checked-normalized |
+| OBS-0025 | SRC-0017 | Militia Proclamation, lines 87-89 | comparative Lincoln war power | necessity; preservation; none; mobilization; legitimation | no | high | checked-normalized |
+| OBS-0026 | SRC-0019 | First Annual Message, line 126 | comparative Lincoln popular government | test; preservation; none; legitimation; mobilization | no | high | checked-normalized |
+| OBS-0027 | SRC-0021 | Second Annual Message, lines 173-174 | comparative Lincoln freedom and crisis | transformation; preservation; none; emancipation; mobilization | no | high | checked-normalized |
+| OBS-0028 | SRC-0022 | Emancipation Proclamation, lines 42-47 | comparative Lincoln emancipation war measure | instrument; necessity; transformation; none; emancipation; legitimation | no | high | checked-normalized |
+| OBS-0029 | SRC-0024 | Third Annual Message, lines 99-108 | comparative Lincoln regeneration | transformation; preservation; debt; emancipation; reconstruction; mobilization | no | high | checked-normalized |
+| OBS-0030 | SRC-0025 | Letter to Albert G. Hodges, lines 56-58 | comparative Lincoln necessity and agency | necessity; preservation; providence; none; legitimation; emancipation | yes | high | checked-normalized |
+| OBS-0031 | SRC-0026 | Fourth Annual Message, line 116 | comparative Lincoln war termination | necessity; preservation; none; legitimation; reconstruction | yes | high | checked-normalized |
+| OBS-0032 | SRC-0028 | Last Public Address, lines 76-99 | comparative Lincoln reconstruction | preservation; reconstruction; none; reconstruction; unification | no | medium | checked-normalized |
+:::

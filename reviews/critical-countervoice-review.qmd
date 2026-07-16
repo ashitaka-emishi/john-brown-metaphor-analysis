@@ -1,0 +1,7 @@
+This review gives the strongest available countervoices room to press against
+the paper's thesis. Its purpose is to test whether cemetery convention,
+Democratic criticism, and later canonical memory could explain or weaken the
+paper's interpretation, and to show how those countervoices narrowed the final
+claim.
+
+{{< include ../research/reviews/critical-countervoice-review.md >}}

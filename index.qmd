@@ -21,10 +21,76 @@ quotation-final checks remain before a stronger publication claim should be
 made.
 :::
 
-## Working paper
+## Site Guide
 
-- [Read the HTML working paper](outputs/paper.html)
-- [Download the PDF working paper](outputs/paper.pdf)
+::: {.site-map}
+<div>
+
+### Working Paper
+
+Read the public working paper or download the PDF.
+
+- [Working paper page](working-paper.html)
+- [PDF working paper](outputs/paper.pdf)
+
+</div>
+
+<div>
+
+### Workflow
+
+See a plain-language summary of how the project moved from question to sources,
+evidence, claims, reviews, and publication.
+
+- [How the project worked](workflow.html)
+- [Detailed methodology paper](methodology-paper/methodology-paper.html)
+
+</div>
+
+<div>
+
+### Evidence
+
+Browse a compact evidence table or download the full CSV appendix.
+
+- [Evidence table](evidence.html)
+- [Evidence appendix CSV](outputs/evidence-appendix.csv)
+
+</div>
+
+<div>
+
+### Reviews
+
+Read the individual audit and review results that narrowed the final claims.
+
+- [Review index](reviews/)
+- [Publication approval review](reviews/publication-approval-review.html)
+
+</div>
+
+<div>
+
+### Reports
+
+Inspect publication readiness and reproduction details.
+
+- [Publication audit](publication-audit.html)
+- [Reproducibility report](reproducibility-report.html)
+
+</div>
+:::
+
+## Workflow Summary
+
+This site is organized around a traceable research workflow. The working paper
+is the public argument, but the site also exposes the evidence table, review
+results, publication audit, reproducibility report, and methodology paper that
+show how that argument was built and checked.
+
+For a reader-friendly overview, start with
+[How the Project Worked](workflow.html). For the formal methodological argument,
+read [The Scholarly Build System](methodology-paper/methodology-paper.html).
 
 ## Publication package
 
@@ -41,6 +107,16 @@ the source-grounded matrix.
 - [Evidence appendix CSV](outputs/evidence-appendix.csv): 32 evidence rows
   exported from the evidence matrix, including passages, observations,
   interpretations, alternative readings, confidence, and review status.
+
+## Individual Reviews
+
+The review suite tests the paper from multiple angles rather than treating one
+audit as enough. The [review index](reviews/) links to historical, rhetorical,
+theological-language, source and citation, countervoice, anachronism,
+disconfirmation, coding, draft-source, and publication-approval reviews.
+
+- [Browse all audit and review results](reviews/)
+- [Open the evidence table](evidence.html)
 
 ## Methodology working paper
 
@@ -64,6 +140,8 @@ The workflow separates source text, observation, inference, and conclusion. It
 preserves manuscript variants, records contradictory evidence, and
 distinguishes Lincoln's public rhetoric from claims about private belief.
 Primary sources are preferred for claims about Lincoln's language and actions.
+The reader-facing overview is available at
+[How the Project Worked](workflow.html).
 
 The staged process covers corpus acquisition, evidence coding, analysis and
 thesis review, paper drafting, adversarial review, publication-package audit,

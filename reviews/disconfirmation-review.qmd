@@ -1,0 +1,6 @@
+This review collects serious ways the thesis could fail. Its purpose is to
+preserve falsifiers and competing interpretations rather than hiding them
+behind the final argument, so readers can see where the working paper is
+strongest, weakest, and most conditional.
+
+{{< include ../research/reviews/disconfirmation-review.md >}}

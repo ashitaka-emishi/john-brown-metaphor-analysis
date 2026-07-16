@@ -1,0 +1,39 @@
+---
+title: "Audit and Review Results"
+description: "Individual review results for the working-paper package."
+---
+
+The working paper was reviewed through several focused audits. Each review
+tested a different failure mode: historical overreach, rhetorical
+overinterpretation, theological attribution, source and citation integrity,
+counterevidence, anachronism, evidence coding, and publication readiness.
+The pages linked below pair a short public-facing purpose statement with the
+underlying review artifact, so readers can see both why the review exists and
+what it concluded.
+
+## Review Pages
+
+| Review | What It Checks | Result |
+|---|---|---|
+| [Historical review](historical-review.html) | Whether the paper overgeneralizes the Civil War, ignores soldier agency, or overstates bodily omission. | Several critiques partially accepted; historical limits remain disclosed. |
+| [Rhetorical review](rhetorical-review.html) | Whether ceremonial convention, sacrifice language, and Everett comparison are handled carefully. | Several cautions accepted or partially accepted; sacrifice claim retained with limits. |
+| [Theological-language review](theological-language-review.html) | Whether public sacred rhetoric is mistaken for Lincoln's private belief. | Distinctions strengthened; Second Inaugural and Christianization cautions retained. |
+| [Source and citation review](source-and-citation-review.html) | Whether citations, quotation status, and source limits are adequate. | No critical citation failures; quotation-finality caveats remain. |
+| [Critical countervoice review](critical-countervoice-review.html) | Whether counter-readings from ceremony, Democratic criticism, and later memory weaken the argument. | Countervoices narrowed the argument rather than defeating the working-paper claim. |
+| [Anachronism review](anachronism-review.html) | Whether later theoretical vocabulary is imported into the 1863 material. | Some vocabulary narrowed; remaining anachronism limits disclosed. |
+| [Disconfirmation review](disconfirmation-review.html) | Whether serious falsifiers and competing interpretations were tested. | Six falsifiers and six competing interpretations were preserved for review. |
+| [Coding review](coding-review.html) | Whether evidence coding is structurally adequate and preserves uncertainty. | Evidence coding supports working analysis with noted risks. |
+| [Draft source audit](draft-source-audit.html) | Whether draft sources, sections, citations, quotations, and rendering were ready. | No critical failures, with recommended next checks. |
+| [Publication approval review](publication-approval-review.html) | Whether the final package was ready for public release. | Approved only as a transparent public working-paper package. |
+
+## Reading Order
+
+For publication readiness, start with the
+[publication approval review](publication-approval-review.html), then read the
+[source and citation review](source-and-citation-review.html) and
+[critical countervoice review](critical-countervoice-review.html).
+
+For interpretive scope, start with the
+[historical review](historical-review.html), [rhetorical review](rhetorical-review.html),
+[theological-language review](theological-language-review.html), and
+[anachronism review](anachronism-review.html).
