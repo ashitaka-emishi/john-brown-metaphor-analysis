@@ -29,9 +29,28 @@ made.
 - [Review the reproducibility report](outputs/reproducibility-report.md)
 - [Download the evidence appendix](outputs/evidence-appendix.csv)
 
+## Methodology working paper
+
+The methodology paper has also been approved for public release as a working
+paper with disclosed limitations. It evaluates the governed human-AI workflow
+used in this project as a single developmental case study.
+
+- [Read the methodology working paper](methodology-paper/methodology-paper.html)
+
+::: {.callout-note title="Methodology status"}
+The methodology paper is public as a working paper. It is not journal-final,
+universally validated, or independent replication evidence. It preserves
+limits around single-case scope, developmental-case bias, process-logging
+effects, accepted-only intervention records, documentation burden, and the
+difference between repository validation and interpretive validity.
+:::
+
 ## Method
 
-The workflow separates source text, observation, inference, and conclusion. It preserves manuscript variants, records contradictory evidence, and distinguishes Lincoln's public rhetoric from claims about private belief. Primary sources are preferred for claims about Lincoln's language and actions.
+The workflow separates source text, observation, inference, and conclusion. It
+preserves manuscript variants, records contradictory evidence, and
+distinguishes Lincoln's public rhetoric from claims about private belief.
+Primary sources are preferred for claims about Lincoln's language and actions.
 
 The staged process covers corpus acquisition, evidence coding, analysis and
 thesis review, paper drafting, adversarial review, publication-package audit,
@@ -45,6 +64,11 @@ The historical track has completed corpus acquisition, evidence coding,
 analysis and thesis review, drafting, adversarial review, and final
 publication-package preparation. The scholar approved the Goal 60 package for
 release as a public working-paper package with disclosed limitations.
+
+The methodology track has completed case-study evaluation, methodology-paper
+drafting, adversarial methodology review, and publication-readiness review. The
+scholar approved the methodology paper for release as a public methodology
+working paper with disclosed limitations.
 
 Known limits remain visible in the publication package:
 

@@ -398,3 +398,38 @@ Run Goal 00 and stop at corpus approval.
   in `methodology/methodology-review.md`, the methodology paper contains the
   corresponding revisions, `quarto render methodology-paper/methodology-paper.qmd`
   passed, validation passed, tests passed, and authored-file diff check passed.
+
+## 2026-07-16 - Methodology publication-readiness review
+
+- Checkpoint scope: review the methodology paper package for possible public
+  working-paper release while preserving the methodology-publication approval
+  human gate.
+- Read `methodology-paper/methodology-paper.qmd`,
+  `methodology/methodology-review.md`, `methodology/case-study-findings.md`,
+  `index.qmd`, `_quarto.yml`, case-study logs, and prior progress records.
+- Created `methodology/methodology-publication-readiness.md`.
+- Recommendation: the methodology paper is ready for scholar approval only as a
+  public methodology working paper with disclosed limitations, not as
+  journal-final, universally validated, or independent replication evidence.
+- Site note: the current Quarto site renders `index.qmd` and copies
+  `outputs/**`; publishing the methodology paper would require an intentional
+  site/resource update after approval.
+- Stop condition reached: methodology-publication approval human gate. Do not
+  update the public site, push a publication-site change, or publish the
+  methodology paper externally until the scholar explicitly approves release.
+- Scholar approved publication of the methodology paper as a public methodology
+  working paper with disclosed limitations.
+- Updated `index.qmd` to link the approved methodology working paper and
+  preserve the methodology limitations on the landing page.
+- Updated `_quarto.yml` to publish the rendered methodology paper HTML as a
+  site resource.
+- Updated `methodology/methodology-publication-readiness.md` to record that the
+  methodology-publication approval gate is cleared.
+- `quarto render methodology-paper/methodology-paper.qmd` passed.
+- `quarto render .` passed and copied the methodology working paper to
+  `_site/methodology-paper/methodology-paper.html`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check -- . ':(exclude)_site/**'
+  ':(exclude)methodology-paper/methodology-paper.html'
+  ':(exclude)methodology-paper/methodology-paper_files/**'` passed.

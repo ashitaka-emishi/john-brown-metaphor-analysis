@@ -5,6 +5,7 @@ project:
     - index.qmd
   resources:
     - outputs/**
+    - methodology-paper/methodology-paper.html
 
 website:
   title: "Lincoln, Gettysburg, and the Nature of War"
