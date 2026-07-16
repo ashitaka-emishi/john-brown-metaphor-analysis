@@ -452,6 +452,8 @@ Run Goal 00 and stop at corpus approval.
   `outputs/evidence-appendix.csv`, `_quarto.yml`, and `index.qmd`.
 - Added `publication-audit.qmd` and `reproducibility-report.qmd` as rendered
   Quarto wrapper pages for the existing Markdown reports.
+- Replaced the wrapper includes with page-local content to avoid duplicate H1
+  titles in the rendered pages.
 - Updated `_quarto.yml` to render the new pages.
 - Updated `index.qmd` with a publication-package section summarizing the
   publication audit, reproducibility report, and evidence appendix CSV.
