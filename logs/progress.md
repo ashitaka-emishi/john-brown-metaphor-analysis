@@ -62,3 +62,15 @@ Run Goal 00 and stop at corpus approval.
 - The scholar subsequently approved upgrading to Python 3.11. Homebrew Python 3.11.15 was installed, `.venv` was recreated, and the project installed normally with its declared development dependencies. Validation and all 3 tests pass without compatibility overrides.
 - Public repository created at <https://github.com/ashitaka-emishi/lincoln-war-research-project> with `master` as the default branch, public visibility, and a mission-specific description.
 - GitHub Pages configured for Actions and the Quarto landing page verified live at <https://ashitaka-emishi.github.io/lincoln-war-research-project/>. The deployed site contains the status-conscious landing page only; the provisional dossier is not rendered as a site page.
+
+## 2026-07-16 - Methodology-track integration
+
+- Added a parallel methodology-paper track around the active Lincoln historical project.
+- Preserved the existing corpus, goals, source register, research method, and paper structure.
+- Added a general methodology specification, human-AI boundary, artifact model, governance model, evaluation plan, and limitations.
+- Added retrospective case-study records for completed Goal 00 and Goal 10 work to date.
+- Added prospective process-event and human-intervention instrumentation.
+- Added methodology-specific goals and a Quarto methodology-paper scaffold.
+- Updated repository instructions and README without changing historical research scope.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.

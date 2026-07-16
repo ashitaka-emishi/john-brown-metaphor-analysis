@@ -98,3 +98,33 @@ Stop and report when:
 - a required source is inaccessible;
 - a human gate is reached;
 - validation fails after reasonable repair attempts.
+
+## Methodology case-study instrumentation
+
+This repository also evaluates the scholarly process itself.
+
+Record a methodology event when a material action:
+
+- requires human approval;
+- changes corpus scope;
+- accepts, revises, or rejects an AI recommendation;
+- encounters a source, tool, copyright, provenance, or validation failure;
+- changes a definition, claim, thesis, or interpretation;
+- substitutes human judgment for automation;
+- or materially changes a paper.
+
+Record events in `case-study/process-events.csv`.
+
+Record human interventions in `case-study/intervention-log.csv`.
+
+Use `capture_mode=retrospective` only for events reconstructed from repository
+evidence. Use `capture_mode=prospective` for future events recorded during the
+active stage.
+
+Do not distort the historical research workflow to produce favorable
+methodology results.
+
+Research integrity takes precedence over methodology evaluation.
+
+The methodology paper has its own human findings and publication approval
+gates.

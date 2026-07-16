@@ -1,0 +1,67 @@
+---
+title: "The Scholarly Build System"
+subtitle: "A Governed Human-AI Method for Reproducible Interpretive Research"
+author: "Andrew Hammer"
+date: last-modified
+abstract: |
+  This manuscript is under development. It presents and evaluates a governed
+  human-AI scholarly build system through a case study of research on Abraham
+  Lincoln's Gettysburg Address.
+keywords:
+  - artificial intelligence
+  - scholarly method
+  - reproducible research
+  - digital humanities
+  - research compendium
+  - human-in-the-loop
+  - interpretive scholarship
+bibliography: references.bib
+---
+
+# Introduction
+
+# Related Practices
+
+## Reproducible research
+
+## Research compendia
+
+## Executable and dynamic documents
+
+## Argument mapping and provenance
+
+## AI-assisted scholarship
+
+# The Scholarly Build System
+
+## Research as a governed knowledge base
+
+## The artifact chain
+
+## Human scholarly authority
+
+## Goals, gates, and stop conditions
+
+## Machine validation and scholarly validity
+
+## Adversarial review
+
+# Case-Study Design
+
+## Historical research question
+
+## Repository architecture
+
+## Event and intervention logging
+
+## Evaluation criteria
+
+# Case-Study Findings
+
+This section must remain provisional until methodology findings are approved.
+
+# Discussion
+
+# Limitations
+
+# Conclusion

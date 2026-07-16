@@ -1,0 +1,13 @@
+intervention_id
+event_id
+timestamp
+initiator
+proposal
+human_response
+response_reason
+artifact_changed
+epistemic_effect
+accepted_status
+evidence_reference
+commit_sha
+notes

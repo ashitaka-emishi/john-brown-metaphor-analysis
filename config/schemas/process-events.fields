@@ -1,0 +1,15 @@
+event_id
+timestamp
+capture_mode
+stage
+actor
+action_type
+artifact
+proposal_or_action
+human_decision
+outcome
+error_or_risk
+methodological_significance
+evidence_reference
+commit_sha
+notes

@@ -2,6 +2,28 @@
 
 A Codex-assisted scholarly research project examining how the Gettysburg Address constructs war as national testing, sacrifice, obligation, and political rebirth.
 
+## Two linked scholarly outputs
+
+This repository now supports two related outputs:
+
+1. a historical study of Lincoln's Gettysburg Address and the nature of war;
+2. a methodology paper evaluating the governed human-AI process used to produce
+   that study.
+
+The historical project remains the active case study. Existing research files
+and goals retain their current meaning and location.
+
+The methodology track records process events, human interventions, failures,
+corrections, and thesis development. It does not treat the method as validated
+in advance.
+
+See:
+
+- `methodology/methodology.md`
+- `methodology/research-question.md`
+- `case-study/README.md`
+- `methodology-paper/methodology-paper.qmd`
+
 ## Project website
 
 The Quarto-generated project website is published with GitHub Pages at:
@@ -49,6 +71,14 @@ codex features enable goals
 7. `goals/60-final-publication.md`
 
 `goals/99-master-goal.md` is provided for later use after the staged workflow is proven.
+
+## Methodology goal sequence
+
+1. `goals/methodology/M00-methodology-foundation.md`
+2. `goals/methodology/M10-instrument-current-workflow.md`
+3. `goals/methodology/M20-evaluate-case-study.md`
+4. `goals/methodology/M30-draft-methodology-paper.md`
+5. `goals/methodology/M40-review-methodology.md`
 
 ## Research controls
 

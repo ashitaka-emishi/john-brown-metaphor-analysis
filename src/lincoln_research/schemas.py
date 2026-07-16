@@ -8,6 +8,11 @@ SCHEMA_FILES = {
     "claims.csv": "claims.fields",
 }
 
+CASE_STUDY_SCHEMA_FILES = {
+    "process-events.csv": "process-events.fields",
+    "intervention-log.csv": "intervention-log.fields",
+}
+
 
 def read_expected_fields(schema_path: Path) -> list[str]:
     return [
