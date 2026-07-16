@@ -1,0 +1,6 @@
+---
+title: "Publication Audit"
+description: "Audit summary for the public working-paper package."
+---
+
+{{< include outputs/publication-audit.md >}}

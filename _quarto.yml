@@ -3,6 +3,8 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - publication-audit.qmd
+    - reproducibility-report.qmd
   resources:
     - outputs/**
     - methodology-paper/methodology-paper.html

@@ -442,3 +442,21 @@ Run Goal 00 and stop at corpus approval.
 - Verified
   `https://ashitaka-emishi.github.io/lincoln-war-research-project/methodology-paper/methodology-paper.html`
   returns HTTP 200 and contains the methodology-paper title and abstract.
+
+## 2026-07-16 - Site artifact-link polish
+
+- Checkpoint scope: replace raw Markdown publication-package links on the
+  landing page with rendered HTML pages and clearer summaries, while preserving
+  the evidence appendix as a CSV download.
+- Read `outputs/publication-audit.md`, `outputs/reproducibility-report.md`,
+  `outputs/evidence-appendix.csv`, `_quarto.yml`, and `index.qmd`.
+- Added `publication-audit.qmd` and `reproducibility-report.qmd` as rendered
+  Quarto wrapper pages for the existing Markdown reports.
+- Updated `_quarto.yml` to render the new pages.
+- Updated `index.qmd` with a publication-package section summarizing the
+  publication audit, reproducibility report, and evidence appendix CSV.
+- `quarto render .` passed and produced rendered audit and reproducibility
+  report pages.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check -- . ':(exclude)_site/**'` passed.

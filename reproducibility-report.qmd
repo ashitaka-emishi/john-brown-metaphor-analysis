@@ -1,0 +1,6 @@
+---
+title: "Reproducibility Report"
+description: "Environment, command, and output checks for the working-paper package."
+---
+
+{{< include outputs/reproducibility-report.md >}}

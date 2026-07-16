@@ -25,9 +25,22 @@ made.
 
 - [Read the HTML working paper](outputs/paper.html)
 - [Download the PDF working paper](outputs/paper.pdf)
-- [Review the publication audit](outputs/publication-audit.md)
-- [Review the reproducibility report](outputs/reproducibility-report.md)
-- [Download the evidence appendix](outputs/evidence-appendix.csv)
+
+## Publication package
+
+The public package includes the working paper, its publication audit, a
+reproducibility report, and the evidence appendix used to check claims against
+the source-grounded matrix.
+
+- [Publication audit](publication-audit.html): citation coverage, quotation
+  cautions, source boundaries, claim coverage, review coverage, output checks,
+  and the release approval status.
+- [Reproducibility report](reproducibility-report.html): Python, pytest,
+  Quarto, render commands, test results, evidence counts, and reproduction
+  steps for the working-paper package.
+- [Evidence appendix CSV](outputs/evidence-appendix.csv): 32 evidence rows
+  exported from the evidence matrix, including passages, observations,
+  interpretations, alternative readings, confidence, and review status.
 
 ## Methodology working paper
 
