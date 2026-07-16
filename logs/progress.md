@@ -310,3 +310,35 @@ Run Goal 00 and stop at corpus approval.
   `outputs/paper.pdf`.
 - Verified `https://ashitaka-emishi.github.io/lincoln-war-research-project/outputs/paper.html`
   returns HTTP 200.
+
+## 2026-07-16 - Methodology M20 case-study evaluation
+
+- Checkpoint scope: evaluate the methodology after the historical project's
+  evidence coding, thesis formation, adversarial review, and public
+  working-paper release.
+- Read `AGENTS.md`, `goals/methodology/M20-evaluate-case-study.md`,
+  `methodology/evaluation-plan.md`, `methodology/methodology.md`,
+  `methodology/artifact-model.md`, `methodology/human-ai-boundary.md`,
+  `methodology/limitations.md`, process-event logs, intervention logs, source
+  register, evidence matrix, claims table, and relevant reviews.
+- Measured the case-study record: 27 process events, 13 interventions, 42
+  source-register rows, 32 evidence rows, 9 claims, 8 disconfirming evidence
+  rows, 11 retrospective process events, and 16 prospective process events.
+- Created `methodology/case-study-findings.md` covering traceability, error
+  detection, successful and failed AI contributions, documentation burden,
+  counterevidence-driven change, retrospective/prospective capture quality,
+  human authority, reproducibility, and supported/unsupported methodological
+  claims.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
+- Stop condition reached: methodology-findings approval gate. The scholar must
+  approve, revise, or reject the findings before methodology-paper drafting.
+- Scholar approved `methodology/case-study-findings.md` as the M20 methodology
+  findings.
+- Updated `methodology/case-study-findings.md`, `case-study/process-events.csv`,
+  and `case-study/intervention-log.csv` to record that the methodology-findings
+  approval gate is cleared.
+- `.venv/bin/python -m lincoln_research validate` passed after approval.
+- `.venv/bin/pytest` passed after approval: 10 tests passed.
+- `git diff --check` passed after approval.
