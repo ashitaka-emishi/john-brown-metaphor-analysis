@@ -74,3 +74,31 @@ Run Goal 00 and stop at corpus approval.
 - Updated repository instructions and README without changing historical research scope.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
+
+## 2026-07-16 - Goal 20 evidence coding
+
+- Checkpoint scope: begin evidence-matrix coding from the acquired Goal 10
+  corpus while prospectively logging material methodology events.
+- Read `AGENTS.md`, the `$scholarly-research` skill,
+  `goals/20-evidence-coding.md`, and `research/dossier/research-dossier.md`.
+- Populated the coded evidence matrix in
+  `research/data/evidence-matrix.csv` with stable `OBS-` identifiers.
+- Added working `CLM-` claim records in `research/data/claims.csv` so
+  thesis-bearing claims map to supporting and counter evidence.
+- Coded Gettysburg Address close-reading rows, manuscript-variant rows,
+  Wills/ceremonial context, Everett comparison rows, comparative Lincoln rows
+  from Lyceum through the Last Public Address, and limited
+  reception/counterevidence rows.
+- Produced `research/notes/coding-memo.md` with codebook use, initial
+  findings, variant comparison, and open limits.
+- Produced `research/reviews/coding-review.md` with source/interpretation
+  separation checks, alternative-reading checks, and residual risks.
+- Current evidence limits: Bliss Copy quotation use still needs manuscript-image
+  second pass; OCR-derived pamphlet/newspaper rows need page-image checks;
+  `SRC-0011` remains derivative pending original newspaper image.
+- Consistency audit: 32 evidence rows, 9 claims, no missing claim-evidence
+  references, all evidence rows include alternative readings, and
+  disconfirming rows remain visible.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
