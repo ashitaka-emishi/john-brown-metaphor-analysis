@@ -366,3 +366,35 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check` passed.
+
+## 2026-07-16 - Methodology M40 adversarial review
+
+- Checkpoint scope: conduct adversarial review of the methodology paper and
+  its claimed originality.
+- Read `goals/methodology/M40-review-methodology.md`, `AGENTS.md`,
+  `methodology-paper/methodology-paper.qmd`, process logs, intervention logs,
+  and methodology artifacts.
+- Created `methodology/methodology-review.md` with decisions for all required
+  critiques.
+- Accepted or partially accepted critiques about originality, artifact-model
+  mechanization, gate effectiveness, developmental-case bias, observer effect,
+  one-case evidence, documentation cost, and AI disclosure.
+- Rejected with caution the claim that the paper simply confuses
+  reproducibility with validity, while strengthening the conclusion to preserve
+  that distinction.
+- Revised `methodology-paper/methodology-paper.qmd` to narrow originality
+  claims, add an AI disclosure subsection, define the artifact chain as an
+  audit device rather than a truth procedure, distinguish gate presence from
+  gate effectiveness, describe developmental-case bias and observer effect, add
+  a proportionality principle for documentation burden, and strengthen the
+  reproducibility-versus-validity distinction.
+- `quarto render methodology-paper/methodology-paper.qmd` passed and refreshed
+  `methodology-paper/methodology-paper.html`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check -- . ':(exclude)methodology-paper/methodology-paper.html'
+  ':(exclude)methodology-paper/methodology-paper_files/**'` passed.
+- Rechecked M40 after continuation: all required critiques remain represented
+  in `methodology/methodology-review.md`, the methodology paper contains the
+  corresponding revisions, `quarto render methodology-paper/methodology-paper.qmd`
+  passed, validation passed, tests passed, and authored-file diff check passed.

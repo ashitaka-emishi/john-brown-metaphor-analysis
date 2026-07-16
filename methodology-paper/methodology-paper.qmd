@@ -42,20 +42,25 @@ and blur the line between a source's language and a model's inference.
 This paper proposes a different use of AI in interpretive scholarship. The
 central claim is that AI should not be treated as an accountable scholar or as a
 machine that authorizes interpretation. It can, however, serve as a subordinate
-research and engineering assistant inside a governed scholarly build system. In
-such a system, the paper is not the only research object. It is a publication
-view generated from a larger version-controlled artifact chain: question,
-corpus, source, passage, observation, interpretation, claim, counterevidence,
-review, decision, and output.
+research and engineering assistant inside a governed scholarly build system.
+The term "scholarly build system" is not meant to announce a wholly new genre
+of research object. It names a governance adaptation of existing practices in
+reproducible research, research compendia, provenance tracking, argument
+mapping, and human-in-the-loop review. In such a system, the paper is not the
+only research object. It is a publication view generated from a larger
+version-controlled artifact chain: question, corpus, source, passage,
+observation, interpretation, claim, counterevidence, review, decision, and
+output.
 
 The model is evaluated through a single case study: a repository-based project
 on how Lincoln's Gettysburg Address transforms soldiers' deaths into public
 obligation. That historical project produced an approved public working-paper
 package, but the methodology paper does not treat that success as universal
 validation. The case is one humanities project, conducted by one scholar with
-one AI assistant in one repository. Its value is diagnostic rather than
-statistical. It shows what the method made easier, what it caught, what it
-failed to solve, and what burdens it introduced.
+one AI assistant in one repository. It is also a developmental case: the method
+was refined while the case was being conducted. Its value is diagnostic rather
+than statistical. It shows what the method made easier, what it caught, what it
+failed to solve, what biases it introduced, and what burdens it created.
 
 The argument is deliberately modest. A scholarly build system can improve
 traceability, accountability, reproducibility, and reviewability. It cannot make
@@ -95,10 +100,11 @@ packaging data and code, the repository packages evidence, claims,
 counterevidence, reviews, human approvals, validation checks, and publication
 artifacts.
 
-This adaptation is not trivial. A research compendium can make a computation
-rerunnable, but interpretive scholarship also requires making uncertainty
-legible. The repository must record not only the sources used but also blocked
-sources, derivative transcriptions, OCR limits, manuscript variants, and
+This adaptation is not trivial, but neither is it a claim of absolute
+originality. A research compendium can make a computation rerunnable, but
+interpretive scholarship also requires making uncertainty legible. The
+repository must record not only the sources used but also blocked sources,
+derivative transcriptions, OCR limits, manuscript variants, and
 counterarguments. A humanities compendium that contains only polished evidence
 would be too clean. The case study suggests that failures and caveats are not
 noise in the system; they are part of the scholarly record.
@@ -129,9 +135,11 @@ It is a row or record linked to evidence, counterevidence, confidence, review
 notes, and draft location.
 
 This does not mean that all interpretation can be reduced to a table. Tables
-can oversimplify ambiguity. But tables can force distinctions that prose may
-hide: source text versus observation, observation versus inference, confidence
-versus assertion, and support versus counterevidence.
+can oversimplify ambiguity, and the most important historical judgment may
+remain in the prose explanation rather than in any cell. But tables can force
+distinctions that prose may hide: source text versus observation, observation
+versus inference, confidence versus assertion, and support versus
+counterevidence.
 
 ## AI-Assisted Scholarship
 
@@ -147,6 +155,17 @@ The model therefore treats AI neither as a forbidden contaminant nor as a
 co-author. It is closer to a research instrument and engineering assistant. Its
 proper use depends on containment: explicit tasks, visible artifacts, repeatable
 checks, and human gates.
+
+## AI Disclosure
+
+AI disclosure in this model should report more than the name of a tool. It
+should identify the kinds of work AI performed, the decisions it did not make,
+the artifacts through which its work can be inspected, and the human gates at
+which its outputs were accepted, revised, or rejected. In the case study, AI
+helped acquire and normalize sources, propose evidence organization, generate
+drafts and reviews, run checks, and prepare publication artifacts. It did not
+approve corpus scope, settle the thesis, accept publication, or assume
+responsibility for the paper's claims. Those decisions remained human.
 
 # The Scholarly Build-System Model
 
@@ -165,6 +184,10 @@ misidentified. A passage may be misquoted. An observation may smuggle in
 interpretation. An interpretation may overgeneralize. A claim may ignore
 counterevidence. A paper may make a provisional inference sound settled. The
 system's purpose is not to eliminate those risks but to make them inspectable.
+The artifact chain is therefore an audit device, not a truth procedure.
+Historical meaning is not produced by moving data through a pipeline. The chain
+only records enough of the movement to let a human reader ask where a claim
+came from and where it might fail.
 
 In the Lincoln case, the source register recorded source identity, provenance,
 local paths, dates, hashes, rights status, acquisition method, verification
@@ -196,6 +219,15 @@ required artifacts, completion criteria, and stop conditions. Human gates
 prevent AI from silently proceeding past decisions that belong to the scholar:
 corpus approval, thesis approval, publication approval, and methodology
 findings approval.
+
+Gate effectiveness must be judged by what gates changed or stopped, not by
+their ceremonial presence in a workflow. In the case study, the gates mattered
+because acquisition paused before corpus approval, thesis synthesis paused
+before drafting, publication did not proceed until explicit approval, and
+methodology findings were not treated as drafting evidence until approved. At
+the same time, the intervention log records accepted interventions only, so the
+case provides limited evidence about how the gates would perform against a
+major rejected AI recommendation.
 
 Stop conditions are not failures of productivity. They are part of the
 governance model. Work must stop when provenance is uncertain, a quotation
@@ -301,6 +333,12 @@ The logs include both retrospective and prospective capture. Retrospective rows
 were reconstructed from progress logs and commit history for earlier work.
 Prospective rows were recorded during later goals.
 
+This design creates bias. The method was being evaluated while it was also
+being developed and used. Prospective logging likely changed the process by
+making decisions more explicit, increasing attention to auditable artifacts,
+and adding maintenance work. That observer effect is partly the point of the
+method, but it prevents the case from serving as an independent validation.
+
 ## Evaluation Criteria
 
 The evaluation plan asks whether the system improved traceability, error
@@ -366,6 +404,10 @@ stale metadata, committing output dependencies, and updating the public landing
 page. The burden was justified in this case because it caught errors and made
 decisions reviewable, but it is not free. A larger project would need stronger
 rules for what must be logged and what can remain ordinary working context.
+The method therefore needs a proportionality principle: documentation should be
+as heavy as the evidentiary risk, public stakes, and complexity require, and no
+heavier. For a short, low-risk interpretive exercise, the full apparatus could
+cost more than it contributes.
 
 ## Counterevidence and Thesis Change
 
@@ -393,6 +435,10 @@ build-system metaphor if the metaphor is kept under control. The word "build"
 should not imply that interpretation is compiled from evidence in a purely
 mechanical way. It means that the visible paper can be generated from a
 maintained system of artifacts whose transformations are reviewable.
+The contribution, therefore, is not the invention of the research compendium
+under a new name. It is a proposed governance layer for cases where AI-assisted
+work, interpretive judgment, source uncertainty, and public release need to be
+coordinated in one inspectable repository.
 
 The most important gain was not speed, although repetitive tasks were
 accelerated. The most important gain was accountable slowness: the system made
@@ -415,11 +461,24 @@ logging, but methodologically it leaves a gap. A mature version of the process
 should log rejected, deferred, and materially revised recommendations more
 explicitly.
 
+The paper's own AI disclosure is also incomplete if it is reduced to a general
+statement that AI assisted the project. A useful disclosure should say that AI
+generated drafts, reviews, scripts, logs, and render checks; that the human
+scholar approved thesis and publication decisions; and that repository
+artifacts preserve many, but not all, of the decision points. The absence of a
+full conversational transcript is itself a limit on process reproducibility.
+
 # Limitations
 
 This paper makes no claim of universal validation. It evaluates one case study:
 one historical project, one repository, one scholar, one AI-assisted workflow,
 and one public working-paper release.
+
+The case is not independent of the method. The methodology was articulated,
+instrumented, and revised during the same project used to evaluate it. That
+makes the case useful for design research and reflective methodology, but weak
+as evidence that the same system will work in other fields, with other
+scholars, or under adversarial institutional conditions.
 
 The historical paper itself remains a working paper with disclosed source
 limits. The Bliss Copy transcription needs a second manuscript-image check
@@ -433,6 +492,10 @@ formalized. Schemas may oversimplify ambiguity. Process logging may impose
 burden and alter behavior. Validation tests check structural integrity, not
 interpretive truth. AI may still generate plausible but false claims if the
 governance system fails or if human review becomes superficial.
+Human gates may also become ceremonial if the human reviewer lacks time,
+expertise, or willingness to reject AI-generated work. In this case, gates
+clearly delayed and authorized transitions, but the accepted-only intervention
+record cannot prove resistance under stronger pressure.
 
 Finally, external reproducibility is incomplete. Local transformations can be
 rerun, but source availability depends on external repositories, access rules,
@@ -447,9 +510,12 @@ outputs more visible to inspection. It assigns AI a bounded role in research
 engineering and review while preserving human authority over meaning and
 publication.
 
-The Lincoln case suggests that such a system can improve traceability, catch
-errors, preserve uncertainty, and narrow overbroad claims. It also shows the
-cost: documentation burden, maintenance work, incomplete external
-reproducibility, and the continued need for human judgment. The method is best
-understood not as a replacement for scholarship but as a way to make scholarly
-judgment more accountable to its own evidence.
+The Lincoln case suggests, but does not prove generally, that such a system can
+improve traceability, catch errors, preserve uncertainty, and narrow overbroad
+claims. It also shows the cost: documentation burden, maintenance work,
+observer effects, incomplete external reproducibility, and the continued need
+for human judgment. Reproducibility here means that a reader can inspect and
+rerun parts of the apparatus; it does not mean that the interpretation is
+therefore valid. The method is best understood not as a replacement for
+scholarship but as a way to make scholarly judgment more accountable to its own
+evidence.
