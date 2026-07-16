@@ -208,3 +208,41 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check` passed.
+
+## 2026-07-16 - Goal 60 final publication package
+
+- Checkpoint scope: create a reproducible, source-audited publication-review
+  package and stop at the publication approval human gate.
+- Read `AGENTS.md`, the `$scholarly-research` skill,
+  `goals/60-final-publication.md`, the research dossier, the current draft,
+  source register, claim map, evidence matrix, and prior Goal 40/50 reviews.
+- Confirmed current paper and bibliography are already finalized for package
+  preparation after Goal 50 narrowing; no additional thesis-expanding edits
+  were made.
+- Ran citation and claim audits: 25 citation keys used, 25 bibliography
+  entries, no missing keys, no unused keys, 32 evidence rows, 9 claims, and no
+  broken claim-to-evidence references.
+- Exported `outputs/evidence-appendix.csv` from
+  `research/data/evidence-matrix.csv` with 32 evidence rows.
+- Created `outputs/publication-readme.md`,
+  `outputs/reproducibility-report.md`, and `outputs/publication-audit.md`.
+- Publication package excludes raw corpus files, browser data, secrets,
+  cookies, and paywalled or restricted source files.
+- Known limitations remain recorded for publication review: `SRC-0005` Bliss
+  Copy manuscript-image second pass, `SRC-0006` OCR-derived Everett pamphlet
+  quote checks, `SRC-0011` derivative Dickinson transcription pending original
+  newspaper image, and `SRC-0041` noisy OCR used only for limited reception
+  framing.
+- `outputs/paper.html`, `outputs/paper.pdf`,
+  `outputs/publication-readme.md`, `outputs/reproducibility-report.md`,
+  `outputs/publication-audit.md`, and `outputs/evidence-appendix.csv` all
+  exist after the final render/package check.
+- `quarto render paper/paper.qmd` passed and produced HTML/PDF outputs;
+  Quarto emitted the same noncritical path warning about
+  `outputs/paper_files/libs`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
+- Stop condition reached: publication approval human gate. Do not publish,
+  upload, push externally, or otherwise distribute the package without
+  explicit scholar approval.
