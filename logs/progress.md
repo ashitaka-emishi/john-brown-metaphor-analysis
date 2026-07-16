@@ -102,3 +102,43 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check` passed.
+
+## 2026-07-16 - Goal 30 analysis and thesis
+
+- Checkpoint scope: analyze the coded evidence matrix, test the working thesis
+  against disconfirmation, and stop at the thesis approval gate.
+- Read `AGENTS.md`, the `$scholarly-research` skill,
+  `goals/30-analysis-and-thesis.md`, `research/dossier/research-dossier.md`,
+  `research/data/evidence-matrix.csv`, `research/data/claims.csv`,
+  `research/notes/coding-memo.md`, and
+  `research/reviews/coding-review.md`.
+- Updated `research/data/claims.csv` so each claim points to the Goal 30
+  analysis/provisional-thesis artifacts and has `provisional-thesis` status.
+- Created `research/notes/argument-map.md` with thesis clauses, support,
+  counterevidence, confidence levels, and distinctions between direct
+  Gettysburg evidence and comparative evidence.
+- Created `research/reviews/disconfirmation-review.md` with six falsification
+  tests and six steelmanned competing interpretations.
+- Created `research/notes/provisional-thesis.md` with the proposed thesis,
+  clause-by-clause evidence map, limits, and proposed revisions from the dossier
+  thesis.
+- Created `research/notes/findings.md` with high-, medium-, and low-confidence
+  findings.
+- Consistency audit: 9 claims, no missing claim-evidence references, and all
+  four Goal 30 deliverables are present.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
+- Stop condition reached: thesis approval human gate. The thesis, strongest
+  counterargument, unresolved evidence, and proposed revisions must be presented
+  to the scholar before proceeding to drafting.
+- Scholar approved the qualified thesis. Updated `research/notes/provisional-thesis.md`,
+  `research/notes/findings.md`, and `research/data/claims.csv` to record
+  thesis approval while preserving the stated limits.
+- Final completion audit: 9 claims, all in `approved-thesis` status; no missing
+  claim-evidence references; all four Goal 30 deliverables are present.
+- `.venv/bin/python -m lincoln_research validate` passed after approval.
+- `.venv/bin/pytest` passed after approval: 10 tests passed.
+- `git diff --check` passed after approval.
+- Created `research/notes/thesis-approval.md` from the scholar's approval so
+  Goal 40's drafting precondition is explicit.
