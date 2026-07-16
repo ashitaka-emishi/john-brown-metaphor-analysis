@@ -433,3 +433,12 @@ Run Goal 00 and stop at corpus approval.
 - `git diff --check -- . ':(exclude)_site/**'
   ':(exclude)methodology-paper/methodology-paper.html'
   ':(exclude)methodology-paper/methodology-paper_files/**'` passed.
+- Committed and pushed methodology working-paper site update as `3cfbb3d`.
+- GitHub Pages workflow `29500718074` completed successfully for commit
+  `3cfbb3d71d115f4ad22cebb377f59f1a95cd7eae`.
+- Verified the live landing page with a cache-busting request: it shows the
+  methodology working-paper section, link, single-case status, and disclosed
+  limitations.
+- Verified
+  `https://ashitaka-emishi.github.io/lincoln-war-research-project/methodology-paper/methodology-paper.html`
+  returns HTTP 200 and contains the methodology-paper title and abstract.
