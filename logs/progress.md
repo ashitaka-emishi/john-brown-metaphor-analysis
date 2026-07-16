@@ -284,3 +284,21 @@ Run Goal 00 and stop at corpus approval.
   Quarto emitted the same noncritical path warning about
   `outputs/paper_files/libs`.
 - `git diff --check` passed after approval.
+
+## 2026-07-16 - Public landing page update
+
+- Checkpoint scope: update the GitHub Pages landing page to reflect the
+  approved public working-paper package.
+- Verified the live page still described the project as a scaffold with source
+  acquisition incomplete and the paper as an outline.
+- Updated `index.qmd` to describe the current public working-paper status,
+  link to the approved outputs, and preserve disclosed limitations.
+- Updated `_quarto.yml` so Quarto copies `outputs/**` into `_site`, allowing
+  the GitHub Pages deployment to serve `outputs/paper.html`,
+  `outputs/paper.pdf`, audit files, reproducibility report, and evidence
+  appendix from the site.
+- `quarto render .` passed and copied the approved output package into
+  `_site/outputs/`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check -- . ':(exclude)_site/**'` passed.

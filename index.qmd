@@ -1,25 +1,59 @@
 ---
 title: "Lincoln, Gettysburg, and the Nature of War"
-subtitle: "A source-grounded research project"
-description: "How the Gettysburg Address turns soldiers' deaths into an obligation to preserve and refound the nation."
+subtitle: "A public working-paper package"
+description: "How the Gettysburg Address turns soldiers' deaths into an obligation to preserve the nation and seek a new birth of freedom."
 ---
 
 ## Research question
 
 > How does the Gettysburg Address transform the deaths of soldiers into a sacred obligation to preserve and refound the nation, and what does this reveal about Lincoln's understanding of the nature of war?
 
-This project is building a traceable corpus and evidence base for a scholarly paper on Abraham Lincoln's wartime rhetoric. It examines how the Gettysburg Address relates soldier death, national survival, democratic obligation, and political rebirth while testing those interpretations against Lincoln's other writings, historical context, and disconfirming evidence.
+This project has produced an approved public working-paper package on Abraham
+Lincoln's wartime rhetoric. It examines how the Gettysburg Address relates
+soldier death, national survival, democratic obligation, and political rebirth
+while testing those interpretations against Lincoln's other writings,
+historical context, and disconfirming evidence.
 
-::: {.callout-important title="Research status"}
-The research dossier is a provisional specification, not verified evidence. No source quotation or interpretive conclusion should be treated as publication-ready until it has passed the project's source, claim, and human-approval gates.
+::: {.callout-important title="Publication status"}
+The working paper is public with disclosed limitations. It is not a
+journal-final, quotation-final, or limitation-free publication. Several
+quotation-final checks remain before a stronger publication claim should be
+made.
 :::
+
+## Working paper
+
+- [Read the HTML working paper](outputs/paper.html)
+- [Download the PDF working paper](outputs/paper.pdf)
+- [Review the publication audit](outputs/publication-audit.md)
+- [Review the reproducibility report](outputs/reproducibility-report.md)
+- [Download the evidence appendix](outputs/evidence-appendix.csv)
 
 ## Method
 
 The workflow separates source text, observation, inference, and conclusion. It preserves manuscript variants, records contradictory evidence, and distinguishes Lincoln's public rhetoric from claims about private belief. Primary sources are preferred for claims about Lincoln's language and actions.
 
-The staged process covers corpus acquisition, evidence coding, analysis and thesis review, paper drafting, adversarial review, and final publication approval. Project data and validation tooling are available in the [public GitHub repository](https://github.com/ashitaka-emishi/lincoln-war-research-project).
+The staged process covers corpus acquisition, evidence coding, analysis and
+thesis review, paper drafting, adversarial review, publication-package audit,
+and human approval for release as a public working paper. Project data,
+validation tooling, and committed publication artifacts are available in the
+[public GitHub repository](https://github.com/ashitaka-emishi/lincoln-war-research-project).
 
 ## Current state
 
-The project scaffold is initialized. Source acquisition and verification have not yet been completed, and the paper remains an outline pending approved evidence and claims.
+The historical track has completed corpus acquisition, evidence coding,
+analysis and thesis review, drafting, adversarial review, and final
+publication-package preparation. The scholar approved the Goal 60 package for
+release as a public working-paper package with disclosed limitations.
+
+Known limits remain visible in the publication package:
+
+- the Bliss Copy transcription should receive a second manuscript-image check
+  before quotation-final use;
+- Everett pamphlet quotations should be checked against page images because
+  the normalized text is OCR-derived;
+- the Harrisburg *Patriot and Union* criticism remains a Dickinson derivative
+  transcription pending original newspaper image review;
+- noisy newspaper OCR is used only for limited reception framing;
+- secondary-source engagement remains intentionally limited and should be
+  broadened before journal submission.
