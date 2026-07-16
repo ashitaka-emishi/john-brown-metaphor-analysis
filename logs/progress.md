@@ -23,6 +23,35 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/pytest` passed: 3 tests passed.
 - Stop condition reached: corpus approval human gate.
 
+## 2026-07-16 - Goal 10 corpus acquisition
+
+- Checkpoint scope: verify prerequisites before acquiring or normalizing any corpus material.
+- Read `AGENTS.md`, the `$scholarly-research` skill, `goals/10-corpus-acquisition.md`, and `research/dossier/research-dossier.md`.
+- Stop condition reached: Goal 10 precondition is not satisfied because `research/notes/corpus-approval.md` is not present.
+- No sources were acquired, normalized, hashed, or marked verified during this checkpoint.
+- Continuation recheck confirmed the approval file is still absent; acquisition remains paused at the same gate.
+- Scholar directed creation of `research/notes/corpus-approval.md`; Goal 10 precondition is now satisfied.
+- Created the approval record with lawful-access, provenance, raw/normalized separation, variant-preservation, and stop-condition limits.
+- Acquired LOC PDFs for `SRC-0001` Nicolay Copy and `SRC-0002` Hay Copy using `scripts/fetch_source.py`; normalized separate text with `pdftotext` and `scripts/normalize_text.py`.
+- Updated `research/data/source-register.csv` for `SRC-0001` and `SRC-0002` with local paths, retrieval date, hashes, rights status, acquisition method, and verified status.
+- Added local `.env` configuration for `LINCOLN_RESEARCH_USER_AGENT`; `.env` remains ignored by Git.
+- Chrome-assisted discovery setup was requested for CAPTCHA/search-gated sources. Chrome is installed and running, and the native host manifest is correct, but the Codex Chrome Extension is installed/enabled in Chrome `Profile 2` while the selected profile is `Default`, where the extension is not installed. Browser-assisted scraping is paused until the selected Chrome profile has the extension enabled or the profile selection is corrected.
+- Chrome DevTools MCP was noted as installed in VS Code, but no `chrome-devtools` MCP namespace is exposed to this Codex session; exact tool discovery surfaced only the bundled Chrome extension route and Node browser runtime.
+- Acquired authoritative representations for Gettysburg manuscript witnesses `SRC-0003` Everett Copy from ALPLM, `SRC-0004` Bancroft/Cornell Copy from Cornell University Library, and raw `SRC-0005` Bliss/White House Copy manuscript imagery from Smithsonian/NMAH.
+- Acquired `SRC-0006` Everett/ceremony pamphlet from Internet Archive and `SRC-0007` Wills invitation from LOC; identified the same 1864 pamphlet as the source for `SRC-0008` ceremony order/program and `SRC-0009` prayers/hymns/dirge/benediction.
+- Verification checkpoint: source identity checks used file type, PDF metadata, repository metadata, and known phrase searches. Everett and Bancroft normalized text passed identity-level checks; OCR for the Smithsonian Bliss manuscript failed badly and was not retained.
+- Stop condition reached: `SRC-0005` has verified raw provenance and hash, but normalized text requires human transcription from the manuscript image before it can be marked verified. The scholar offered to transcribe handwriting if needed.
+- Continuation recheck confirmed the same stop condition remains active: `SRC-0005` still lacks reliable normalized text. Added `research/notes/bliss-copy-transcription-needed.md` to identify the raw source, expected normalized-text path, and post-transcription verification checks.
+- Blocked-audit recheck confirmed the same stop condition remains active for a third consecutive Goal 10 turn: `SRC-0005` still lacks reliable normalized text. Goal 10 cannot proceed without human transcription or another legally preservable authoritative transcript.
+- Created `research/corpus/primary/normalized/SRC-0005-gettysburg-address-bliss-copy-smithsonian-transcript.txt` as the human transcription target with page markers. Opened the target file in VS Code and the raw Smithsonian PDF in Chrome; automated horizontal window arrangement was blocked by macOS assistive-access permissions.
+- Scholar completed and approved the `SRC-0005` human transcription. Updated the source register with the normalized path and raw/normalized hashes; replaced the old transcription-needed note with `research/notes/bliss-copy-transcription.md`. The Gettysburg manuscript-witness stop condition is cleared for acquisition purposes, with quotation-level page-image verification still required.
+- Encoded repeatable LOC Chronicling America support in `src/lincoln_research/loc_chronicling.py`, `scripts/acquire_chronicling_page.py`, and `scripts/extract_chronicling_text.py`; added focused tests for URL construction and full-text extraction.
+- Acquired and normalized `SRC-0040` Dickinson House Divided reception guide as a discovery source only.
+- Acquired and normalized two public issue-level reception examples from LOC Chronicling America: `SRC-0041` New-York Daily Tribune, 1863-11-20, and `SRC-0042` Union County Star and Lewisburg Chronicle, 1863-11-27.
+- Updated `SRC-0010` as a partially verified reception sampling frame and marked `SRC-0011` Harrisburg Patriot/Patriot and Union criticism blocked because issue-level access was not legally/reliably available in this environment; retrospective summaries were not treated as primary evidence.
+- Produced `research/notes/corpus-report.md` documenting acquired corpus, repeatable commands, OCR limits, and reception blocks.
+- Scholar approved using the Dickinson House Divided transcription of `SRC-0011` pending the original newspaper image. Downloaded the Dickinson record, extracted a normalized derivative transcription, and updated `SRC-0011` to `verified-derivative-transcription` with page-image verification still pending for final quotation use.
+
 ## 2026-07-15 — Public repository and project website
 
 - Publication approval received through the scholar's explicit instruction to create and push a public GitHub repository.
