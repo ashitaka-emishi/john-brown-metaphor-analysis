@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Validate research data",
+      "type": "shell",
+      "command": "python -m lincoln_research validate",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "pytest",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Render paper",
+      "type": "shell",
+      "command": "quarto render paper/paper.qmd",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

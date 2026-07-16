@@ -1,0 +1,12 @@
+project:
+  id: lincoln-war
+  title: War as Sacrifice, Trial, and National Rebirth
+  question: >-
+    How does the Gettysburg Address transform the deaths of soldiers into a
+    sacred obligation to preserve and refound the nation, and what does this
+    reveal about Lincoln's understanding of the nature of war?
+  citation_style: chicago-author-date
+  human_gates:
+    - corpus_approval
+    - thesis_approval
+    - publication_approval

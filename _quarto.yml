@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+
+website:
+  title: "Lincoln, Gettysburg, and the Nature of War"
+  description: "A source-grounded study of how the Gettysburg Address turns soldiers' deaths into an obligation to preserve and refound the nation."
+  site-url: "https://ashitaka-emishi.github.io/lincoln-war-research-project/"
+  repo-url: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
+  repo-actions: [source, issue]
+  navbar:
+    right:
+      - text: "GitHub"
+        href: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
+  page-footer:
+    center: "A source-grounded scholarly research project"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto

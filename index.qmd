@@ -1,0 +1,25 @@
+---
+title: "Lincoln, Gettysburg, and the Nature of War"
+subtitle: "A source-grounded research project"
+description: "How the Gettysburg Address turns soldiers' deaths into an obligation to preserve and refound the nation."
+---
+
+## Research question
+
+> How does the Gettysburg Address transform the deaths of soldiers into a sacred obligation to preserve and refound the nation, and what does this reveal about Lincoln's understanding of the nature of war?
+
+This project is building a traceable corpus and evidence base for a scholarly paper on Abraham Lincoln's wartime rhetoric. It examines how the Gettysburg Address relates soldier death, national survival, democratic obligation, and political rebirth while testing those interpretations against Lincoln's other writings, historical context, and disconfirming evidence.
+
+::: {.callout-important title="Research status"}
+The research dossier is a provisional specification, not verified evidence. No source quotation or interpretive conclusion should be treated as publication-ready until it has passed the project's source, claim, and human-approval gates.
+:::
+
+## Method
+
+The workflow separates source text, observation, inference, and conclusion. It preserves manuscript variants, records contradictory evidence, and distinguishes Lincoln's public rhetoric from claims about private belief. Primary sources are preferred for claims about Lincoln's language and actions.
+
+The staged process covers corpus acquisition, evidence coding, analysis and thesis review, paper drafting, adversarial review, and final publication approval. Project data and validation tooling are available in the [public GitHub repository](https://github.com/ashitaka-emishi/lincoln-war-research-project).
+
+## Current state
+
+The project scaffold is initialized. Source acquisition and verification have not yet been completed, and the paper remains an outline pending approved evidence and claims.
