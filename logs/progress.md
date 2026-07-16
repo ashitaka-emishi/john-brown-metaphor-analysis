@@ -246,3 +246,41 @@ Run Goal 00 and stop at corpus approval.
 - Stop condition reached: publication approval human gate. Do not publish,
   upload, push externally, or otherwise distribute the package without
   explicit scholar approval.
+
+## 2026-07-16 - Publication approval review
+
+- Checkpoint scope: review the Goal 60 package in `outputs/` and determine
+  whether it is ready for scholar publication approval.
+- Read `AGENTS.md`, the `$scholarly-research` skill, Goal 60 package files,
+  and the current repository state.
+- Corrected stale package metadata in `outputs/publication-readme.md` and
+  `outputs/reproducibility-report.md` so the audited commit is
+  `9a4ba49f077d2b9ec60533e953868791ed980f46`.
+- Created `research/reviews/publication-approval-review.md`.
+- Recommendation: approve only as a transparent public working-paper package
+  with disclosed limitations. Do not treat as journal-final or
+  quotation-final until page-image checks are completed for `SRC-0005`,
+  `SRC-0006`, `SRC-0011`, and relevant newspaper quotations.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
+- Publication approval remains a human decision under `AGENTS.md`. Stop at the
+  human gate until the scholar explicitly approves publication of the package
+  and the intended release type.
+- Scholar approved publication of the Goal 60 package as a public working-paper
+  package with the disclosed limitations, including committing, pushing, and
+  publishing only the approved outputs.
+- Updated `outputs/publication-readme.md`, `outputs/publication-audit.md`, and
+  `research/reviews/publication-approval-review.md` to record the approved
+  release type and to clarify that this approval does not cover journal-final,
+  quotation-final, or limitation-free publication.
+- Confirmed `outputs/paper.html` references `outputs/paper_files/`; those
+  Quarto support assets are approved output dependencies and must be committed
+  with the HTML manuscript.
+- `.venv/bin/python -m lincoln_research validate` passed after approval.
+- `.venv/bin/pytest` passed after approval: 10 tests passed.
+- `quarto render paper/paper.qmd` passed after approval and refreshed
+  `outputs/paper.html`, `outputs/paper.pdf`, and `outputs/paper_files/`;
+  Quarto emitted the same noncritical path warning about
+  `outputs/paper_files/libs`.
+- `git diff --check` passed after approval.
