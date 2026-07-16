@@ -8,6 +8,21 @@ Scaffold initialized. No research source is yet verified.
 
 Run Goal 00 and stop at corpus approval.
 
+## 2026-07-16 - Goal 00 research foundation
+
+- Checkpoint scope: convert the dossier into a controlled research plan without treating its claims as verified evidence.
+- Read `AGENTS.md`, the `$scholarly-research` skill, `goals/00-research-foundation.md`, and `research/dossier/research-dossier.md`.
+- Expanded `research/data/source-register.csv` to inventory the dossier's proposed Gettysburg manuscripts, ceremony/context sources, Lincoln comparative corpus, reception sources, secondary works, and online source guides.
+- All source-register rows remain `unverified`; unresolved source identities, provenance gaps, rights issues, and copyrighted secondary works are marked rather than silently resolved.
+- Completed `research/notes/question-and-scope.md` with research question, unit of analysis, temporal boundaries, public/private distinction, Civil War/all-war distinction, and an operational definition of sacrifice.
+- Completed `research/notes/method.md` with source hierarchy, acquisition/preservation rules, textual-variant method, coding method, claim control, comparative method, reception method, adversarial review, and human gates.
+- Completed `research/notes/source-acquisition-plan.md` with authoritative-repository priorities, phased acquisition plan, risks, exclusions, and proposed corpus for approval.
+- Created `research/notes/dossier-claim-inventory.md` to separate provisional dossier claims from verified evidence and identify disconfirming tests.
+- Mechanical CSV check passed: 40 source rows, 16 schema columns, no malformed rows.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 3 tests passed.
+- Stop condition reached: corpus approval human gate.
+
 ## 2026-07-15 — Public repository and project website
 
 - Publication approval received through the scholar's explicit instruction to create and push a public GitHub repository.
