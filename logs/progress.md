@@ -142,3 +142,29 @@ Run Goal 00 and stop at corpus approval.
 - `git diff --check` passed after approval.
 - Created `research/notes/thesis-approval.md` from the scholar's approval so
   Goal 40's drafting precondition is explicit.
+
+## 2026-07-16 - Goal 40 scholarly paper draft
+
+- Checkpoint scope: draft a 7,000-9,000 word scholarly paper from approved
+  claims and evidence, cite through `paper/references.bib`, and audit source
+  use.
+- Read `AGENTS.md`, the `$scholarly-research` skill,
+  `goals/40-draft-paper.md`, `research/dossier/research-dossier.md`,
+  `research/notes/thesis-approval.md`,
+  `research/notes/provisional-thesis.md`,
+  `research/notes/argument-map.md`, and
+  `research/reviews/disconfirmation-review.md`.
+- Replaced the placeholder manuscript in `paper/paper.qmd` with a 7,137-word
+  draft organized around the nine required Goal 40 sections.
+- Expanded `paper/references.bib` so every citation key used in the draft
+  resolves to a project-preserved source.
+- Created `research/reviews/draft-source-audit.md`; it reports no unresolved
+  critical failures and preserves quotation-finality caveats for later review.
+- Added `paper/.gitignore` to keep Quarto scratch files under `paper/.quarto/`
+  out of Git.
+- `quarto render paper/paper.qmd` passed and produced ignored local outputs
+  `outputs/paper.html` and `outputs/paper.pdf`; Quarto emitted a noncritical
+  path warning about `outputs/paper_files/libs`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.
