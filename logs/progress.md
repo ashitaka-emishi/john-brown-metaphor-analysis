@@ -302,3 +302,11 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check -- . ':(exclude)_site/**'` passed.
+- Committed and pushed landing-page update as `278a439`.
+- GitHub Pages workflow `29486048963` completed successfully for commit
+  `278a4399bd5bc45f93a6036e7f71a4caa5c589c8`.
+- Verified the live site with a cache-busting request: the landing page shows
+  the working-paper status and links to `outputs/paper.html` and
+  `outputs/paper.pdf`.
+- Verified `https://ashitaka-emishi.github.io/lincoln-war-research-project/outputs/paper.html`
+  returns HTTP 200.
