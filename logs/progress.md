@@ -168,3 +168,43 @@ Run Goal 00 and stop at corpus approval.
 - `.venv/bin/python -m lincoln_research validate` passed.
 - `.venv/bin/pytest` passed: 10 tests passed.
 - `git diff --check` passed.
+
+## 2026-07-16 - Goal 50 adversarial scholarly review
+
+- Checkpoint scope: attempt to disprove, narrow, or materially improve the
+  Goal 40 draft before publication preparation.
+- Read `AGENTS.md`, the `$scholarly-research` skill,
+  `goals/50-adversarial-review.md`, the Goal 40 draft, the claim map, and the
+  existing draft source audit.
+- Created the six required adversarial review reports:
+  `research/reviews/historical-review.md`,
+  `research/reviews/rhetorical-review.md`,
+  `research/reviews/theological-language-review.md`,
+  `research/reviews/source-and-citation-review.md`,
+  `research/reviews/critical-countervoice-review.md`, and
+  `research/reviews/anachronism-review.md`.
+- Accepted or partially accepted critiques where the draft risked overclaiming:
+  generalizing the Civil War into war as such, implying private belief,
+  understating Everett/convention, understating soldier agency, implying
+  intentional suppression, and using "refound" or "political theology" too
+  broadly.
+- Rejected with caution the claim that sacrifice was merely imposed: the draft
+  defines sacrifice restrictively and demonstrates it through giving,
+  consecration, obligation, unfinished work, and new birth rather than treating
+  death alone as sacrifice.
+- Revised `paper/paper.qmd` to replace summary-level "refound" language with
+  "new birth of freedom," remove the "political theology" keyword, preserve
+  soldier agency, avoid intentional-sounding "suppresses" language, and narrow
+  the conclusion to Lincoln's public presentation of this Civil War in this
+  ceremonial setting.
+- Updated `research/data/claims.csv` so affected claims record Goal 50 review
+  status and links to the adversarial reports.
+- No critical citation failures were found. Remaining source caveats are
+  publication-final checks for `SRC-0005`, `SRC-0006`, `SRC-0011`, and
+  `SRC-0041`.
+- `quarto render paper/paper.qmd` passed and updated ignored local render
+  outputs in `outputs/`; Quarto emitted the same noncritical path warning
+  about `outputs/paper_files/libs`.
+- `.venv/bin/python -m lincoln_research validate` passed.
+- `.venv/bin/pytest` passed: 10 tests passed.
+- `git diff --check` passed.

@@ -6,24 +6,24 @@ date: last-modified
 bibliography: references.bib
 abstract: |
   This paper argues that the Gettysburg Address transforms Union soldiers'
-  battlefield deaths into a public obligation to preserve and refound the
-  nation. Lincoln does so by placing death inside a sequence of founding,
-  testing, consecration, dedication, and rebirth. The Address presents the
-  nation as an inherited proposition dedicated to equality, the Civil War as a
-  test of whether such a nation can endure, and the dead as having imposed an
-  unfinished work upon the living. The argument is intentionally bounded. The
-  Gettysburg Address is evidence for Lincoln's public ceremonial construction
-  of this Civil War, not direct access to his private belief and not a complete
-  theory of war in general. Comparative Lincoln texts show that his wider
-  wartime thought also included constitutional preservation, emancipation as
-  war measure, providential uncertainty, judgment over slavery, and practical
-  reconstruction.
+  battlefield deaths into a public obligation to preserve the nation and give
+  it a new birth of freedom. Lincoln does so by placing death inside a sequence
+  of founding, testing, consecration, dedication, and rebirth. The Address
+  presents the nation as an inherited proposition dedicated to equality, the
+  Civil War as a test of whether such a nation can endure, and the dead as
+  having imposed an unfinished work upon the living. The argument is
+  intentionally bounded. The Gettysburg Address is evidence for Lincoln's
+  public ceremonial construction of this Civil War, not direct access to his
+  private belief and not a complete theory of war in general. Comparative
+  Lincoln texts show that his wider wartime thought also included
+  constitutional preservation, emancipation as war measure, providential
+  uncertainty, judgment over slavery, and practical reconstruction.
 keywords:
   - Abraham Lincoln
   - Gettysburg Address
   - Civil War
   - sacrifice
-  - political theology
+  - sacred rhetoric
   - war
 ---
 
@@ -43,18 +43,19 @@ the proper object of dedication. The war's aim becomes not only preservation
 but a "new birth of freedom" [@lincolnGettysburgBliss1864].
 
 This paper argues that, in the Gettysburg Address, Lincoln transforms Union
-soldiers' deaths into a public obligation to preserve and refound the nation.
-The nation is presented as an inherited proposition dedicated to equality; the
-Civil War tests whether such a nation can endure; the soldiers have given life
-to the nation and consecrated the battlefield; therefore the living must take
-increased devotion to the unfinished work so that popular government receives a
-new birth of freedom and does not perish. This is an argument about public
-rhetoric. It is not a claim that the speech gives transparent access to
-Lincoln's private mind. Nor is it a claim that Lincoln's whole understanding of
-war can be reduced to sacrifice. The comparative evidence points in the other
-direction. Across his wartime writings, Lincoln also described the war as
-constitutional preservation, democratic test, emancipation policy,
-providential uncertainty, judgment over slavery, and practical reconstruction
+soldiers' deaths into a public obligation to preserve the nation and give it a
+new birth of freedom. The nation is presented as an inherited proposition
+dedicated to equality; the Civil War tests whether such a nation can endure;
+the soldiers have given life to the nation and consecrated the battlefield;
+therefore the living must take increased devotion to the unfinished work so
+that popular government receives a new birth of freedom and does not perish.
+This is an argument about public rhetoric. It is not a claim that the speech
+gives transparent access to Lincoln's private mind. Nor is it a claim that
+Lincoln's whole understanding of war can be reduced to sacrifice. The
+comparative evidence points in the other direction. Across his wartime
+writings, Lincoln also described the war as constitutional preservation,
+democratic test, emancipation policy, providential uncertainty, judgment over
+slavery, and practical reconstruction
 [@lincolnSpecialSession1861; @lincolnEmancipation1863;
 @lincolnMeditation1862; @lincolnSecondInaugural1865].
 
@@ -383,6 +384,11 @@ generalizes across many actual deaths whose circumstances differed. The paper
 therefore treats sacrifice as a rhetorical and political construction rather
 than as a recovered interior motive.
 
+This caution does not erase soldier agency. The Address attributes
+consecrating power to what the soldiers did in struggle, and to "the brave men,
+living and dead," rather than to death considered only as passive suffering
+[@lincolnGettysburgBliss1864].
+
 The same distinction helps explain why "death" and "sacrifice" are not
 synonyms here. The cemetery account's partially covered remains present death
 as material disorder requiring burial [@everettPamphlet1864]. The Address
@@ -668,8 +674,8 @@ from becoming a total theory. Lincoln could frame the same war as democratic
 test, constitutional preservation, emancipation policy, sacred obligation,
 providential mystery, and judgment. The relative weight of these frames changed
 by occasion and time. Gettysburg's power lies in its concentration: it almost
-entirely suppresses legal machinery, strategy, emancipation policy, and divine
-judgment in order to make battlefield death speak as obligation.
+entirely leaves aside legal machinery, strategy, emancipation policy, and
+divine judgment in order to make battlefield death speak as obligation.
 
 Everett supplies a different kind of counterevidence. His oration makes clear
 that sacrifice language and sacred commemoration were not uniquely Lincolnian.
@@ -727,17 +733,20 @@ language that is real but textually variant and partly conventional. It points
 toward emancipation and reconstruction without specifying their policy content.
 It reveals one of Lincoln's war frames, not all of them.
 
-What, then, does Gettysburg reveal about Lincoln's understanding of the nature
-of war? It reveals that, at this moment and in this public ceremonial form,
-Lincoln understood the Civil War as a crisis in which the survival of democratic
-self-government depended on the living's response to the dead. War was not only
-force; it was a test. Death was not only loss; it became a claim. Preservation
-was not only restoration; it required transformation. The nation could live
-only if the living accepted the unfinished work left by those who died.
+What, then, does Gettysburg reveal about Lincoln's public presentation of the
+nature of this war? It reveals that, at this moment and in this ceremonial
+form, Lincoln presented the Civil War as a crisis in which the survival of
+democratic self-government depended on the living's response to the dead. War
+was not only force; it was a test. Death was not only loss; it became a claim.
+Preservation was not only restoration; it required transformation. The nation
+could live only if the living accepted the unfinished work left by those who
+died.
 
 That is not the whole of Lincoln's thought. The Second Inaugural's judgment,
 the Emancipation Proclamation's military necessity, the Hodges letter's
 constitutional reasoning, and the Last Public Address's reconstruction problem
-all show a more plural mind. But Gettysburg remains the place where Lincoln
-most perfectly compressed one public meaning of the war: the dead bind the
-living to preserve and refound the nation.
+all show a more plural public record, and the Second Inaugural's judgment frame
+is not simply a fuller version of Gettysburg. But Gettysburg remains the place
+where Lincoln most compactly arranged one public meaning of the war from
+familiar ceremonial materials, some of them shared with Everett: the dead bind
+the living to preserve the nation and seek a new birth of freedom.
