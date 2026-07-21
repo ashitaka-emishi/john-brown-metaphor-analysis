@@ -239,11 +239,11 @@ checked against preserved source witnesses.
   the permitted PDF, citation, item metadata, and rights statement.
 - Added `SRC-0019`, `Correspondence and Map, John Brown to Seth Thompson,
   January 4, 1836`, to `research/data/source-register.csv`.
-- Preserved and tracked the scholar-supplied PDF in the raw corpus because the
-  item-level AUC metadata supplied by the scholar states `NO COPYRIGHT - UNITED
-  STATES`; generated a raw manifest hash. The attempted text extraction
-  produced only form-feed characters, so the normalized file is a local
-  placeholder rather than a usable transcription.
+- Preserved and tracked the scholar-supplied PDF and raw manifest in the raw
+  corpus because the item-level AUC metadata supplied by the scholar states
+  `NO COPYRIGHT - UNITED STATES`. The attempted text extraction produced only
+  form-feed characters, so the normalized file is a local placeholder rather
+  than a usable transcription.
 - Recorded the item-level rights statement as `NO COPYRIGHT - UNITED STATES`
   with rights URI `http://rightsstatements.org/vocab/NoC-US/1.0/`, based on
   scholar-supplied AUC metadata.

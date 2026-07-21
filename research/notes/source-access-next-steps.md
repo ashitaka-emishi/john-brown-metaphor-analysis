@@ -23,11 +23,11 @@ Result:
   with rights statement `http://rightsstatements.org/vocab/NoC-US/1.0/`.
 - Codex moved the scholar-supplied PDF into the raw corpus and generated a
   manifest hash. Because the item-level metadata supplied by the scholar states
-  `NO COPYRIGHT - UNITED STATES`, this specific raw PDF may be tracked in the
-  public repository. The attempted text extraction produced only form-feed
-  characters, so the normalized file is a placeholder rather than a usable OCR
-  or transcription. No password, cookie, browser profile, or private account
-  state was captured.
+  `NO COPYRIGHT - UNITED STATES`, this specific raw PDF and its raw manifest
+  may be tracked in the public repository. The attempted text extraction
+  produced only form-feed characters, so the normalized file is a placeholder
+  rather than a usable OCR or transcription. No password, cookie, browser
+  profile, or private account state was captured.
 
 Human feedback gate:
 

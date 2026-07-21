@@ -297,8 +297,8 @@ Provenance and rights:
   Series`.
 - Rights statement supplied from the AUC metadata: `NO COPYRIGHT - UNITED
   STATES`, `http://rightsstatements.org/vocab/NoC-US/1.0/`.
-- Public repository tracking is limited to this item-level raw PDF and does not
-  apply to other AUC objects.
+- Public repository tracking is limited to this item-level raw PDF and its raw
+  manifest and does not apply to other AUC objects.
 
 Verification caveats:
 
