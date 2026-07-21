@@ -7,10 +7,38 @@ corpus source has yet been acquired under this project.
 
 ## Next checkpoint
 
-Begin Goal 10 acquisition from the approved source queue, starting with Tier 1
-or strongest-provenance public sources. Do not mark sources verified, populate
-evidence rows, form a thesis, or publish findings until acquisition and
-verification criteria are met.
+Continue Goal 10 acquisition from the approved source queue. Prioritize the
+strongest-provenance public sources while preserving stop conditions for
+derivative, reported, inaccessible, or attribution-uncertain sources. Do not
+populate evidence rows, form a thesis, or publish findings until acquisition
+and verification criteria are met.
+
+### 2026-07-21 - Goal 10 SRC-0002 acquisition
+
+- Checkpoint scope: acquire and preserve `SRC-0002`, the DocsTeach / National
+  Archives page images and metadata for `Provisional Constitution and
+  Ordinances for the People of the United States Written by John Brown`.
+- Preserved the DocsTeach HTML page, thumbnail image, WordPress media metadata,
+  and a nine-page full-resolution image set under
+  `research/corpus/primary/raw/`.
+- Created a raw-file SHA-256 manifest at
+  `research/corpus/primary/raw/SRC-0002-provisional-constitution-manifest.sha256`.
+- Generated page-level OCR and a combined normalized working OCR file at
+  `research/corpus/primary/normalized/SRC-0002-provisional-constitution-ocr.txt`.
+- Updated `research/data/source-register.csv` with local paths, retrieval
+  timestamp, manifest hash, rights statement, acquisition method, and
+  `acquired-ocr-unverified` status.
+- Created `research/notes/corpus-report.md` with provenance, rights, and
+  verification caveats for the source.
+- The OCR is noisy and is not quotation-final. Any quotation, segmentation, or
+  evidence coding must be verified against the preserved page images in Goal 20.
+- DocsTeach media metadata included duplicate page-image uploads; this
+  checkpoint preserved one consistent nine-page set and retained the media JSON
+  for audit.
+- The skill-referenced `references/source-acquisition.md` file is absent in
+  this migrated repository, so acquisition followed `AGENTS.md`,
+  `goals/10-corpus-acquisition.md`, and
+  `research/notes/source-acquisition-plan.md`.
 
 ### 2026-07-21 - Corpus and codebook approval gate
 
