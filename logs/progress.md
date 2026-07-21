@@ -3,14 +3,27 @@
 ## Current state
 
 Repository migrated to the John Brown metaphor-analysis mission. No John Brown
-corpus has yet been approved or acquired under this project.
+corpus source has yet been acquired under this project.
 
 ## Next checkpoint
 
-Stop at the corpus-approval human gate. Do not acquire sources, mark sources
-verified, populate evidence rows, form a thesis, or publish findings until the
-scholar approves the question, scope, chronological periods, proposed corpus,
-source hierarchy, codebook draft, and acquisition plan.
+Create or approve a concrete Goal 10 source queue in
+`research/data/source-register.csv` before acquisition. Do not mark sources
+verified, populate evidence rows, form a thesis, or publish findings.
+
+### 2026-07-21 - Corpus and codebook approval gate
+
+- Scholar approved the proposed John Brown research scope, corpus design,
+  source hierarchy, and draft codebook.
+- Created `research/notes/corpus-approval.md`.
+- Created `research/notes/codebook-approval.md`.
+- Recorded the approval in `case-study/process-events.csv` and
+  `case-study/intervention-log.csv`.
+- Approval authorizes Goal 10 corpus acquisition only; it does not approve any
+  interpretation, thesis, finding, or publication.
+- Stop condition remains before actual acquisition: `research/data/source-register.csv`
+  is currently header-only, so there is no concrete approved source queue to
+  acquire from without adding and reviewing proposed source rows.
 
 ## Migration Record
 
