@@ -28,6 +28,10 @@ Result:
   produced only form-feed characters, so the normalized file is a placeholder
   rather than a usable OCR or transcription. No password, cookie, browser
   profile, or private account state was captured.
+- A later local OCR pass rendered the PDF at 300 DPI and ran Tesseract 5.5.2,
+  producing
+  `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-ocr.txt`.
+  The result is noisy discovery OCR, not verified transcription.
 
 Human feedback gate:
 

@@ -13,6 +13,7 @@ outputs/*
 _site/
 .quarto/
 logs/*.log
+tmp/
 research/corpus/**/raw/*
 !research/corpus/**/raw/.gitkeep
 research/corpus/**/normalized/*

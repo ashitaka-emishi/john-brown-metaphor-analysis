@@ -267,9 +267,9 @@ Checkpoint date: 2026-07-21
 Acquisition status: acquired through human-mediated AUC RADAR access after the
 scholar completed the CAPTCHA flow and supplied the PDF, citation, metadata,
 and rights statement. The raw PDF is tracked in the repository because the
-scholar supplied item-level `NO COPYRIGHT - UNITED STATES` metadata. Text
-extraction produced only form-feed characters, so no usable OCR or
-transcription exists yet.
+scholar supplied item-level `NO COPYRIGHT - UNITED STATES` metadata. Initial
+embedded-text extraction produced only form-feed characters; a later Tesseract
+OCR pass created noisy discovery text.
 
 Source: `Correspondence and Map, John Brown to Seth Thompson, January 4, 1836`,
 Robert W. Woodruff Library of the Atlanta University Center, Inc.,
@@ -283,9 +283,13 @@ Raw preservation:
 Normalized derivative:
 
 - `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836.txt`
+- `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-ocr.txt`
+- `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-ocr.sha256`
 
-The normalized derivative is a placeholder created by `pdftotext`; it is not a
-usable transcription.
+The original normalized derivative is a placeholder created by `pdftotext`; it
+is not a usable transcription. The `-ocr.txt` file was generated with
+Tesseract 5.5.2 from 300 DPI `pdftoppm` page renders. It is machine OCR only,
+not a verified transcription.
 
 Provenance and rights:
 
@@ -304,17 +308,19 @@ Verification caveats:
 
 - Codex did not access AUC through stored credentials or captured browser
   state; the scholar performed the CAPTCHA-gated step and supplied the file.
-- A fresh manual transcription or OCR pass must be produced and verified
-  against the PDF page images before any quotation, passage segmentation, or
-  coding.
+- The OCR is noisy on handwritten pages and more legible on the typed dealer
+  notes on pages 4 and 5.
+- A manual transcription or corrected OCR must be verified against the PDF page
+  images before any quotation, passage segmentation, or coding.
 - This acquisition clears access only for `auc.028.0053`; it does not establish
   permission or rights status for other AUC objects.
 
 Permitted next use:
 
 Use this as a Tier 1 formation/baseline witness for Goal 20 transcription
-creation, verification, and segmentation. Do not quote or code it until
-page-image verification is complete.
+correction, verification, and segmentation. The OCR may support discovery and
+navigation only; do not quote or code it until page-image verification is
+complete.
 
 ## SRC-0010 - Testimonies of Capt. John Brown
 

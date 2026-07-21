@@ -257,6 +257,22 @@ checked against preserved source witnesses.
   better OCR pass from PDF page images before passage segmentation, evidence
   coding, or quotation.
 
+### 2026-07-21 - AUC OCR pass
+
+- Checkpoint scope: answer the scholar's request to OCR the AUC `SRC-0019`
+  PDF.
+- Rendered the tracked PDF to 300 DPI PNG page images with `pdftoppm`.
+- Ran Tesseract 5.5.2 page by page and combined output with page markers at
+  `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-ocr.txt`.
+- Created an OCR hash file at
+  `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-ocr.sha256`.
+- Updated `SRC-0019` in `research/data/source-register.csv` to point to the OCR
+  derivative and mark it `acquired-machine-ocr-unverified`.
+- Quality result: page 4 and page 5 typed dealer notes OCR reasonably, but the
+  handwritten letter/map pages remain noisy. OCR is discovery-only and cannot
+  support quotation, segmentation, or coding until corrected against the PDF
+  page images.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,
