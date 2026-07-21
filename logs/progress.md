@@ -195,6 +195,24 @@ checked against preserved source witnesses.
 - No source is quotation-final, evidence-coded, thesis-bearing, or
   publication-approved.
 
+### 2026-07-21 - Source-access follow-up pass 2
+
+- Checkpoint scope: continue the three source-access tracks and preserve the
+  human feedback gate where required.
+- AUC track: created `research/notes/auc-contact-draft.md`, containing a
+  repository-contact email draft and a human-in-browser inspection protocol.
+  No email was sent, no login or CAPTCHA was attempted, and no restricted file
+  was downloaded.
+- Trial-witness track: incorporated the Avalon Project as `SRC-0015` and
+  acquired the corresponding Internet Archive De Witt pamphlet scan as
+  `SRC-0016`. A follow-up web search confirmed the Richmond Dispatch witness as
+  a target, but no public scan was acquired during this pass.
+- Digital Commonwealth/BPL track: retained the newly acquired `SRC-0014`
+  Higginson prison-period autograph letter as the latest targeted BPL
+  acquisition; no bulk collection scrape was attempted.
+- Human feedback remains required before AUC repository-contact or
+  human-in-browser restricted-access work proceeds.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,

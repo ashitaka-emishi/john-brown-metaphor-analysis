@@ -26,6 +26,14 @@ CAPTCHA/login and confirms download/use terms before Codex preserves files.
 Codex should not attempt further automated AUC item-file acquisition until that
 decision is made.
 
+Prepared follow-up:
+
+- Created `research/notes/auc-contact-draft.md` with a repository-contact
+  email draft and a human-in-browser inspection protocol.
+- No email has been sent.
+- No login, CAPTCHA, browser-cookie capture, or restricted download has been
+  attempted.
+
 ## Contemporary Trial Witnesses
 
 Next step completed: looked beyond modern derivative pages for stronger public
@@ -40,6 +48,8 @@ Result:
 - Added `SRC-0016`, the Internet Archive page-image scan of the 1859 De Witt
   pamphlet that corresponds to the Avalon text, as the preferred source witness
   over the hosted transcription.
+- Follow-up web search confirmed the Richmond Dispatch witness as a known
+  comparison target, but no public scan was acquired in this pass.
 
 Carry-forward:
 
