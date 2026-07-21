@@ -2,16 +2,21 @@
 
 ## Current state
 
-Repository migrated to the John Brown metaphor-analysis mission. No John Brown
-corpus source has yet been acquired under this project.
+Repository migrated to the John Brown metaphor-analysis mission. Goal 10 corpus
+acquisition has begun. `SRC-0002`, `SRC-0003`, and item-level `SRC-0008` have
+been acquired, hashed, and normalized as unverified working text or
+transcription derivatives. No acquired source is quotation-final, evidence
+coded, thesis-bearing, or publication-approved.
 
 ## Next checkpoint
 
-Continue Goal 10 acquisition from the approved source queue. Prioritize the
-strongest-provenance public sources while preserving stop conditions for
-derivative, reported, inaccessible, or attribution-uncertain sources. Do not
-populate evidence rows, form a thesis, or publish findings until acquisition
-and verification criteria are met.
+Human gate: decide the next Goal 10 branch before acquiring derivative or
+reported trial texts. Options are to authorize discovery-only acquisition of
+`SRC-0004` and `SRC-0005`, direct Codex to locate stronger contemporary
+trial-statement witnesses first, or continue collection-level acquisition from
+`SRC-0001`, `SRC-0006`, and `SRC-0007` finding aids. Do not populate evidence
+rows, form a thesis, or publish findings until acquisition and verification
+criteria are met.
 
 ### 2026-07-21 - Goal 10 SRC-0002 acquisition
 
@@ -88,6 +93,20 @@ and verification criteria are met.
   quotation or coding.
 - The human-facing page returned browser verification in one web view; the
   documented `.json` and IIIF endpoints remained available and were used.
+
+### 2026-07-21 - Goal 10 derivative-source gate
+
+- Stop condition reached before acquiring derivative or reported trial-text
+  targets as anything more than discovery sources.
+- Remaining queue items include derivative or reported courtroom-statement
+  pages (`SRC-0004`, `SRC-0005`), federal-record finding-aid material
+  (`SRC-0006`), and repository finding-aid or item-level acquisition work
+  (`SRC-0001`, `SRC-0007`).
+- The next human decision should choose whether to authorize discovery-only
+  acquisition of derivative trial pages, require stronger contemporary
+  witnesses first, or continue acquiring collection/finding-aid materials.
+- No interpretation, thesis, evidence coding, source substitution, or
+  publication decision is approved by the current acquisition checkpoint.
 
 ### 2026-07-21 - Corpus and codebook approval gate
 
