@@ -1,15 +1,6 @@
 # Thesis History
 
-Record each material thesis revision.
+No John Brown thesis has been proposed or approved.
 
-For each version include:
-
-- date;
-- thesis text;
-- supporting claims;
-- counterevidence;
-- reason for revision;
-- human approval status;
-- related commit.
-
-No thesis is yet approved for the methodology paper.
+Future thesis changes must be linked to evidence, counterevidence, human
+approval, and the relevant process event.

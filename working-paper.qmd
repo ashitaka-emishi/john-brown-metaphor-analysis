@@ -1,32 +1,11 @@
 ---
 title: "Working Paper"
-description: "Site page for the public Lincoln/Gettysburg working paper."
+description: "Status page for the future John Brown working paper."
 ---
 
-The historical working paper is public with disclosed limitations. It is not a
-journal-final, quotation-final, or limitation-free publication.
+No working paper is available yet.
 
-::: {.callout-important title="Working-paper status"}
-Several quotation-final checks remain before a stronger publication claim
-should be made. The public package preserves those limits in the publication
-audit, evidence appendix, and source reviews.
-:::
-
-## Read The Paper
-
-- [Open the full HTML working paper](outputs/paper.html)
-- [Download the PDF working paper](outputs/paper.pdf)
-
-## Supporting Materials
-
-- [How the project worked](workflow.html)
-- [Evidence table](evidence.html)
-- [Audit and review results](reviews/)
-- [Publication audit](publication-audit.html)
-- [Reproducibility report](reproducibility-report.html)
-
-## Why This Page Exists
-
-The full HTML paper is a rendered publication artifact. This page keeps readers
-inside the project website header and navigation before sending them to that
-artifact. The GitHub repository link is available in the site header.
+The paper scaffold will remain provisional until the corpus is approved,
+sources are acquired and verified, evidence is coded, and the scholar approves
+a thesis. This page exists so the public site does not imply that preliminary
+migration materials are completed scholarship.

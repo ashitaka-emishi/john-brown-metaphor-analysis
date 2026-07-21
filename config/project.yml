@@ -1,12 +1,19 @@
 project:
-  id: lincoln-war
-  title: War as Sacrifice, Trial, and National Rebirth
+  id: john-brown-metaphor-analysis
+  title: "Blood, Bonds, and the Cause: John Brown's Metaphorical Understanding of Violence and Death"
   question: >-
-    How does the Gettysburg Address transform the deaths of soldiers into a
-    sacred obligation to preserve and refound the nation, and what does this
-    reveal about Lincoln's understanding of the nature of war?
+    How did John Brown use metaphor, biblical allusion, and religious typology
+    in his surviving writings and authenticated statements to understand his
+    antislavery mission, his use of violence, the failure at Harpers Ferry, and
+    his approaching death?
+  compact_question: >-
+    How did John Brown's symbolic language construct his understanding of his
+    actions and death in the struggle against slavery?
   citation_style: chicago-author-date
   human_gates:
     - corpus_approval
+    - source_substitution_approval
+    - codebook_approval
     - thesis_approval
+    - methodology_findings_approval
     - publication_approval

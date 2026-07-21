@@ -1,4 +1,4 @@
-from lincoln_research.loc_chronicling import (
+from john_brown_research.loc_chronicling import (
     collection_search_url,
     extract_full_text,
     fulltext_url,
@@ -8,13 +8,13 @@ from lincoln_research.loc_chronicling import (
 
 def test_collection_search_url_encodes_dates_and_query():
     url = collection_search_url(
-        query="Gettysburg Lincoln",
-        date_range="1863-11-19/1863-12-05",
+        query="John Brown",
+        date_range="1859-10-16/1859-12-05",
         count=5,
     )
     assert "dl=page" in url
-    assert "dates=1863-11-19%2F1863-12-05" in url
-    assert "qs=Gettysburg+Lincoln" in url
+    assert "dates=1859-10-16%2F1859-12-05" in url
+    assert "qs=John+Brown" in url
     assert "fo=json" in url
     assert "c=5" in url
 

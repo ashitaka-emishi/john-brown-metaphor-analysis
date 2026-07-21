@@ -1,7 +1,0 @@
-This review asks whether the paper's claims remain historically bounded. Its
-purpose is to prevent the Gettysburg Address from being treated as Lincoln's
-general theory of war, to keep soldier agency visible, and to avoid turning
-the speech's restrained treatment of bodily violence into an unsupported claim
-about concealment.
-
-{{< include ../research/reviews/historical-review.md >}}

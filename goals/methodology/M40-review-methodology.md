@@ -2,18 +2,28 @@
 
 ## Objective
 
-Conduct adversarial review of the methodology and its claimed originality.
+Conduct adversarial review of the methodology paper and its claimed
+originality, limits, and evidentiary basis.
 
-## Required critiques
+## Required Inputs
 
-- The method is only a research compendium with new terminology.
-- The artifact model falsely mechanizes interpretation.
-- Human gates are ceremonial rather than effective.
-- The case study is biased because the method was developed during the case.
-- Process logging altered the research process.
-- One case provides insufficient evidence.
-- Documentation cost exceeds its scholarly value.
-- AI disclosure remains inadequate.
-- Reproducibility is confused with validity.
+- Methodology paper draft
+- Case-study records
+- Prior methodology reviews
 
-Revise the paper when critiques succeed.
+## Required Artifacts
+
+- Methodology review report
+- Revised methodology paper where critiques succeed
+
+## Completion Criteria
+
+- Critiques are accepted, rejected, or partially accepted with reasons.
+- Single-case and second-case limits remain visible.
+- Process-logging effects and documentation costs are addressed.
+- Publication limits are explicit.
+
+## Stop Conditions
+
+Stop at the methodology publication-approval gate or on unresolved validity,
+disclosure, or evidentiary failures.

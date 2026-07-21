@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from lincoln_research.util import normalize_text
+from john_brown_research.util import normalize_text
 
 
 def main() -> int:

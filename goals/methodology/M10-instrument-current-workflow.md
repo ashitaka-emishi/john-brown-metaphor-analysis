@@ -1,25 +1,28 @@
-# Methodology Goal M10 - Instrument the Active Workflow
+# Methodology Goal M10 - Instrument the Current Workflow
 
 ## Objective
 
-Record future material research actions prospectively while the Lincoln project
-continues.
+Record future material research actions prospectively while the John Brown
+project proceeds.
 
-## Required events
+## Required Inputs
 
-Record a methodology event when an action:
+- Case 2 evaluation plan
+- Process-event and intervention schemas
+- Current goals
 
-- requires human approval;
-- changes corpus scope;
-- accepts, revises, or rejects an AI recommendation;
-- encounters a source, tool, rights, provenance, or validation failure;
-- changes a definition, claim, thesis, or interpretation;
-- substitutes human work for automation;
-- or materially changes the paper.
+## Required Artifacts
 
-## Completion criteria
+- `case-study/process-events.csv`
+- `case-study/intervention-log.csv`
 
-- Events are recorded during the stage in which they occur.
+## Completion Criteria
+
+- Material events are recorded during the stage in which they occur.
 - Events link to repository artifacts.
 - Human interventions are separately recorded.
 - Research integrity takes precedence over instrumentation.
+
+## Stop Conditions
+
+Stop if logging incentives begin to distort the historical research workflow.

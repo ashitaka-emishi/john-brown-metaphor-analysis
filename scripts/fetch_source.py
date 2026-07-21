@@ -17,17 +17,17 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("url")
     parser.add_argument("output", type=Path)
-    parser.add_argument("--delay", type=float, default=float(os.getenv("LINCOLN_RESEARCH_REQUEST_DELAY", "2.0")))
+    parser.add_argument("--delay", type=float, default=float(os.getenv("JOHN_BROWN_RESEARCH_REQUEST_DELAY", "2.0")))
     parser.add_argument("--timeout", type=float, default=30.0)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
     agent = os.getenv(
-        "LINCOLN_RESEARCH_USER_AGENT",
-        "LincolnWarResearch/0.1 (scholarly research; contact=replace-with-email)",
+        "JOHN_BROWN_RESEARCH_USER_AGENT",
+        "JohnBrownMetaphorAnalysis/0.1 (scholarly research; contact=replace-with-email)",
     )
     if "replace-with-email" in agent:
-        print("Configure a real contact in LINCOLN_RESEARCH_USER_AGENT.", file=sys.stderr)
+        print("Configure a real contact in JOHN_BROWN_RESEARCH_USER_AGENT.", file=sys.stderr)
         return 2
 
     print(f"GET {args.url} -> {args.output}")

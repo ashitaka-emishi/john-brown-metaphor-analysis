@@ -1,174 +1,34 @@
 ---
-title: "Lincoln, Gettysburg, and the Nature of War"
-subtitle: "A public working-paper package"
-description: "How the Gettysburg Address turns soldiers' deaths into an obligation to preserve the nation and seek a new birth of freedom."
+title: "John Brown Metaphor Analysis"
+subtitle: "A governed scholarly research project"
+description: "Active research project on John Brown's metaphor, biblical allusion, religious typology, violence, failure, and death."
 ---
 
-## Research question
+## Research Question
 
-> How does the Gettysburg Address transform the deaths of soldiers into a sacred obligation to preserve and refound the nation, and what does this reveal about Lincoln's understanding of the nature of war?
+> How did John Brown use metaphor, biblical allusion, and religious typology in
+> his surviving writings and authenticated statements to understand his
+> antislavery mission, his use of violence, the failure at Harpers Ferry, and
+> his approaching death?
 
-This project has produced an approved public working-paper package on Abraham
-Lincoln's wartime rhetoric. It examines how the Gettysburg Address relates
-soldier death, national survival, democratic obligation, and political rebirth
-while testing those interpretations against Lincoln's other writings,
-historical context, and disconfirming evidence.
+## Current Status
 
-::: {.callout-important title="Publication status"}
-The working paper is public with disclosed limitations. It is not a
-journal-final, quotation-final, or limitation-free publication. Several
-quotation-final checks remain before a stronger publication claim should be
-made.
-:::
+This is an active research project. The corpus is not yet approved or complete,
+the dossier is provisional, and no final findings or working paper are yet
+available.
 
-## Site Guide
-
-::: {.site-map}
-<div>
-
-### Working Paper
-
-Read the public working paper or download the PDF.
-
-- [Working paper page](working-paper.html)
-- [PDF working paper](outputs/paper.pdf)
-
-</div>
-
-<div>
-
-### Workflow
-
-See a plain-language summary of how the project moved from question to sources,
-evidence, claims, reviews, and publication.
-
-- [How the project worked](workflow.html)
-- [Detailed methodology paper](methodology-paper/methodology-paper.html)
-
-</div>
-
-<div>
-
-### Evidence
-
-Browse a compact evidence table or download the full CSV appendix.
-
-- [Evidence table](evidence.html)
-- [Evidence appendix CSV](outputs/evidence-appendix.csv)
-
-</div>
-
-<div>
-
-### Reviews
-
-Read the individual audit and review results that narrowed the final claims.
-
-- [Review index](reviews/)
-- [Publication approval review](reviews/publication-approval-review.html)
-
-</div>
-
-<div>
-
-### Reports
-
-Inspect publication readiness and reproduction details.
-
-- [Publication audit](publication-audit.html)
-- [Reproducibility report](reproducibility-report.html)
-
-</div>
-:::
-
-## Workflow Summary
-
-This site is organized around a traceable research workflow. The working paper
-is the public argument, but the site also exposes the evidence table, review
-results, publication audit, reproducibility report, and methodology paper that
-show how that argument was built and checked.
-
-For a reader-friendly overview, start with
-[How the Project Worked](workflow.html). For the formal methodological argument,
-read [The Scholarly Build System](methodology-paper/methodology-paper.html).
-
-## Publication package
-
-The public package includes the working paper, its publication audit, a
-reproducibility report, and the evidence appendix used to check claims against
-the source-grounded matrix.
-
-- [Publication audit](publication-audit.html): citation coverage, quotation
-  cautions, source boundaries, claim coverage, review coverage, output checks,
-  and the release approval status.
-- [Reproducibility report](reproducibility-report.html): Python, pytest,
-  Quarto, render commands, test results, evidence counts, and reproduction
-  steps for the working-paper package.
-- [Evidence appendix CSV](outputs/evidence-appendix.csv): 32 evidence rows
-  exported from the evidence matrix, including passages, observations,
-  interpretations, alternative readings, confidence, and review status.
-
-## Individual Reviews
-
-The review suite tests the paper from multiple angles rather than treating one
-audit as enough. The [review index](reviews/) links to historical, rhetorical,
-theological-language, source and citation, countervoice, anachronism,
-disconfirmation, coding, draft-source, and publication-approval reviews.
-
-- [Browse all audit and review results](reviews/)
-- [Open the evidence table](evidence.html)
-
-## Methodology working paper
-
-The methodology paper has also been approved for public release as a working
-paper with disclosed limitations. It evaluates the governed human-AI workflow
-used in this project as a single developmental case study.
-
-- [Read the methodology working paper](methodology-paper/methodology-paper.html)
-
-::: {.callout-note title="Methodology status"}
-The methodology paper is public as a working paper. It is not journal-final,
-universally validated, or independent replication evidence. It preserves
-limits around single-case scope, developmental-case bias, process-logging
-effects, accepted-only intervention records, documentation burden, and the
-difference between repository validation and interpretive validity.
-:::
+The project will publish evidence, reviews, methodology artifacts, and paper
+drafts only after the relevant human approvals are recorded.
 
 ## Method
 
-The workflow separates source text, observation, inference, and conclusion. It
-preserves manuscript variants, records contradictory evidence, and
-distinguishes Lincoln's public rhetoric from claims about private belief.
-Primary sources are preferred for claims about Lincoln's language and actions.
-The reader-facing overview is available at
-[How the Project Worked](workflow.html).
+The workflow separates source text, observation, metaphor or symbolic-language
+classification, interpretation, and conclusion. It preserves variants,
+records attribution uncertainty, and distinguishes Brown's own words from
+contemporary reports, later recollections, and later martyr reception.
 
-The staged process covers corpus acquisition, evidence coding, analysis and
-thesis review, paper drafting, adversarial review, publication-package audit,
-and human approval for release as a public working paper. Project data,
-validation tooling, and committed publication artifacts are available in the
-[public GitHub repository](https://github.com/ashitaka-emishi/lincoln-war-research-project).
+## Next Gate
 
-## Current state
-
-The historical track has completed corpus acquisition, evidence coding,
-analysis and thesis review, drafting, adversarial review, and final
-publication-package preparation. The scholar approved the Goal 60 package for
-release as a public working-paper package with disclosed limitations.
-
-The methodology track has completed case-study evaluation, methodology-paper
-drafting, adversarial methodology review, and publication-readiness review. The
-scholar approved the methodology paper for release as a public methodology
-working paper with disclosed limitations.
-
-Known limits remain visible in the publication package:
-
-- the Bliss Copy transcription should receive a second manuscript-image check
-  before quotation-final use;
-- Everett pamphlet quotations should be checked against page images because
-  the normalized text is OCR-derived;
-- the Harrisburg *Patriot and Union* criticism remains a Dickinson derivative
-  transcription pending original newspaper image review;
-- noisy newspaper OCR is used only for limited reception framing;
-- secondary-source engagement remains intentionally limited and should be
-  broadened before journal submission.
+The next human gate is corpus approval. Approval will cover the question,
+scope, chronological periods, proposed corpus, source hierarchy, codebook
+draft, and acquisition plan. It will not approve any thesis or publication.

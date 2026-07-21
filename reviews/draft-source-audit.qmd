@@ -1,6 +1,0 @@
-This review audits the draft before final publication preparation. Its purpose
-is to check whether the required sections, citations, quotations, alternative
-readings, source caveats, and render outputs are coherent enough to move from
-drafting into publication review.
-
-{{< include ../research/reviews/draft-source-audit.md >}}

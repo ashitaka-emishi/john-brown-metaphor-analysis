@@ -1,6 +1,0 @@
-This review checks whether the paper's sources, citations, and quotation
-caveats can support a public working-paper release. Its purpose is to identify
-broken citation links, undisclosed source limits, and quotation-finality risks
-before readers encounter the argument as settled.
-
-{{< include ../research/reviews/source-and-citation-review.md >}}

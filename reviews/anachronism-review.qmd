@@ -1,6 +1,0 @@
-This review asks whether the paper imports later concepts into an 1863 speech.
-Its purpose is to police terms such as "refound," "political theology," and
-"sacrifice" so that analytical vocabulary remains useful without pretending
-Lincoln used later theoretical categories.
-
-{{< include ../research/reviews/anachronism-review.md >}}

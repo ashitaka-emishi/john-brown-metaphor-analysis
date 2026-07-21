@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from lincoln_research.util import normalize_text, sha256_file
+from john_brown_research.util import normalize_text, sha256_file
 
 
 def test_normalize_text():

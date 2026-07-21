@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from lincoln_research.loc_chronicling import (
+from john_brown_research.loc_chronicling import (
     LocChroniclingError,
     acquire_page,
     collection_search_url,

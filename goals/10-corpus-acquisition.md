@@ -1,42 +1,38 @@
-# Goal 10 — Acquire and Normalize the Corpus
+# Goal 10 - Acquire and Preserve the Corpus
 
 ## Objective
 
-Build a provenance-preserving local corpus of legally accessible primary texts and source metadata.
+Build a lawful, provenance-preserving corpus of Brown sources only after corpus
+approval.
 
+## Required Inputs
 
-## Operating contract
+- Approved Goal 00 corpus package
+- `research/data/source-register.csv`
+- `research/notes/source-acquisition-plan.md`
+- `research/notes/codebook-draft.md`
 
-Read `AGENTS.md`, the `$scholarly-research` skill, and the files named below.
-Work in checkpoints. Update `logs/progress.md`.
-Do not proceed past a human gate.
-Run `python -m lincoln_research validate` and `pytest` before completion.
+## Required Artifacts
 
+- Raw source files
+- Normalized text files
+- Updated source register with hashes and rights status
+- Corpus report
+- Source-substitution approval records where derivative or reported texts are
+  needed
 
-## Preconditions
+## Completion Criteria
 
-Human approval is recorded in `research/notes/corpus-approval.md`.
-
-## Required work
-
-1. Use the source register as the queue.
-2. Prefer documented downloads or APIs over scraping.
-3. For authorized HTML, use `scripts/fetch_source.py` or a tested source adapter.
-4. Preserve raw content and normalized text separately.
-5. Calculate SHA-256 hashes.
-6. Record retrieval metadata and rights status.
-7. Acquire the Gettysburg manuscript witnesses or authoritative representations.
-8. Acquire comparative Lincoln texts, Everett, ceremony materials where available, and a balanced reception sample.
-9. Produce `research/notes/corpus-report.md`.
-
-## Completion criteria
-
-- Every acquired source has provenance and hash.
-- Raw and normalized content are separate.
+- Every acquired source has provenance, hash, rights status, and verification
+  status.
+- Raw and normalized files remain separate.
+- Each corpus period is complete or explicitly blocked.
 - No access control was bypassed.
-- Required corpus is complete or explicitly blocked.
-- Validation and tests pass.
+- `python -m john_brown_research validate` and `pytest` pass.
 
-## Stop conditions
+## Stop Conditions
 
-Stop if a required source cannot be legally or reliably acquired, provenance is uncertain, or variants remain unresolved.
+Stop if authorship or attribution is uncertain, a material quotation cannot be
+verified, transcriptions conflict materially, access or rights rules prohibit
+acquisition, a required period lacks adequate evidence, or a source
+substitution requires human approval.

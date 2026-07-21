@@ -1,25 +1,31 @@
-# Methodology Goal M00 - Establish the Methodology Track
+# Methodology Goal M00 - Establish the Case 2 Methodology Track
 
 ## Objective
 
-Add the methodology paper and case-study track without changing the active
-historical research workflow.
+Preserve the generic scholarly build-system methodology and define how the John
+Brown project will be evaluated as a prospective second case.
 
-## Required work
+## Required Inputs
 
-1. Create the methodology documents.
-2. Create the artifact and governance models.
-3. Create the evaluation plan.
-4. Create case-study schemas.
-5. Reconstruct completed process events.
-6. Add prospective instrumentation rules to `AGENTS.md`.
-7. Add the methodology paper scaffold.
-8. Update the README and progress log.
+- `methodology/*.md`
+- `case-study/*.csv`
+- `logs/progress.md`
 
-## Completion criteria
+## Required Artifacts
 
-- Existing historical files are not relocated.
-- Historical corpus scope is unchanged.
-- Retrospective events are explicitly labeled.
-- New schemas are validated.
-- Existing validation and tests pass.
+- Baseline methodology document
+- Case 2 evaluation plan
+- Case 2 findings scaffold
+- Empty or migration-only process/intervention logs
+
+## Completion Criteria
+
+- Generic methodology is preserved.
+- Prior-case findings are not represented as current results.
+- Evaluation questions and limits are explicit.
+- `python -m john_brown_research validate` and `pytest` pass.
+
+## Stop Conditions
+
+Stop if methodology findings are being asserted before the methodology-findings
+approval gate.

@@ -1,111 +1,23 @@
 ---
-title: "How the Project Worked"
-description: "A reader-friendly summary of the research workflow behind the working paper."
+title: "Workflow"
+description: "Reader-facing summary of the governed research workflow."
 ---
 
-This page explains the workflow behind the project in ordinary terms. It is
-not the full methodology paper. It is a map of how the working paper moved from
-question, to sources, to evidence, to claims, to review, to public release.
+This project uses a governed scholarly workflow: question definition, corpus
+approval, lawful source acquisition, textual verification, evidence coding,
+claim mapping, adversarial review, and human publication approval.
 
-## The Basic Idea
+## Current Phase
 
-The project treated the paper as the visible result of a larger research record.
-That record includes source files, evidence rows, claim maps, reviews,
-limitations, render checks, and human approval points.
+The repository is in migration and research-foundation setup. No John Brown
+source has yet been marked verified, and no evidence row or thesis-bearing
+claim has yet been approved.
 
-The goal was not to make interpretation mechanical. The goal was to make the
-path from source to claim easier to inspect.
+## Human Gates
 
-::: {.callout-note title="Methodology working paper"}
-This page is the short version. The detailed methodology paper,
-[The Scholarly Build System](methodology-paper/methodology-paper.html),
-explains the governed human-AI method as a public methodology working paper.
-It is not journal-final, universally validated, or independent replication
-evidence; it evaluates one developmental case study.
-:::
-
-## Workflow At A Glance
-
-| Step | What Happened | Why It Matters |
-|---|---|---|
-| Research question | The project began with a question about how the Gettysburg Address turns soldier death into public obligation. | Keeps the inquiry focused. |
-| Corpus building | Primary sources, variants, reception evidence, and secondary-source targets were registered with provenance and verification status. | Shows what evidence is being used and what remains limited. |
-| Source preservation | Raw and normalized files were kept separate, with hashes and retrieval notes where available. | Reduces silent source drift. |
-| Evidence coding | Passages were entered into an evidence matrix with observations, interpretations, alternative readings, confidence, and review status. | Separates source text from interpretation. |
-| Claim mapping | Main claims were linked to supporting and disconfirming evidence. | Makes the argument traceable. |
-| Drafting | The working paper was drafted from the approved claims and evidence. | Keeps prose tied to the research record. |
-| Review | Historical, rhetorical, theological, source, countervoice, anachronism, coding, and publication reviews tested the draft. | Catches overstatement and weak links before publication. |
-| Publication package | The paper, audit, reproducibility report, evidence appendix, and limitations were assembled. | Defines what kind of release this is. |
-| Human approval | The scholar approved public working-paper release with disclosed limitations. | Keeps publication authority human. |
-
-## What The Evidence Table Does
-
-The evidence table is not a proof machine. It is a browsing and audit tool.
-Each row shows a source passage and separates:
-
-- what the source says;
-- what the project observes in that passage;
-- what interpretation is drawn from it;
-- what alternative reading remains possible;
-- whether the row is disconfirming;
-- how confident the project is in using it.
-
-That structure helps readers see where the paper is strongly grounded and
-where caution remains appropriate.
-
-## What The Reviews Do
-
-The review pages show how the paper was challenged before release. They ask
-questions such as:
-
-- Does the paper overgeneralize from Gettysburg to war as such?
-- Does it treat public rhetoric as private belief?
-- Does it import later concepts into an 1863 speech?
-- Are quotations and source caveats visible?
-- Do counterarguments narrow the claims?
-
-The reviews matter because the final paper is not just a polished thesis. It is
-a thesis that was tested, narrowed, and released with limits still visible.
-
-## What AI Did And Did Not Do
-
-AI assisted with bounded research and engineering tasks: organizing files,
-drafting structured artifacts, creating review passes, running checks, and
-helping maintain the site.
-
-AI did not approve the corpus, settle the thesis, authorize publication, or
-replace the scholar's judgment. Those decisions remained human control points.
-
-## What The Checks Prove
-
-The repository checks prove limited but useful things:
-
-- required files and schemas are present;
-- references between claims and evidence are structurally valid;
-- tests pass;
-- Quarto can render the public site and papers;
-- the public package can be reproduced from the repository state.
-
-They do not prove that the interpretation is true. They prove that the public
-argument has an inspectable evidentiary trail.
-
-## What Still Remains Limited
-
-The public paper remains a working paper. The main limits are:
-
-- the Bliss Copy transcription should receive a second manuscript-image check
-  before quotation-final use;
-- Everett pamphlet quotations should be checked against page images;
-- the Harrisburg *Patriot and Union* criticism remains a derivative
-  transcription pending original newspaper image review;
-- secondary-source engagement should be broadened before journal submission.
-
-These limits are part of the public record, not hidden cleanup notes.
-
-## Where To Go Next
-
-- [Read the working paper](working-paper.html)
-- [Browse the evidence table](evidence.html)
-- [Read the audit and review results](reviews/)
-- [Review the publication audit](publication-audit.html)
-- [Read the full methodology paper](methodology-paper/methodology-paper.html)
+- Corpus approval
+- Source-substitution approval for derivative or reported texts
+- Codebook approval
+- Thesis approval
+- Methodology-findings approval
+- Publication approval

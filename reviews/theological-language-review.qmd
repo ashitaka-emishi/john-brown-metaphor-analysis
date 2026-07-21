@@ -1,7 +1,0 @@
-This review checks how the paper handles sacred and theological language. Its
-purpose is to keep public rhetoric separate from claims about Lincoln's private
-belief, to preserve the different theological register of the Second
-Inaugural, and to avoid over-Christianizing phrases that may also work as civic
-or ceremonial language.
-
-{{< include ../research/reviews/theological-language-review.md >}}

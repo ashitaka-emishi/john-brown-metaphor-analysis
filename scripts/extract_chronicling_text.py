@@ -5,8 +5,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from lincoln_research.loc_chronicling import extract_full_text
-from lincoln_research.util import normalize_text, sha256_file
+from john_brown_research.loc_chronicling import extract_full_text
+from john_brown_research.util import normalize_text, sha256_file
 
 
 def main() -> int:

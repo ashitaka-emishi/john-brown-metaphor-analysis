@@ -1,20 +1,30 @@
-# Methodology Goal M20 - Evaluate the Case Study
+# Methodology Goal M20 - Evaluate Case 2
 
 ## Objective
 
-Evaluate the methodology after the historical project has completed evidence
-coding and initial thesis formation.
+Evaluate the John Brown project as a second, prospective case after sufficient
+workflow evidence exists.
 
-## Required work
+## Required Inputs
 
-1. Analyze process events and interventions.
-2. Measure traceability and error detection.
-3. Identify successful and failed AI contributions.
-4. Evaluate documentation burden.
-5. Identify changes caused by counterevidence.
-6. Compare retrospective and prospective capture quality.
-7. Produce `methodology/case-study-findings.md`.
+- Process events
+- Intervention log
+- Progress log
+- Research artifacts and reviews
 
-## Stop condition
+## Required Artifacts
 
-Stop at a human methodology-findings approval gate.
+- `methodology/case-2-findings.md`
+
+## Completion Criteria
+
+- Findings distinguish migration, setup, acquisition, coding, analysis, and
+  review phases.
+- Accepted, revised, rejected, and deferred AI recommendations are identified
+  where available.
+- Documentation burden and rework are addressed.
+- Limits of a second case are explicit.
+
+## Stop Conditions
+
+Stop at the methodology-findings approval human gate.

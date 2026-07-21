@@ -3,9 +3,9 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lincoln-war-research"
+name = "john-brown-metaphor-analysis"
 version = "0.1.0"
-description = "Traceable corpus and evidence tooling for a study of Lincoln's understanding of war."
+description = "Traceable corpus and evidence tooling for a study of John Brown's symbolic language."
 requires-python = ">=3.11"
 dependencies = []
 
@@ -15,7 +15,7 @@ web = ["beautifulsoup4>=4.12", "requests>=2.32"]
 pdf = ["pypdf>=5.0"]
 
 [project.scripts]
-lincoln-research = "lincoln_research.cli:main"
+john-brown-research = "john_brown_research.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

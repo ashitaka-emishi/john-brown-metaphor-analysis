@@ -1,4 +1,4 @@
-name: Publish Quarto website
+name: Publish John Brown research website
 
 on:
   push:

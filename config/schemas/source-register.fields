@@ -4,6 +4,8 @@ creator
 date_original
 source_type
 genre
+corpus_period
+source_tier
 repository
 canonical_url
 local_raw_path
@@ -13,4 +15,6 @@ sha256
 rights_status
 acquisition_method
 verification_status
+authorship_status
+attribution_caveat
 notes

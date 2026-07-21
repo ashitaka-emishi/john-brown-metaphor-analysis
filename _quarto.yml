@@ -11,15 +11,10 @@ project:
     - reviews/*.qmd
   resources:
     - outputs/**
-    - methodology-paper/methodology-paper.html
-    - methodology-paper/methodology-paper_files/**
 
 website:
-  title: "Lincoln, Gettysburg, and the Nature of War"
-  description: "A source-grounded study of how the Gettysburg Address turns soldiers' deaths into an obligation to preserve the nation and seek a new birth of freedom."
-  site-url: "https://ashitaka-emishi.github.io/lincoln-war-research-project/"
-  repo-url: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
-  repo-actions: [source, issue]
+  title: "John Brown Metaphor Analysis"
+  description: "A governed AI-assisted scholarly research project examining John Brown's metaphor, biblical allusion, religious typology, violence, failure, and death."
   navbar:
     left:
       - text: "Home"
@@ -31,43 +26,15 @@ website:
       - text: "Evidence"
         href: evidence.html
       - text: "Reviews"
-        menu:
-          - text: "Review Index"
-            href: reviews/
-          - text: "Historical Review"
-            href: reviews/historical-review.html
-          - text: "Rhetorical Review"
-            href: reviews/rhetorical-review.html
-          - text: "Theological-Language Review"
-            href: reviews/theological-language-review.html
-          - text: "Source and Citation Review"
-            href: reviews/source-and-citation-review.html
-          - text: "Critical Countervoice Review"
-            href: reviews/critical-countervoice-review.html
-          - text: "Anachronism Review"
-            href: reviews/anachronism-review.html
-          - text: "Disconfirmation Review"
-            href: reviews/disconfirmation-review.html
-          - text: "Coding Review"
-            href: reviews/coding-review.html
-          - text: "Draft Source Audit"
-            href: reviews/draft-source-audit.html
-          - text: "Publication Approval Review"
-            href: reviews/publication-approval-review.html
+        href: reviews/
       - text: "Reports"
         menu:
           - text: "Publication Audit"
             href: publication-audit.html
           - text: "Reproducibility Report"
             href: reproducibility-report.html
-          - text: "Evidence Appendix CSV"
-            href: outputs/evidence-appendix.csv
-    right:
-      - icon: github
-        aria-label: "GitHub repository"
-        href: "https://github.com/ashitaka-emishi/lincoln-war-research-project"
   page-footer:
-    center: "A source-grounded scholarly research project"
+    center: "A governed source-grounded scholarly research project"
 
 format:
   html:

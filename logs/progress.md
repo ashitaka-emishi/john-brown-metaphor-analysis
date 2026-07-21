@@ -2,508 +2,169 @@
 
 ## Current state
 
-Scaffold initialized. No research source is yet verified.
+Repository migrated to the John Brown metaphor-analysis mission. No John Brown
+corpus has yet been approved or acquired under this project.
 
 ## Next checkpoint
 
-Run Goal 00 and stop at corpus approval.
+Stop at the corpus-approval human gate. Do not acquire sources, mark sources
+verified, populate evidence rows, form a thesis, or publish findings until the
+scholar approves the question, scope, chronological periods, proposed corpus,
+source hierarchy, codebook draft, and acquisition plan.
 
-## 2026-07-16 - Goal 00 research foundation
+## Migration Record
 
-- Checkpoint scope: convert the dossier into a controlled research plan without treating its claims as verified evidence.
-- Read `AGENTS.md`, the `$scholarly-research` skill, `goals/00-research-foundation.md`, and `research/dossier/research-dossier.md`.
-- Expanded `research/data/source-register.csv` to inventory the dossier's proposed Gettysburg manuscripts, ceremony/context sources, Lincoln comparative corpus, reception sources, secondary works, and online source guides.
-- All source-register rows remain `unverified`; unresolved source identities, provenance gaps, rights issues, and copyrighted secondary works are marked rather than silently resolved.
-- Completed `research/notes/question-and-scope.md` with research question, unit of analysis, temporal boundaries, public/private distinction, Civil War/all-war distinction, and an operational definition of sacrifice.
-- Completed `research/notes/method.md` with source hierarchy, acquisition/preservation rules, textual-variant method, coding method, claim control, comparative method, reception method, adversarial review, and human gates.
-- Completed `research/notes/source-acquisition-plan.md` with authoritative-repository priorities, phased acquisition plan, risks, exclusions, and proposed corpus for approval.
-- Created `research/notes/dossier-claim-inventory.md` to separate provisional dossier claims from verified evidence and identify disconfirming tests.
-- Mechanical CSV check passed: 40 source rows, 16 schema columns, no malformed rows.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 3 tests passed.
-- Stop condition reached: corpus approval human gate.
+### 2026-07-21 - Checkpoint 0 inventory
 
-## 2026-07-16 - Goal 10 corpus acquisition
+- Created `migration/inventory.md`.
+- Confirmed this working directory is a migration copy at
+  `/Users/andrewhammer/codegarden/john-brown-metaphor-analysis`.
+- Removed the old Git remote that pointed to the prior project repository.
+- Ran the pre-migration baseline:
+  `.venv/bin/python -m lincoln_research validate` passed and
+  `.venv/bin/pytest` passed with 10 tests.
 
-- Checkpoint scope: verify prerequisites before acquiring or normalizing any corpus material.
-- Read `AGENTS.md`, the `$scholarly-research` skill, `goals/10-corpus-acquisition.md`, and `research/dossier/research-dossier.md`.
-- Stop condition reached: Goal 10 precondition is not satisfied because `research/notes/corpus-approval.md` is not present.
-- No sources were acquired, normalized, hashed, or marked verified during this checkpoint.
-- Continuation recheck confirmed the approval file is still absent; acquisition remains paused at the same gate.
-- Scholar directed creation of `research/notes/corpus-approval.md`; Goal 10 precondition is now satisfied.
-- Created the approval record with lawful-access, provenance, raw/normalized separation, variant-preservation, and stop-condition limits.
-- Acquired LOC PDFs for `SRC-0001` Nicolay Copy and `SRC-0002` Hay Copy using `scripts/fetch_source.py`; normalized separate text with `pdftotext` and `scripts/normalize_text.py`.
-- Updated `research/data/source-register.csv` for `SRC-0001` and `SRC-0002` with local paths, retrieval date, hashes, rights status, acquisition method, and verified status.
-- Added local `.env` configuration for `LINCOLN_RESEARCH_USER_AGENT`; `.env` remains ignored by Git.
-- Chrome-assisted discovery setup was requested for CAPTCHA/search-gated sources. Chrome is installed and running, and the native host manifest is correct, but the Codex Chrome Extension is installed/enabled in Chrome `Profile 2` while the selected profile is `Default`, where the extension is not installed. Browser-assisted scraping is paused until the selected Chrome profile has the extension enabled or the profile selection is corrected.
-- Chrome DevTools MCP was noted as installed in VS Code, but no `chrome-devtools` MCP namespace is exposed to this Codex session; exact tool discovery surfaced only the bundled Chrome extension route and Node browser runtime.
-- Acquired authoritative representations for Gettysburg manuscript witnesses `SRC-0003` Everett Copy from ALPLM, `SRC-0004` Bancroft/Cornell Copy from Cornell University Library, and raw `SRC-0005` Bliss/White House Copy manuscript imagery from Smithsonian/NMAH.
-- Acquired `SRC-0006` Everett/ceremony pamphlet from Internet Archive and `SRC-0007` Wills invitation from LOC; identified the same 1864 pamphlet as the source for `SRC-0008` ceremony order/program and `SRC-0009` prayers/hymns/dirge/benediction.
-- Verification checkpoint: source identity checks used file type, PDF metadata, repository metadata, and known phrase searches. Everett and Bancroft normalized text passed identity-level checks; OCR for the Smithsonian Bliss manuscript failed badly and was not retained.
-- Stop condition reached: `SRC-0005` has verified raw provenance and hash, but normalized text requires human transcription from the manuscript image before it can be marked verified. The scholar offered to transcribe handwriting if needed.
-- Continuation recheck confirmed the same stop condition remains active: `SRC-0005` still lacks reliable normalized text. Added `research/notes/bliss-copy-transcription-needed.md` to identify the raw source, expected normalized-text path, and post-transcription verification checks.
-- Blocked-audit recheck confirmed the same stop condition remains active for a third consecutive Goal 10 turn: `SRC-0005` still lacks reliable normalized text. Goal 10 cannot proceed without human transcription or another legally preservable authoritative transcript.
-- Created `research/corpus/primary/normalized/SRC-0005-gettysburg-address-bliss-copy-smithsonian-transcript.txt` as the human transcription target with page markers. Opened the target file in VS Code and the raw Smithsonian PDF in Chrome; automated horizontal window arrangement was blocked by macOS assistive-access permissions.
-- Scholar completed and approved the `SRC-0005` human transcription. Updated the source register with the normalized path and raw/normalized hashes; replaced the old transcription-needed note with `research/notes/bliss-copy-transcription.md`. The Gettysburg manuscript-witness stop condition is cleared for acquisition purposes, with quotation-level page-image verification still required.
-- Encoded repeatable LOC Chronicling America support in `src/lincoln_research/loc_chronicling.py`, `scripts/acquire_chronicling_page.py`, and `scripts/extract_chronicling_text.py`; added focused tests for URL construction and full-text extraction.
-- Acquired and normalized `SRC-0040` Dickinson House Divided reception guide as a discovery source only.
-- Acquired and normalized two public issue-level reception examples from LOC Chronicling America: `SRC-0041` New-York Daily Tribune, 1863-11-20, and `SRC-0042` Union County Star and Lewisburg Chronicle, 1863-11-27.
-- Updated `SRC-0010` as a partially verified reception sampling frame and marked `SRC-0011` Harrisburg Patriot/Patriot and Union criticism blocked because issue-level access was not legally/reliably available in this environment; retrospective summaries were not treated as primary evidence.
-- Produced `research/notes/corpus-report.md` documenting acquired corpus, repeatable commands, OCR limits, and reception blocks.
-- Scholar approved using the Dickinson House Divided transcription of `SRC-0011` pending the original newspaper image. Downloaded the Dickinson record, extracted a normalized derivative transcription, and updated `SRC-0011` to `verified-derivative-transcription` with page-image verification still pending for final quotation use.
+### 2026-07-21 - Checkpoint 1 project identity
 
-## 2026-07-15 — Public repository and project website
+- Updated repository metadata, active public pages, configuration, and
+  instructions for the John Brown metaphor-analysis mission.
+- Added the primary John Brown research question and project-specific
+  epistemic rules to `README.md` and `AGENTS.md`.
+- Replaced active completed-paper pages with no-findings scaffolds.
 
-- Publication approval received through the scholar's explicit instruction to create and push a public GitHub repository.
-- Checkpoint scope: initialize Git on `master`, add a status-conscious Quarto project website, configure GitHub Pages deployment, validate, and publish.
-- The website will distinguish the unverified dossier from completed scholarship; no research claims are being approved or advanced at this checkpoint.
-- Local checks use a `.venv` created from the scholar-selected installed Python 3.9.6. The editable install required `--ignore-requires-python` because project metadata specifies Python 3.11+; compatible pytest 8.3.5 and iniconfig 2.1.0 were selected for this local environment.
-- Validation passed, all 3 tests passed, the public website rendered to `_site/`, and `quarto render paper/paper.qmd` produced the manuscript HTML and PDF outputs.
-- The scholar subsequently approved upgrading to Python 3.11. Homebrew Python 3.11.15 was installed, `.venv` was recreated, and the project installed normally with its declared development dependencies. Validation and all 3 tests pass without compatibility overrides.
-- Public repository created at <https://github.com/ashitaka-emishi/lincoln-war-research-project> with `master` as the default branch, public visibility, and a mission-specific description.
-- GitHub Pages configured for Actions and the Quarto landing page verified live at <https://ashitaka-emishi.github.io/lincoln-war-research-project/>. The deployed site contains the status-conscious landing page only; the provisional dossier is not rendered as a site page.
+### 2026-07-21 - Checkpoint 2 package rename
 
-## 2026-07-16 - Methodology-track integration
+- Renamed the Python package to `john_brown_research`.
+- Updated scripts, tests, command examples, environment variables, and package
+  metadata.
+- Regenerated editable package metadata.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 10 tests.
 
-- Added a parallel methodology-paper track around the active Lincoln historical project.
-- Preserved the existing corpus, goals, source register, research method, and paper structure.
-- Added a general methodology specification, human-AI boundary, artifact model, governance model, evaluation plan, and limitations.
-- Added retrospective case-study records for completed Goal 00 and Goal 10 work to date.
-- Added prospective process-event and human-intervention instrumentation.
-- Added methodology-specific goals and a Quarto methodology-paper scaffold.
-- Updated repository instructions and README without changing historical research scope.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
+### 2026-07-21 - Checkpoint 3 research-state reset
 
-## 2026-07-16 - Goal 20 evidence coding
-
-- Checkpoint scope: begin evidence-matrix coding from the acquired Goal 10
-  corpus while prospectively logging material methodology events.
-- Read `AGENTS.md`, the `$scholarly-research` skill,
-  `goals/20-evidence-coding.md`, and `research/dossier/research-dossier.md`.
-- Populated the coded evidence matrix in
-  `research/data/evidence-matrix.csv` with stable `OBS-` identifiers.
-- Added working `CLM-` claim records in `research/data/claims.csv` so
-  thesis-bearing claims map to supporting and counter evidence.
-- Coded Gettysburg Address close-reading rows, manuscript-variant rows,
-  Wills/ceremonial context, Everett comparison rows, comparative Lincoln rows
-  from Lyceum through the Last Public Address, and limited
-  reception/counterevidence rows.
-- Produced `research/notes/coding-memo.md` with codebook use, initial
-  findings, variant comparison, and open limits.
-- Produced `research/reviews/coding-review.md` with source/interpretation
-  separation checks, alternative-reading checks, and residual risks.
-- Current evidence limits: Bliss Copy quotation use still needs manuscript-image
-  second pass; OCR-derived pamphlet/newspaper rows need page-image checks;
-  `SRC-0011` remains derivative pending original newspaper image.
-- Consistency audit: 32 evidence rows, 9 claims, no missing claim-evidence
-  references, all evidence rows include alternative readings, and
-  disconfirming rows remain visible.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-
-## 2026-07-16 - Goal 30 analysis and thesis
-
-- Checkpoint scope: analyze the coded evidence matrix, test the working thesis
-  against disconfirmation, and stop at the thesis approval gate.
-- Read `AGENTS.md`, the `$scholarly-research` skill,
-  `goals/30-analysis-and-thesis.md`, `research/dossier/research-dossier.md`,
+- Reset `research/data/source-register.csv`,
   `research/data/evidence-matrix.csv`, `research/data/claims.csv`,
-  `research/notes/coding-memo.md`, and
-  `research/reviews/coding-review.md`.
-- Updated `research/data/claims.csv` so each claim points to the Goal 30
-  analysis/provisional-thesis artifacts and has `provisional-thesis` status.
-- Created `research/notes/argument-map.md` with thesis clauses, support,
-  counterevidence, confidence levels, and distinctions between direct
-  Gettysburg evidence and comparative evidence.
-- Created `research/reviews/disconfirmation-review.md` with six falsification
-  tests and six steelmanned competing interpretations.
-- Created `research/notes/provisional-thesis.md` with the proposed thesis,
-  clause-by-clause evidence map, limits, and proposed revisions from the dossier
-  thesis.
-- Created `research/notes/findings.md` with high-, medium-, and low-confidence
-  findings.
-- Consistency audit: 9 claims, no missing claim-evidence references, and all
-  four Goal 30 deliverables are present.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
+  `case-study/process-events.csv`, and `case-study/intervention-log.csv` to
+  headers only.
+- Deleted prior-project corpus files from active raw and normalized corpus
+  directories while preserving `.gitkeep` placeholders.
+- Deleted generated publication/site outputs from active output paths.
+- Deleted prior-project review reports and active review wrappers.
+- Deleted prior-project approval, transcription, thesis, findings, coding, and
+  corpus-report notes.
+- Replaced foundation-note files with provisional John Brown migration
+  scaffolds.
+
+### 2026-07-21 - Checkpoint 4 foundation documents
+
+- Rebuilt `research/dossier/research-dossier.md` as a provisional John Brown
+  research specification.
+- Rewrote `research/notes/question-and-scope.md`,
+  `research/notes/method.md`, `research/notes/source-acquisition-plan.md`, and
+  `research/notes/dossier-claim-inventory.md`.
+- Created `research/notes/codebook-draft.md` with operational definitions for
+  metaphor, biblical quotation, biblical allusion, religious typology,
+  providential claim, role construction, sacrificial frame, diachronic
+  comparison, confidence, alternatives, disconfirming evidence, attribution,
+  and variants.
+- Included the required disconfirming possibilities in the dossier.
+- No source is marked verified, no corpus is approved, and no hypothesis is
+  promoted to a claim.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 10 tests.
+
+### 2026-07-21 - Checkpoint 5 data model and codebook
+
+- Reviewed source-register, evidence-matrix, claims, process-events, and
+  intervention schemas; no separate review schema exists in the current
+  architecture.
+- Expanded `config/schemas/source-register.fields` and
+  `research/data/source-register.csv` additively with `corpus_period`,
+  `source_tier`, `authorship_status`, and `attribution_caveat`.
+- Expanded `config/schemas/evidence-matrix.fields` and
+  `research/data/evidence-matrix.csv` for corpus period, document type,
+  audience, public/private/report status, source tier, textual variants,
+  symbolic-language category, metaphor domains, biblical citation/allusion,
+  typology, Brown role construction, relationships to violence/failure/death,
+  disconfirming status, and provenance or attribution caveat.
+- Added a focused schema test requiring the Brown-specific evidence fields.
+- The codebook remains provisional and does not presuppose the final thesis.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+
+### 2026-07-21 - Checkpoint 6 goal sequence
+
+- Rewrote the historical goal sequence as:
+  `00-research-foundation.md`, `10-corpus-acquisition.md`,
+  `20-textual-verification-and-segmentation.md`,
+  `30-metaphor-and-symbolic-language-coding.md`,
+  `40-diachronic-analysis-and-thesis.md`, `50-draft-paper.md`,
+  `60-adversarial-review.md`, and `70-final-publication.md`.
+- Rewrote `goals/99-master-goal.md` for the John Brown workflow.
+- Rewrote methodology goals M00 through M40 for the prospective second-case
+  methodology track.
+- Added required human gates and stop conditions across the goal sequence,
+  including corpus approval, source-substitution approval, codebook approval,
+  thesis approval, methodology-findings approval, and publication approval.
+- Targeted goal search found no Lincoln, Gettysburg, old package, or old
+  command residue.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+
+### 2026-07-21 - Checkpoint 7 methodology case study
+
+- Replaced active case-study files with a prospective second-case setup for
+  the John Brown project.
+- Repopulated `case-study/process-events.csv` with migration-era records only.
+- Left `case-study/intervention-log.csv` header-only because no John Brown
+  human intervention beyond the initiating migration goal has yet been
+  separately logged.
+- Rewrote `case-study/README.md`, `case-study/human-decisions.md`, and
+  `case-study/thesis-history.md`.
+- Removed old retrospective case-study notes from active paths.
+- Replaced active prior-case findings with a pointer to the new unapproved
+  `methodology/case-2-findings.md` scaffold.
+- Created `methodology/baseline-methodology.md`,
+  `methodology/case-2-evaluation-plan.md`, and
+  `methodology/case-2-findings.md`.
+- Rewrote `methodology/research-question.md` and
+  `methodology/methodology-review.md` for the second-case status.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+
+### 2026-07-21 - Checkpoint 8 paper and website scaffolds
+
+- Confirmed required scaffolds exist: `paper/paper.qmd`,
+  `paper/references.bib`, `index.qmd`, `working-paper.qmd`, `workflow.qmd`,
+  `evidence.qmd`, `reviews/index.qmd`, `publication-audit.qmd`, and
+  `reproducibility-report.qmd`.
+- Removed stale Quarto repository-action metadata because the old remote was
+  removed and no new repository URL is configured yet.
+- Rendered the clean scaffold with `quarto render .`; output was created at
+  `_site/index.html`.
+- The site states that the project is active, the corpus is not approved or
+  complete, the dossier is provisional, and no findings or working paper are
+  available yet.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+
+### 2026-07-21 - Checkpoint 9 validation and migration audit
+
+- Ran the required residue search for `Lincoln`, `lincoln`, `Gettysburg`,
+  `gettysburg`, `lincoln_research`, and
+  `Lincoln, Gettysburg, and the Nature of War`.
+- Removed obsolete active residue from the methodology paper scaffold, test
+  fixture, and old repository patch file.
+- Classified remaining prior-case terms as intentional migration history in
+  the migration spec, inventory, report, progress log, and migration-era
+  process event.
+- Created `migration/migration-report.md`.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+- `quarto render .` passed.
+- `quarto render paper/paper.qmd` passed and regenerated scaffold HTML/PDF;
+  Quarto emitted a noncritical warning about the nested paper output support
+  directory.
 - `git diff --check` passed.
-- Stop condition reached: thesis approval human gate. The thesis, strongest
-  counterargument, unresolved evidence, and proposed revisions must be presented
-  to the scholar before proceeding to drafting.
-- Scholar approved the qualified thesis. Updated `research/notes/provisional-thesis.md`,
-  `research/notes/findings.md`, and `research/data/claims.csv` to record
-  thesis approval while preserving the stated limits.
-- Final completion audit: 9 claims, all in `approved-thesis` status; no missing
-  claim-evidence references; all four Goal 30 deliverables are present.
-- `.venv/bin/python -m lincoln_research validate` passed after approval.
-- `.venv/bin/pytest` passed after approval: 10 tests passed.
-- `git diff --check` passed after approval.
-- Created `research/notes/thesis-approval.md` from the scholar's approval so
-  Goal 40's drafting precondition is explicit.
-
-## 2026-07-16 - Goal 40 scholarly paper draft
-
-- Checkpoint scope: draft a 7,000-9,000 word scholarly paper from approved
-  claims and evidence, cite through `paper/references.bib`, and audit source
-  use.
-- Read `AGENTS.md`, the `$scholarly-research` skill,
-  `goals/40-draft-paper.md`, `research/dossier/research-dossier.md`,
-  `research/notes/thesis-approval.md`,
-  `research/notes/provisional-thesis.md`,
-  `research/notes/argument-map.md`, and
-  `research/reviews/disconfirmation-review.md`.
-- Replaced the placeholder manuscript in `paper/paper.qmd` with a 7,137-word
-  draft organized around the nine required Goal 40 sections.
-- Expanded `paper/references.bib` so every citation key used in the draft
-  resolves to a project-preserved source.
-- Created `research/reviews/draft-source-audit.md`; it reports no unresolved
-  critical failures and preserves quotation-finality caveats for later review.
-- Added `paper/.gitignore` to keep Quarto scratch files under `paper/.quarto/`
-  out of Git.
-- `quarto render paper/paper.qmd` passed and produced ignored local outputs
-  `outputs/paper.html` and `outputs/paper.pdf`; Quarto emitted a noncritical
-  path warning about `outputs/paper_files/libs`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-
-## 2026-07-16 - Goal 50 adversarial scholarly review
-
-- Checkpoint scope: attempt to disprove, narrow, or materially improve the
-  Goal 40 draft before publication preparation.
-- Read `AGENTS.md`, the `$scholarly-research` skill,
-  `goals/50-adversarial-review.md`, the Goal 40 draft, the claim map, and the
-  existing draft source audit.
-- Created the six required adversarial review reports:
-  `research/reviews/historical-review.md`,
-  `research/reviews/rhetorical-review.md`,
-  `research/reviews/theological-language-review.md`,
-  `research/reviews/source-and-citation-review.md`,
-  `research/reviews/critical-countervoice-review.md`, and
-  `research/reviews/anachronism-review.md`.
-- Accepted or partially accepted critiques where the draft risked overclaiming:
-  generalizing the Civil War into war as such, implying private belief,
-  understating Everett/convention, understating soldier agency, implying
-  intentional suppression, and using "refound" or "political theology" too
-  broadly.
-- Rejected with caution the claim that sacrifice was merely imposed: the draft
-  defines sacrifice restrictively and demonstrates it through giving,
-  consecration, obligation, unfinished work, and new birth rather than treating
-  death alone as sacrifice.
-- Revised `paper/paper.qmd` to replace summary-level "refound" language with
-  "new birth of freedom," remove the "political theology" keyword, preserve
-  soldier agency, avoid intentional-sounding "suppresses" language, and narrow
-  the conclusion to Lincoln's public presentation of this Civil War in this
-  ceremonial setting.
-- Updated `research/data/claims.csv` so affected claims record Goal 50 review
-  status and links to the adversarial reports.
-- No critical citation failures were found. Remaining source caveats are
-  publication-final checks for `SRC-0005`, `SRC-0006`, `SRC-0011`, and
-  `SRC-0041`.
-- `quarto render paper/paper.qmd` passed and updated ignored local render
-  outputs in `outputs/`; Quarto emitted the same noncritical path warning
-  about `outputs/paper_files/libs`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-
-## 2026-07-16 - Goal 60 final publication package
-
-- Checkpoint scope: create a reproducible, source-audited publication-review
-  package and stop at the publication approval human gate.
-- Read `AGENTS.md`, the `$scholarly-research` skill,
-  `goals/60-final-publication.md`, the research dossier, the current draft,
-  source register, claim map, evidence matrix, and prior Goal 40/50 reviews.
-- Confirmed current paper and bibliography are already finalized for package
-  preparation after Goal 50 narrowing; no additional thesis-expanding edits
-  were made.
-- Ran citation and claim audits: 25 citation keys used, 25 bibliography
-  entries, no missing keys, no unused keys, 32 evidence rows, 9 claims, and no
-  broken claim-to-evidence references.
-- Exported `outputs/evidence-appendix.csv` from
-  `research/data/evidence-matrix.csv` with 32 evidence rows.
-- Created `outputs/publication-readme.md`,
-  `outputs/reproducibility-report.md`, and `outputs/publication-audit.md`.
-- Publication package excludes raw corpus files, browser data, secrets,
-  cookies, and paywalled or restricted source files.
-- Known limitations remain recorded for publication review: `SRC-0005` Bliss
-  Copy manuscript-image second pass, `SRC-0006` OCR-derived Everett pamphlet
-  quote checks, `SRC-0011` derivative Dickinson transcription pending original
-  newspaper image, and `SRC-0041` noisy OCR used only for limited reception
-  framing.
-- `outputs/paper.html`, `outputs/paper.pdf`,
-  `outputs/publication-readme.md`, `outputs/reproducibility-report.md`,
-  `outputs/publication-audit.md`, and `outputs/evidence-appendix.csv` all
-  exist after the final render/package check.
-- `quarto render paper/paper.qmd` passed and produced HTML/PDF outputs;
-  Quarto emitted the same noncritical path warning about
-  `outputs/paper_files/libs`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-- Stop condition reached: publication approval human gate. Do not publish,
-  upload, push externally, or otherwise distribute the package without
-  explicit scholar approval.
-
-## 2026-07-16 - Publication approval review
-
-- Checkpoint scope: review the Goal 60 package in `outputs/` and determine
-  whether it is ready for scholar publication approval.
-- Read `AGENTS.md`, the `$scholarly-research` skill, Goal 60 package files,
-  and the current repository state.
-- Corrected stale package metadata in `outputs/publication-readme.md` and
-  `outputs/reproducibility-report.md` so the audited commit is
-  `9a4ba49f077d2b9ec60533e953868791ed980f46`.
-- Created `research/reviews/publication-approval-review.md`.
-- Recommendation: approve only as a transparent public working-paper package
-  with disclosed limitations. Do not treat as journal-final or
-  quotation-final until page-image checks are completed for `SRC-0005`,
-  `SRC-0006`, `SRC-0011`, and relevant newspaper quotations.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-- Publication approval remains a human decision under `AGENTS.md`. Stop at the
-  human gate until the scholar explicitly approves publication of the package
-  and the intended release type.
-- Scholar approved publication of the Goal 60 package as a public working-paper
-  package with the disclosed limitations, including committing, pushing, and
-  publishing only the approved outputs.
-- Updated `outputs/publication-readme.md`, `outputs/publication-audit.md`, and
-  `research/reviews/publication-approval-review.md` to record the approved
-  release type and to clarify that this approval does not cover journal-final,
-  quotation-final, or limitation-free publication.
-- Confirmed `outputs/paper.html` references `outputs/paper_files/`; those
-  Quarto support assets are approved output dependencies and must be committed
-  with the HTML manuscript.
-- `.venv/bin/python -m lincoln_research validate` passed after approval.
-- `.venv/bin/pytest` passed after approval: 10 tests passed.
-- `quarto render paper/paper.qmd` passed after approval and refreshed
-  `outputs/paper.html`, `outputs/paper.pdf`, and `outputs/paper_files/`;
-  Quarto emitted the same noncritical path warning about
-  `outputs/paper_files/libs`.
-- `git diff --check` passed after approval.
-
-## 2026-07-16 - Public landing page update
-
-- Checkpoint scope: update the GitHub Pages landing page to reflect the
-  approved public working-paper package.
-- Verified the live page still described the project as a scaffold with source
-  acquisition incomplete and the paper as an outline.
-- Updated `index.qmd` to describe the current public working-paper status,
-  link to the approved outputs, and preserve disclosed limitations.
-- Updated `_quarto.yml` so Quarto copies `outputs/**` into `_site`, allowing
-  the GitHub Pages deployment to serve `outputs/paper.html`,
-  `outputs/paper.pdf`, audit files, reproducibility report, and evidence
-  appendix from the site.
-- `quarto render .` passed and copied the approved output package into
-  `_site/outputs/`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check -- . ':(exclude)_site/**'` passed.
-- Committed and pushed landing-page update as `278a439`.
-- GitHub Pages workflow `29486048963` completed successfully for commit
-  `278a4399bd5bc45f93a6036e7f71a4caa5c589c8`.
-- Verified the live site with a cache-busting request: the landing page shows
-  the working-paper status and links to `outputs/paper.html` and
-  `outputs/paper.pdf`.
-- Verified `https://ashitaka-emishi.github.io/lincoln-war-research-project/outputs/paper.html`
-  returns HTTP 200.
-
-## 2026-07-16 - Methodology M20 case-study evaluation
-
-- Checkpoint scope: evaluate the methodology after the historical project's
-  evidence coding, thesis formation, adversarial review, and public
-  working-paper release.
-- Read `AGENTS.md`, `goals/methodology/M20-evaluate-case-study.md`,
-  `methodology/evaluation-plan.md`, `methodology/methodology.md`,
-  `methodology/artifact-model.md`, `methodology/human-ai-boundary.md`,
-  `methodology/limitations.md`, process-event logs, intervention logs, source
-  register, evidence matrix, claims table, and relevant reviews.
-- Measured the case-study record: 27 process events, 13 interventions, 42
-  source-register rows, 32 evidence rows, 9 claims, 8 disconfirming evidence
-  rows, 11 retrospective process events, and 16 prospective process events.
-- Created `methodology/case-study-findings.md` covering traceability, error
-  detection, successful and failed AI contributions, documentation burden,
-  counterevidence-driven change, retrospective/prospective capture quality,
-  human authority, reproducibility, and supported/unsupported methodological
-  claims.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-- Stop condition reached: methodology-findings approval gate. The scholar must
-  approve, revise, or reject the findings before methodology-paper drafting.
-- Scholar approved `methodology/case-study-findings.md` as the M20 methodology
-  findings.
-- Updated `methodology/case-study-findings.md`, `case-study/process-events.csv`,
-  and `case-study/intervention-log.csv` to record that the methodology-findings
-  approval gate is cleared.
-- `.venv/bin/python -m lincoln_research validate` passed after approval.
-- `.venv/bin/pytest` passed after approval: 10 tests passed.
-- `git diff --check` passed after approval.
-
-## 2026-07-16 - Methodology M30 methodology-paper draft
-
-- Checkpoint scope: draft the methodology paper from approved methodology
-  findings and case-study evidence.
-- Read `goals/methodology/M30-draft-methodology-paper.md`,
-  `methodology/case-study-findings.md`, the methodology model artifacts, and
-  the existing methodology-paper scaffold.
-- Drafted `methodology-paper/methodology-paper.qmd` with the required sections:
-  introduction, related practices, scholarly build-system model, human-AI
-  authority model, artifact and governance model, case-study design,
-  case-study findings, discussion, limitations, and conclusion.
-- Added verified related-practices bibliography entries to
-  `methodology-paper/references.bib` for reproducible research, research
-  compendia, literate programming, argument structure, and AI authorship
-  accountability.
-- The draft does not claim universal validation from one case, distinguishes
-  retrospective from prospective evidence, includes failures and documentation
-  burden, and preserves the rule that AI is not an accountable scholar.
-- `quarto render methodology-paper/methodology-paper.qmd` passed and produced
-  `methodology-paper/methodology-paper.html` with Quarto support files.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check` passed.
-
-## 2026-07-16 - Methodology M40 adversarial review
-
-- Checkpoint scope: conduct adversarial review of the methodology paper and
-  its claimed originality.
-- Read `goals/methodology/M40-review-methodology.md`, `AGENTS.md`,
-  `methodology-paper/methodology-paper.qmd`, process logs, intervention logs,
-  and methodology artifacts.
-- Created `methodology/methodology-review.md` with decisions for all required
-  critiques.
-- Accepted or partially accepted critiques about originality, artifact-model
-  mechanization, gate effectiveness, developmental-case bias, observer effect,
-  one-case evidence, documentation cost, and AI disclosure.
-- Rejected with caution the claim that the paper simply confuses
-  reproducibility with validity, while strengthening the conclusion to preserve
-  that distinction.
-- Revised `methodology-paper/methodology-paper.qmd` to narrow originality
-  claims, add an AI disclosure subsection, define the artifact chain as an
-  audit device rather than a truth procedure, distinguish gate presence from
-  gate effectiveness, describe developmental-case bias and observer effect, add
-  a proportionality principle for documentation burden, and strengthen the
-  reproducibility-versus-validity distinction.
-- `quarto render methodology-paper/methodology-paper.qmd` passed and refreshed
-  `methodology-paper/methodology-paper.html`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check -- . ':(exclude)methodology-paper/methodology-paper.html'
-  ':(exclude)methodology-paper/methodology-paper_files/**'` passed.
-- Rechecked M40 after continuation: all required critiques remain represented
-  in `methodology/methodology-review.md`, the methodology paper contains the
-  corresponding revisions, `quarto render methodology-paper/methodology-paper.qmd`
-  passed, validation passed, tests passed, and authored-file diff check passed.
-
-## 2026-07-16 - Methodology publication-readiness review
-
-- Checkpoint scope: review the methodology paper package for possible public
-  working-paper release while preserving the methodology-publication approval
-  human gate.
-- Read `methodology-paper/methodology-paper.qmd`,
-  `methodology/methodology-review.md`, `methodology/case-study-findings.md`,
-  `index.qmd`, `_quarto.yml`, case-study logs, and prior progress records.
-- Created `methodology/methodology-publication-readiness.md`.
-- Recommendation: the methodology paper is ready for scholar approval only as a
-  public methodology working paper with disclosed limitations, not as
-  journal-final, universally validated, or independent replication evidence.
-- Site note: the current Quarto site renders `index.qmd` and copies
-  `outputs/**`; publishing the methodology paper would require an intentional
-  site/resource update after approval.
-- Stop condition reached: methodology-publication approval human gate. Do not
-  update the public site, push a publication-site change, or publish the
-  methodology paper externally until the scholar explicitly approves release.
-- Scholar approved publication of the methodology paper as a public methodology
-  working paper with disclosed limitations.
-- Updated `index.qmd` to link the approved methodology working paper and
-  preserve the methodology limitations on the landing page.
-- Updated `_quarto.yml` to publish the rendered methodology paper HTML as a
-  site resource.
-- Updated `methodology/methodology-publication-readiness.md` to record that the
-  methodology-publication approval gate is cleared.
-- `quarto render methodology-paper/methodology-paper.qmd` passed.
-- `quarto render .` passed and copied the methodology working paper to
-  `_site/methodology-paper/methodology-paper.html`.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check -- . ':(exclude)_site/**'
-  ':(exclude)methodology-paper/methodology-paper.html'
-  ':(exclude)methodology-paper/methodology-paper_files/**'` passed.
-- Committed and pushed methodology working-paper site update as `3cfbb3d`.
-- GitHub Pages workflow `29500718074` completed successfully for commit
-  `3cfbb3d71d115f4ad22cebb377f59f1a95cd7eae`.
-- Verified the live landing page with a cache-busting request: it shows the
-  methodology working-paper section, link, single-case status, and disclosed
-  limitations.
-- Verified
-  `https://ashitaka-emishi.github.io/lincoln-war-research-project/methodology-paper/methodology-paper.html`
-  returns HTTP 200 and contains the methodology-paper title and abstract.
-
-## 2026-07-16 - Site artifact-link polish
-
-- Checkpoint scope: replace raw Markdown publication-package links on the
-  landing page with rendered HTML pages and clearer summaries, while preserving
-  the evidence appendix as a CSV download.
-- Read `outputs/publication-audit.md`, `outputs/reproducibility-report.md`,
-  `outputs/evidence-appendix.csv`, `_quarto.yml`, and `index.qmd`.
-- Added `publication-audit.qmd` and `reproducibility-report.qmd` as rendered
-  Quarto wrapper pages for the existing Markdown reports.
-- Replaced the wrapper includes with page-local content to avoid duplicate H1
-  titles in the rendered pages.
-- Updated `_quarto.yml` to render the new pages.
-- Updated `index.qmd` with a publication-package section summarizing the
-  publication audit, reproducibility report, and evidence appendix CSV.
-- `quarto render .` passed and produced rendered audit and reproducibility
-  report pages.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- `git diff --check -- . ':(exclude)_site/**'` passed.
-
-## 2026-07-16 - Site review and evidence expansion
-
-- Checkpoint scope: add individual audit result pages, add a table view of the
-  evidence appendix, reorganize the Quarto site navigation, and stop at a
-  human review control point before committal.
-- Read the current Quarto config, landing page, publication reports, evidence
-  appendix, and review documents in `research/reviews/`.
-- Added `reviews/index.qmd` and individual rendered review pages for the
-  historical, rhetorical, theological-language, source and citation, critical
-  countervoice, anachronism, disconfirmation, coding, draft-source, and
-  publication-approval reviews.
-- Added `evidence.qmd` with a compact table view of the 32 evidence rows and a
-  link to the full evidence appendix CSV.
-- Updated `_quarto.yml` with rendered review/evidence pages, organized navbar
-  entries, and site CSS.
-- Updated `index.qmd` into a hub linking the working paper, evidence, reviews,
-  publication reports, and methodology paper.
-- Added `styles.css` for the evidence table and homepage site-map layout.
-- Human control point: stop before commit until the scholar reviews and
-  approves the site changes.
-- `quarto render .` passed and rendered 15 site pages.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
-- Local generated-page checks confirmed the homepage hub, evidence table,
-  review index, and individual review pages are present in `_site/`.
-- Stop condition reached: human review control point before committal.
-- Added `workflow.qmd` as a reader-facing summary of the research method and
-  workflow, distinct from the more technical methodology paper.
-- Updated `_quarto.yml` and `index.qmd` to link the workflow overview from the
-  navigation and homepage.
-- Added `working-paper.qmd` and `methodology.qmd` as site-native pages so the
-  default paper and methodology routes retain the website header and GitHub
-  repository link.
-- Updated navigation and internal links to point to the site-native pages while
-  preserving direct links to the rendered artifact files from those pages.
-- Folded the methodology wrapper back into `workflow.qmd`: the workflow page is
-  now the summary page, and it links deeper to the detailed methodology paper.
-- Removed `methodology.qmd` from the rendered top-level site navigation.
-- Updated the GitHub navbar item to use an icon-only link with an accessible
-  label.
-- Scholar reviewed the local preview and approved commit and push.
-- `quarto render .` passed and rendered 17 site pages after review changes.
-- `.venv/bin/python -m lincoln_research validate` passed.
-- `.venv/bin/pytest` passed: 10 tests passed.
+- Final stop condition reached: corpus-approval human gate.
