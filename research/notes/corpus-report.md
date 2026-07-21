@@ -260,6 +260,62 @@ Permitted next use:
 Use `SRC-0009` for Goal 20 government-record segmentation and to identify
 reported statements or testimony that require locator-level verification.
 
+## SRC-0019 - Brown to Seth Thompson, 1836-01-04
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired through human-mediated AUC RADAR access after the
+scholar completed the CAPTCHA flow and supplied the PDF, citation, metadata,
+and rights statement. The raw PDF is tracked in the repository because the
+scholar supplied item-level `NO COPYRIGHT - UNITED STATES` metadata. Text
+extraction produced only form-feed characters, so no usable OCR or
+transcription exists yet.
+
+Source: `Correspondence and Map, John Brown to Seth Thompson, January 4, 1836`,
+Robert W. Woodruff Library of the Atlanta University Center, Inc.,
+`http://hdl.handle.net/20.500.12322/auc.028:0053`.
+
+Raw preservation:
+
+- `research/corpus/primary/raw/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836.pdf`
+- `research/corpus/primary/raw/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836-manifest.sha256`
+
+Normalized derivative:
+
+- `research/corpus/primary/normalized/SRC-0019-auc-028-0053-correspondence-map-brown-thompson-1836.txt`
+
+The normalized derivative is a placeholder created by `pdftotext`; it is not a
+usable transcription.
+
+Provenance and rights:
+
+- AUC metadata supplied by the scholar identifies Brown as correspondent and
+  Seth Thompson as addressee.
+- Local identifier: `auc.028.0053`.
+- Extent: 5 pages.
+- Series: `John Brown Collection, Correspondence: Seth Thompson, 1814-1831
+  Series`.
+- Rights statement supplied from the AUC metadata: `NO COPYRIGHT - UNITED
+  STATES`, `http://rightsstatements.org/vocab/NoC-US/1.0/`.
+- Public repository tracking is limited to this item-level raw PDF and does not
+  apply to other AUC objects.
+
+Verification caveats:
+
+- Codex did not access AUC through stored credentials or captured browser
+  state; the scholar performed the CAPTCHA-gated step and supplied the file.
+- A fresh manual transcription or OCR pass must be produced and verified
+  against the PDF page images before any quotation, passage segmentation, or
+  coding.
+- This acquisition clears access only for `auc.028.0053`; it does not establish
+  permission or rights status for other AUC objects.
+
+Permitted next use:
+
+Use this as a Tier 1 formation/baseline witness for Goal 20 transcription
+creation, verification, and segmentation. Do not quote or code it until
+page-image verification is complete.
+
 ## SRC-0010 - Testimonies of Capt. John Brown
 
 Checkpoint date: 2026-07-21
@@ -305,6 +361,29 @@ Permitted next use:
 
 Use `SRC-0013` in Goal 20 as a contemporary newspaper witness candidate for
 Brown's courtroom-address wording.
+
+## SRC-0017 - Milwaukee Daily Sentinel, 1859-11-03
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Internet Archive metadata, full issue PDF, and
+DjVu XML; normalized as working text extracted locally from the PDF.
+
+Source: `Milwaukee Daily Sentinel (1859-11-03)`.
+
+Verification caveats:
+
+- This is a contemporary newspaper report, not a Brown-authored manuscript.
+- OCR/text extraction contains the opening of Brown's courtroom speech, but
+  exact wording, page, and column must be verified against the PDF scan.
+- The advertised Internet Archive DjVuTXT derivative returned HTTP 500 during
+  acquisition; this failure is recorded in the source register.
+- Reuse rights are not explicit in Internet Archive item metadata.
+
+Permitted next use:
+
+Use `SRC-0017` in Goal 20 as a second contemporary newspaper witness candidate
+for Brown's courtroom-address wording.
 
 ## SRC-0015 - Avalon Project Hosted De Witt Text
 
@@ -433,4 +512,35 @@ Verification caveats:
 Permitted next use:
 
 Use this as a Tier 1 prison-period Brown-authored witness for Goal 20
+transcription verification and segmentation.
+
+## SRC-0018 - Brown to Wife and Children, 1859-10-01
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Digital Commonwealth / Boston Public Library
+item metadata, IIIF manifest, and page images; normalized as local working OCR
+only.
+
+Source: `John Brown autograph letter signed to "Dear Wife and Children All",
+Chambersburg, PA, 1 October 1859`.
+
+Provenance and rights:
+
+- Digital Commonwealth metadata identifies Brown as author and Mary Ann Day
+  Brown as addressee.
+- Repository metadata lists local call number `MS E.5.1, pt. 1, p. 40`.
+- Repository metadata and IIIF manifest state no known copyright restrictions
+  and no known restrictions on use.
+
+Verification caveats:
+
+- No repository transcription was advertised.
+- Local manuscript OCR is noisy and discovery-only.
+- Metadata notes verso epitaphs; quotation, segmentation, and coding require
+  page-image verification in Goal 20.
+
+Permitted next use:
+
+Use this as a Tier 1 pre-raid/family-correspondence witness for Goal 20
 transcription verification and segmentation.

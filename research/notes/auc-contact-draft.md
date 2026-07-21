@@ -1,6 +1,9 @@
 # AUC Repository Contact Draft
 
-Status: draft only. Do not send until the scholar approves.
+Status: draft only. Do not send until the scholar approves. The specific item
+`auc.028.0053` was later acquired through the human-mediated protocol and
+registered as `SRC-0019`; use this draft only for remaining AUC items or for
+broader reuse guidance.
 
 To: `archives@auctr.edu`
 
@@ -18,6 +21,11 @@ I am especially interested in item-level access to:
 - `Correspondence and Map, John Brown to Seth Thompson, January 4, 1836`,
   digital object page `https://findingaids.auctr.edu/repositories/2/digital_objects/6800`,
   handle `http://hdl.handle.net/20.500.12322/auc.028:0053`.
+
+Note: this item-level access question has been resolved for local research
+preservation because the scholar completed the CAPTCHA flow and supplied the
+file, citation, metadata, and `NO COPYRIGHT - UNITED STATES` rights statement.
+Keep it in the draft only if asking AUC to confirm broader reuse guidance.
 
 The public finding aid states that collection materials may be protected by
 copyright and/or be property of the Robert W. Woodruff Library at Atlanta
@@ -46,6 +54,9 @@ Sincerely,
 ## Human-In-Browser Inspection Protocol
 
 Use this only if the scholar chooses a browser-session path instead of email.
+Browser automation was unavailable in the 2026-07-21 Codex session, so the
+manual fallback is currently the active path unless browser control becomes
+available later.
 
 1. The scholar opens the AUC digital object page and handles any CAPTCHA,
    login, institutional authentication, or terms prompt personally.
@@ -58,3 +69,22 @@ Use this only if the scholar chooses a browser-session path instead of email.
    file names, hashes, and permitted local files.
 5. Codex does not store passwords, cookies, browser profiles, screenshots of
    private account state, or files whose terms prohibit local preservation.
+
+Manual page to open:
+
+`https://findingaids.auctr.edu/repositories/2/digital_objects/6800`
+
+After clicking `Go to file`, report:
+
+- whether the file can be viewed;
+- whether it can be downloaded;
+- whether local preservation for scholarly verification is allowed;
+- whether public redistribution is allowed, restricted, or prohibited;
+- and the local path if a permitted file is downloaded.
+
+Resolved item:
+
+- `auc.028.0053` / `SRC-0019`: scholar completed CAPTCHA, supplied
+  `auc.028.0053.pdf`, and supplied AUC metadata stating `NO COPYRIGHT - UNITED
+  STATES`. Codex preserved the PDF locally without storing credentials,
+  cookies, or private browser state.

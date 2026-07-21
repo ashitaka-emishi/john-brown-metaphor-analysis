@@ -213,6 +213,50 @@ checked against preserved source witnesses.
 - Human feedback remains required before AUC repository-contact or
   human-in-browser restricted-access work proceeds.
 
+### 2026-07-21 - Source-access follow-up pass 3
+
+- Checkpoint scope: continue the three source-access tracks after the scholar
+  requested an AUC login attempt.
+- AUC track: browser control was unavailable in the Codex session, so Codex
+  could not bring up the page. Updated `research/notes/auc-contact-draft.md`
+  with the manual AUC page URL and exact terms/download facts needed from the
+  scholar after login or CAPTCHA handling. No restricted AUC file was acquired.
+- Trial-witness track: acquired `SRC-0017`, the Internet Archive / Milwaukee
+  Daily Sentinel issue for 1859-11-03, as a second contemporary newspaper
+  witness candidate for Brown's courtroom speech. The IA DjVuTXT derivative
+  returned HTTP 500, but PDF and DjVu XML were preserved and working text was
+  extracted locally from the PDF.
+- Digital Commonwealth/BPL track: acquired `SRC-0018`, Brown's 1859-10-01
+  autograph letter to "Dear Wife and Children All," as a Tier 1 pre-raid
+  family-correspondence witness.
+- No source is quotation-final, evidence-coded, thesis-bearing, or
+  publication-approved.
+
+### 2026-07-21 - AUC item acquisition via human-mediated access
+
+- Checkpoint scope: resolve the AUC gate for the specific item
+  `auc.028.0053` after the scholar manually handled the CAPTCHA and supplied
+  the permitted PDF, citation, item metadata, and rights statement.
+- Added `SRC-0019`, `Correspondence and Map, John Brown to Seth Thompson,
+  January 4, 1836`, to `research/data/source-register.csv`.
+- Preserved and tracked the scholar-supplied PDF in the raw corpus because the
+  item-level AUC metadata supplied by the scholar states `NO COPYRIGHT - UNITED
+  STATES`; generated a raw manifest hash. The attempted text extraction
+  produced only form-feed characters, so the normalized file is a local
+  placeholder rather than a usable transcription.
+- Recorded the item-level rights statement as `NO COPYRIGHT - UNITED STATES`
+  with rights URI `http://rightsstatements.org/vocab/NoC-US/1.0/`, based on
+  scholar-supplied AUC metadata.
+- Updated `research/notes/source-access-next-steps.md`,
+  `research/notes/auc-contact-draft.md`, and
+  `research/notes/corpus-report.md` to distinguish this resolved item from
+  other still-gated AUC objects.
+- No AUC credentials, cookies, browser profiles, or private account state were
+  captured by Codex.
+- `SRC-0019` remains quotation-unverified and needs manual transcription or a
+  better OCR pass from PDF page images before passage segmentation, evidence
+  coding, or quotation.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,

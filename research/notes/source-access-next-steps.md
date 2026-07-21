@@ -17,14 +17,25 @@ Result:
 - The collection-level rights statement remains controlling: underlying
   materials may be protected by copyright and/or repository or copyright-holder
   property.
+- After the scholar manually handled the AUC CAPTCHA and supplied the permitted
+  PDF, citation, and item-level metadata, `auc.028.0053` was registered as
+  `SRC-0019`. The supplied item metadata states `NO COPYRIGHT - UNITED STATES`
+  with rights statement `http://rightsstatements.org/vocab/NoC-US/1.0/`.
+- Codex moved the scholar-supplied PDF into the raw corpus and generated a
+  manifest hash. Because the item-level metadata supplied by the scholar states
+  `NO COPYRIGHT - UNITED STATES`, this specific raw PDF may be tracked in the
+  public repository. The attempted text extraction produced only form-feed
+  characters, so the normalized file is a placeholder rather than a usable OCR
+  or transcription. No password, cookie, browser profile, or private account
+  state was captured.
 
 Human feedback gate:
 
-Decide whether to authorize a repository-contact workflow with AUC Woodruff
-Library, or a human-in-browser inspection session where the scholar handles any
-CAPTCHA/login and confirms download/use terms before Codex preserves files.
-Codex should not attempt further automated AUC item-file acquisition until that
-decision is made.
+The gate is cleared only for `auc.028.0053` / `SRC-0019` because the scholar
+provided item-level rights metadata and the file. Public raw-file tracking is
+also limited to this item. Other AUC digital objects remain gated: decide
+whether to authorize repository-contact workflow or repeat the human-mediated
+inspection/download protocol for each item.
 
 Prepared follow-up:
 
@@ -33,6 +44,10 @@ Prepared follow-up:
 - No email has been sent.
 - No login, CAPTCHA, browser-cookie capture, or restricted download has been
   attempted.
+- Browser control was unavailable in the Codex session, so the current AUC
+  path is manual scholar inspection of the page and terms.
+- The manual protocol succeeded for `auc.028.0053`; carry it forward for any
+  additional AUC objects unless AUC supplies broader written guidance.
 
 ## Contemporary Trial Witnesses
 
@@ -50,6 +65,10 @@ Result:
   over the hosted transcription.
 - Follow-up web search confirmed the Richmond Dispatch witness as a known
   comparison target, but no public scan was acquired in this pass.
+- Added `SRC-0017`, the Internet Archive / Milwaukee Daily Sentinel issue from
+  1859-11-03, as a second contemporary newspaper witness candidate. The IA
+  DjVuTXT derivative returned HTTP 500, so normalized working text was extracted
+  locally from the public PDF.
 
 Carry-forward:
 
@@ -66,8 +85,10 @@ Result:
 
 - Added `SRC-0014`, John Brown autograph letter signed to Thomas Wentworth
   Higginson, Charlestown, Jefferson County, Virginia, 1859-11-22.
+- Added `SRC-0018`, John Brown autograph letter signed to "Dear Wife and
+  Children All," Chambersburg, Pennsylvania, 1859-10-01.
 - Preserved repository metadata, IIIF manifest, page images, raw manifest, and
-  noisy local OCR.
+  noisy local OCR for targeted autograph-letter acquisitions.
 - Repository metadata and IIIF manifest state no known copyright restrictions
   and no known restrictions on use.
 
