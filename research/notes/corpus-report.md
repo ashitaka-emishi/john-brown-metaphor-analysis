@@ -259,3 +259,83 @@ Permitted next use:
 
 Use `SRC-0009` for Goal 20 government-record segmentation and to identify
 reported statements or testimony that require locator-level verification.
+
+## SRC-0010 - Testimonies of Capt. John Brown
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Internet Archive metadata, PDF, DjVu OCR, and
+DjVu XML; normalized as working OCR.
+
+Source: `Testimonies of Capt. John Brown, at Harper's Ferry: with his address
+to the court`, published by the American Anti-Slavery Society in 1860.
+
+Verification caveats:
+
+- This is a posthumous published pamphlet witness, not a stenographic court
+  original.
+- The publisher's framing belongs to the American Anti-Slavery Society and must
+  be separated from Brown-attributed text.
+- Compare any courtroom-address quotation against contemporary newspaper or
+  government witnesses before final use.
+
+Permitted next use:
+
+Use `SRC-0010` in Goal 20 as a stronger public witness than modern web
+derivative pages for the courtroom-address branch, with posthumous publication
+and editorial-framing caveats.
+
+## SRC-0004 and SRC-0005 - Modern Trial-Statement Discovery Pages
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as public web pages and normalized discovery text
+only.
+
+Sources:
+
+- `SRC-0004`: House Divided / Dickinson College, `John Brown's Statement
+  (1859)`.
+- `SRC-0005`: Famous Trials, `John Brown's Speech to the Court at his Trial`.
+
+Stop condition:
+
+These are not approved source substitutions and are not quotation-final. Use
+them only to identify wording, source trails, and comparison targets. Do not
+let either page anchor evidence coding unless the scholar explicitly approves
+source substitution after stronger-witness comparison.
+
+## SRC-0011 and SRC-0012 - Kansas-Period Autograph Letters
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Digital Commonwealth / Boston Public Library
+item metadata, IIIF manifests, and page images; normalized as local working OCR
+only.
+
+Sources:
+
+- `SRC-0011`: `John Brown autograph letter to "Dear Friend and Other Friends",
+  Osawatomie, Kansas, 10 & 13 September 1858`.
+- `SRC-0012`: `John Brown autograph letter signed to Franklin Benjamin
+  Sanborn, Missouri Line, 20 & 30 July, 6 August 1858`.
+
+Provenance and rights:
+
+- Digital Commonwealth metadata identifies both as Brown autograph letters.
+- Repository metadata and IIIF manifests state no known copyright restrictions
+  and no known restrictions on use.
+- Repository metadata says the letters were printed in F. B. Sanborn's `The
+  Life and Letters of John Brown`.
+
+Verification caveats:
+
+- No repository transcription was advertised for either item.
+- Local manuscript OCR is noisy and discovery-only.
+- Quote, segmentation, and coding work must be done from page-image
+  verification in Goal 20.
+
+Permitted next use:
+
+Use these as Tier 1 Kansas-period witnesses for Goal 20 transcription
+verification and segmentation.

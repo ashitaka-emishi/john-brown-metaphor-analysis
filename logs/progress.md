@@ -3,20 +3,20 @@
 ## Current state
 
 Repository migrated to the John Brown metaphor-analysis mission. Goal 10 corpus
-acquisition has begun. `SRC-0002`, `SRC-0003`, and item-level `SRC-0008` have
-been acquired, hashed, and normalized as unverified working text or
-transcription derivatives. No acquired source is quotation-final, evidence
-coded, thesis-bearing, or publication-approved.
+acquisition is complete at the acquisition level. Acquired sources have been
+preserved locally with raw manifests, normalized working text or transcription
+derivatives, hashes, rights notes, and verification-status caveats. No acquired
+source is quotation-final, evidence coded, thesis-bearing, or
+publication-approved.
+Goal 10 completion audit is complete: acquisition-level coverage exists for
+all approved corpus periods, with AUC underlying manuscript acquisition blocked
+by rights/access terms and modern derivative trial pages limited to discovery.
 
 ## Next checkpoint
 
-Human gate: decide the next Goal 10 branch before acquiring derivative or
-reported trial texts. Options are to authorize discovery-only acquisition of
-`SRC-0004` and `SRC-0005`, direct Codex to locate stronger contemporary
-trial-statement witnesses first, or continue collection-level acquisition from
-`SRC-0001`, `SRC-0006`, and `SRC-0007` finding aids. Do not populate evidence
-rows, form a thesis, or publish findings until acquisition and verification
-criteria are met.
+Begin Goal 20 textual verification and segmentation. Do not populate evidence
+rows, form a thesis, or publish findings until quotations and segments are
+checked against preserved source witnesses.
 
 ### 2026-07-21 - Goal 10 SRC-0002 acquisition
 
@@ -132,6 +132,48 @@ criteria are met.
 - Updated `research/data/source-register.csv` and
   `research/notes/corpus-report.md` with paths, hashes, rights notes,
   provenance, and verification caveats.
+
+### 2026-07-21 - Goal 10 trial and Kansas branch acquisition
+
+- Checkpoint scope: acquire stronger trial-address and Kansas-period witnesses
+  while keeping derivative pages in discovery-only status.
+- Added and acquired `SRC-0010`, the 1860 American Anti-Slavery Society
+  pamphlet `Testimonies of Capt. John Brown, at Harper's Ferry: with his
+  address to the court`, from Internet Archive.
+- Acquired `SRC-0004` and `SRC-0005` public web pages as discovery-only modern
+  derivative sources. They are not approved source substitutions and are not
+  quotation-final.
+- Located and acquired two Digital Commonwealth / Boston Public Library
+  Kansas-period autograph letters:
+  `SRC-0011`, Brown to "Dear Friend and Other Friends", Osawatomie, Kansas,
+  10 and 13 September 1858, and `SRC-0012`, Brown to Franklin Benjamin
+  Sanborn, Missouri Line, 20 and 30 July and 6 August 1858.
+- Preserved metadata, IIIF manifests, page images, and raw/OCR derivatives as
+  available; generated noisy local manuscript OCR for `SRC-0011` and
+  `SRC-0012` because no repository transcription was advertised.
+- Updated `research/data/source-register.csv` and
+  `research/notes/corpus-report.md` with paths, hashes, rights notes,
+  provenance, and verification caveats.
+- No source was marked quotation-final or evidence-coded.
+
+### 2026-07-21 - Goal 10 completion audit
+
+- Created `research/notes/source-substitution-log.md`.
+- Created `research/notes/goal-10-completion-audit.md`.
+- Source-substitution status: no thesis-bearing source substitution is
+  approved. `SRC-0004` and `SRC-0005` are discovery-only; `SRC-0010` is a
+  stronger public pamphlet witness but remains posthumous and
+  quotation-unverified.
+- Corpus period status at acquisition level:
+  formation/baseline acquired with remaining AUC possibilities blocked;
+  Kansas/armed resistance acquired through Tier 1 autograph letters;
+  preparation acquired through `SRC-0002`; capture/trial/imprisonment/execution
+  acquired through government, pamphlet, and discovery witnesses.
+- Carry-forward limit: Goal 10 does not approve interpretation, thesis,
+  evidence coding, publication, or quotation-final use.
+- `.venv/bin/python -m john_brown_research validate` passed.
+- `.venv/bin/pytest` passed with 11 tests.
+- `git diff --check` passed.
 
 ### 2026-07-21 - Corpus and codebook approval gate
 
