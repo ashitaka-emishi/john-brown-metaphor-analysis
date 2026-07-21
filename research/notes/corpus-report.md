@@ -106,3 +106,57 @@ Permitted next use:
 Use `SRC-0003` for Goal 20 manuscript-copy verification and segmentation only.
 Do not quote, code, or infer from the OCR until the relevant passages are
 checked against the PDF or image-derived source witness.
+
+## SRC-0008 - Copies of Correspondence to and From John Brown
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Digital Commonwealth / Boston Public Library
+item metadata, IIIF manifest, page images, transcription metadata, and
+repository text derivative; normalized as transcription text pending
+image-level verification.
+
+Source: Digital Commonwealth item `commonwealth:dv143964q`, discovered from
+the approved `SRC-0001` collection.
+
+Raw preservation:
+
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143964q-metadata.json`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143964q-manifest.json`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-8p58s2051-transcription.json`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-8p58s2051-text-plain.txt`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv1439650.jpg`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv1439668.jpg`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143967j.jpg`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143968t.jpg`
+- `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143964q-manifest.sha256`
+
+Normalized derivative:
+
+- `research/corpus/primary/normalized/SRC-0008-digitalcommonwealth-dv143964q-transcription.txt`
+
+Provenance and rights:
+
+- Digital Commonwealth metadata lists the item under the Boston Public Library
+  Anti-Slavery Collection, with local call number `MS B.1.6 v.1, p.49`.
+- The IIIF manifest and metadata state no known copyright restrictions and no
+  known restrictions on use.
+- The acquisition used Digital Commonwealth's documented JSON and IIIF access
+  routes and the advertised transcription derivative key.
+
+Verification caveats:
+
+- The item consists of copies/transcriptions, not necessarily Brown autograph
+  documents.
+- Metadata says the transcriptions and annotations are not in the same hand and
+  identifies May as annotator.
+- The normalized text is a repository transcription derivative and must be
+  checked against the preserved page images before quotation or coding.
+- The human-facing item page returned browser verification in one web view;
+  documented JSON and IIIF endpoints remained available and were used.
+
+Permitted next use:
+
+Use `SRC-0008` in Goal 20 for item-level verification and segmentation within
+the correspondence-copy tier. Do not treat repository transcription wording as
+final without page-image comparison.

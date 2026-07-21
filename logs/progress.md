@@ -64,6 +64,31 @@ and verification criteria are met.
 - Initial guessed Internet Archive derivative filenames returned 404; the
   acquisition used filenames advertised in the preserved item metadata.
 
+### 2026-07-21 - Goal 10 SRC-0008 item-level acquisition
+
+- Checkpoint scope: acquire one item-level correspondence witness from the
+  approved `SRC-0001` Digital Commonwealth / Boston Public Library collection.
+- Added `SRC-0008`, `Copies of correspondence to and from John Brown`, to
+  `research/data/source-register.csv`.
+- Preserved Digital Commonwealth item JSON, IIIF manifest, four IIIF page
+  images, transcription-object JSON, and the advertised plain-text derivative
+  under `research/corpus/primary/raw/`.
+- Created a raw-file SHA-256 manifest at
+  `research/corpus/primary/raw/SRC-0008-digitalcommonwealth-dv143964q-manifest.sha256`.
+- Generated a normalized transcription derivative at
+  `research/corpus/primary/normalized/SRC-0008-digitalcommonwealth-dv143964q-transcription.txt`.
+- Updated `research/notes/corpus-report.md` with provenance, rights, and
+  verification caveats.
+- Digital Commonwealth metadata lists no known copyright restrictions and no
+  known restrictions on use, and identifies the item as Boston Public Library
+  Anti-Slavery Collection material with local call number `MS B.1.6 v.1, p.49`.
+- The source remains `acquired-transcription-unverified`: it consists of
+  copies/transcriptions, not necessarily Brown autograph documents, and the
+  repository transcription must be checked against the page images before
+  quotation or coding.
+- The human-facing page returned browser verification in one web view; the
+  documented `.json` and IIIF endpoints remained available and were used.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,
