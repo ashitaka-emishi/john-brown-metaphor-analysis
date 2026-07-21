@@ -40,6 +40,30 @@ and verification criteria are met.
   `goals/10-corpus-acquisition.md`, and
   `research/notes/source-acquisition-plan.md`.
 
+### 2026-07-21 - Goal 10 SRC-0003 acquisition
+
+- Checkpoint scope: acquire and preserve `SRC-0003`, the Internet Archive /
+  Boston Public Library item `[Extracts from letters by John Brown]
+  [manuscript]`.
+- Preserved Internet Archive metadata JSON, Text PDF, DjVu OCR text, and DjVu
+  XML under `research/corpus/primary/raw/`.
+- Created a raw-file SHA-256 manifest at
+  `research/corpus/primary/raw/SRC-0003-extractsfromlett00mays-manifest.sha256`.
+- Generated a normalized working OCR file at
+  `research/corpus/primary/normalized/SRC-0003-extractsfromlett00mays-ocr.txt`.
+- Updated `research/data/source-register.csv` with local paths, retrieval
+  timestamp, manifest hash, rights note, acquisition method, and
+  `acquired-ocr-unverified` status.
+- Updated `research/notes/corpus-report.md` with provenance and verification
+  caveats.
+- Item metadata describes the witness as copies in Samuel May's hand of Brown's
+  original correspondence, with a cataloger-supplied title; it is not an
+  autograph Brown manuscript.
+- The OCR is extremely noisy and may be used only for discovery until manually
+  checked against the scan witness.
+- Initial guessed Internet Archive derivative filenames returned 404; the
+  acquisition used filenames advertised in the preserved item metadata.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,
