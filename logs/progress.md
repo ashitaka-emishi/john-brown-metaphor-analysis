@@ -108,6 +108,31 @@ criteria are met.
 - No interpretation, thesis, evidence coding, source substitution, or
   publication decision is approved by the current acquisition checkpoint.
 
+### 2026-07-21 - Goal 10 SRC-0006, SRC-0007, and SRC-0009 acquisition
+
+- Checkpoint scope: continue Goal 10 after the user's instruction to complete
+  the goal by acquiring non-derivative public finding-aid and government-report
+  targets before derivative trial pages.
+- Preserved the National Archives Senate guide page for `SRC-0006` and
+  normalized it as finding-aid/discovery text.
+- Preserved AUC John Brown collection overview, inventory, and digitized
+  material listing pages for `SRC-0007` and normalized them as finding-aid
+  discovery text.
+- AUC underlying item-level acquisition is blocked at this checkpoint because
+  the finding-aid rights statement says materials are protected by copyright
+  and/or repository or copyright-holder property; no image download or
+  quotation use is authorized without clearer terms or repository-contact
+  workflow approval.
+- Added and acquired `SRC-0009`, the United States Senate public PDF
+  `Harpers Ferry Investigation, 1860`, as a stronger government-record witness
+  for the capture/trial period.
+- Extracted normalized working text from the Senate PDF. The extraction is
+  imperfect and must be checked against the PDF before quotation or evidence
+  coding.
+- Updated `research/data/source-register.csv` and
+  `research/notes/corpus-report.md` with paths, hashes, rights notes,
+  provenance, and verification caveats.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,

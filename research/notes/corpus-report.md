@@ -160,3 +160,102 @@ Permitted next use:
 Use `SRC-0008` in Goal 20 for item-level verification and segmentation within
 the correspondence-copy tier. Do not treat repository transcription wording as
 final without page-image comparison.
+
+## SRC-0006 - NARA Senate Records Guide
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as a National Archives public finding-aid page and
+normalized discovery text.
+
+Raw preservation:
+
+- `research/corpus/primary/raw/SRC-0006-nara-senate-guide.html`
+- `research/corpus/primary/raw/SRC-0006-nara-senate-guide-manifest.sha256`
+
+Normalized derivative:
+
+- `research/corpus/primary/normalized/SRC-0006-nara-senate-guide.txt`
+
+Provenance and rights:
+
+- The guide identifies the Senate Select Committee to Inquire into the Facts
+  Attending the Invasion and Seizure of the United States Armory at Harpers
+  Ferry and National Archives Microfilm Publication `M1196`.
+- This source is a guide to federal records, not Brown-authored evidence.
+
+Permitted next use:
+
+Use `SRC-0006` as a provenance and discovery source for locating government
+records. Do not code it as Brown language or as a witness to Brown's rhetoric.
+
+## SRC-0007 - AUC John Brown Collection Finding Aid
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as public finding-aid overview, inventory, and
+digitized-materials listing pages. Underlying item acquisition is blocked until
+rights and access terms are resolved.
+
+Raw preservation:
+
+- `research/corpus/primary/raw/SRC-0007-auc-john-brown-collection.html`
+- `research/corpus/primary/raw/SRC-0007-auc-john-brown-collection-inventory.html`
+- `research/corpus/primary/raw/SRC-0007-auc-john-brown-collection-digitized.html`
+- `research/corpus/primary/raw/SRC-0007-auc-john-brown-collection-manifest.sha256`
+
+Normalized derivative:
+
+- `research/corpus/primary/normalized/SRC-0007-auc-john-brown-collection-finding-aid.txt`
+
+Provenance and rights:
+
+- The finding aid identifies the collection as correspondence and papers of
+  John Brown, relatives, and associates, with majority dates 1826-1859.
+- The public digitized-materials listing identifies many digital records,
+  including early Seth Thompson correspondence and Harpers Ferry-related
+  letters.
+- The rights statement says collection materials are protected by copyright
+  and/or are property of the Robert W. Woodruff Library at Atlanta University
+  Center and/or the copyright holder.
+
+Stop condition:
+
+Do not acquire underlying AUC manuscript images or quote from them until public
+download/use terms are established or the scholar authorizes a repository
+contact workflow.
+
+## SRC-0009 - Harpers Ferry Investigation, 1860
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as a United States Senate public PDF and extracted
+working text.
+
+Raw preservation:
+
+- `research/corpus/primary/raw/SRC-0009-senate-harpers-ferry-investigation-1860.pdf`
+- `research/corpus/primary/raw/SRC-0009-senate-harpers-ferry-investigation-1860-manifest.sha256`
+
+Normalized derivative:
+
+- `research/corpus/primary/normalized/SRC-0009-senate-harpers-ferry-investigation-1860.txt`
+
+Provenance and rights:
+
+- The PDF is a public United States Senate scan of the 1860 Harpers Ferry
+  investigation report.
+- The source is a government report and testimony compilation, not a
+  Brown-authored source.
+
+Verification caveats:
+
+- The extracted text is OCR-like and imperfect. Verify any use against the PDF
+  image.
+- Brown statements in this report are reported/government-record witnesses and
+  require attribution caveats.
+
+Permitted next use:
+
+Use `SRC-0009` for Goal 20 government-record segmentation and to identify
+reported statements or testimony that require locator-level verification.
