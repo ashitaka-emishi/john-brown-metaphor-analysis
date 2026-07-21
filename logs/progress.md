@@ -175,6 +175,26 @@ checked against preserved source witnesses.
 - `.venv/bin/pytest` passed with 11 tests.
 - `git diff --check` passed.
 
+### 2026-07-21 - Post-Goal 10 source-access next steps
+
+- Checkpoint scope: work the next step for each of the three unresolved source
+  access tracks and stop for human feedback where required.
+- AUC track: preserved the public digital-object page for
+  `Correspondence and Map, John Brown to Seth Thompson, January 4, 1836`
+  (`digital_objects/6800`). Direct acquisition of the linked handle URL
+  returned HTTP 403, and the collection rights statement remains restrictive.
+  Human feedback is required before repository-contact or human-in-browser
+  access work.
+- Trial-witness track: added `SRC-0013`, the 1859-11-03 New York Times issue
+  from Internet Archive, after OCR showed the opening of Brown's courtroom
+  speech. Added `SRC-0015`, the Avalon Project hosted De Witt transcription,
+  and `SRC-0016`, the Internet Archive De Witt pamphlet scan.
+- Digital Commonwealth/BPL track: added `SRC-0014`, Brown's 1859-11-22
+  autograph letter to Thomas Wentworth Higginson, with metadata, IIIF manifest,
+  page images, raw manifest, and local OCR.
+- No source is quotation-final, evidence-coded, thesis-bearing, or
+  publication-approved.
+
 ### 2026-07-21 - Corpus and codebook approval gate
 
 - Scholar approved the proposed John Brown research scope, corpus design,

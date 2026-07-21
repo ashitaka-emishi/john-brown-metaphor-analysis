@@ -285,6 +285,70 @@ Use `SRC-0010` in Goal 20 as a stronger public witness than modern web
 derivative pages for the courtroom-address branch, with posthumous publication
 and editorial-framing caveats.
 
+## SRC-0013 - The New York Times, 1859-11-03
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Internet Archive metadata, full issue PDF,
+DjVu OCR text, and DjVu XML; normalized as working OCR.
+
+Source: `The New York Times 1859-11-03: Vol. 9, Iss. 2534`.
+
+Verification caveats:
+
+- This is a contemporary newspaper report, not a Brown-authored manuscript.
+- OCR contains the opening of Brown's courtroom speech, but exact wording,
+  page, and column must be verified against the PDF scan.
+- Reuse rights are not explicit in Internet Archive item metadata.
+
+Permitted next use:
+
+Use `SRC-0013` in Goal 20 as a contemporary newspaper witness candidate for
+Brown's courtroom-address wording.
+
+## SRC-0015 - Avalon Project Hosted De Witt Text
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as a hosted web transcription and normalized text.
+
+Source: Avalon Project at Yale Law School, `Life, Trial and Execution of
+Captain John Brown; 1859`.
+
+Verification caveats:
+
+- Avalon is a hosted transcription, not the preferred page-image witness.
+- Use it for navigation and comparison against `SRC-0016`, not as
+  quotation-final evidence.
+
+Permitted next use:
+
+Use `SRC-0015` as discovery/comparison text in Goal 20, subordinate to the
+Internet Archive De Witt scan.
+
+## SRC-0016 - De Witt Life, Trial, and Execution Pamphlet
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Internet Archive metadata, PDF, DjVu OCR text,
+and DjVu XML; normalized as working OCR.
+
+Source: 1859 Robert M. De Witt pamphlet, `The life, trial, and execution of
+Captain John Brown`.
+
+Verification caveats:
+
+- The pamphlet is a published compilation, not Brown-authored as a whole.
+- Brown-attributed statements require locator-level verification against the
+  scan and comparison with newspaper/government witnesses.
+- Internet Archive metadata does not expose an explicit rights or license
+  field.
+
+Permitted next use:
+
+Use `SRC-0016` in Goal 20 as the page-image/OCR witness corresponding to the
+Avalon-hosted De Witt text.
+
 ## SRC-0004 and SRC-0005 - Modern Trial-Statement Discovery Pages
 
 Checkpoint date: 2026-07-21
@@ -339,3 +403,34 @@ Permitted next use:
 
 Use these as Tier 1 Kansas-period witnesses for Goal 20 transcription
 verification and segmentation.
+
+## SRC-0014 - Brown to Thomas Wentworth Higginson, 1859-11-22
+
+Checkpoint date: 2026-07-21
+
+Acquisition status: acquired as Digital Commonwealth / Boston Public Library
+item metadata, IIIF manifest, and page images; normalized as local working OCR
+only.
+
+Source: `John Brown autograph letter signed to Thomas Wentworth Higginson,
+Charlestown, Jefferson Co., Va., 22 November 1859`.
+
+Provenance and rights:
+
+- Digital Commonwealth metadata identifies Brown as author and Higginson as
+  addressee.
+- Repository metadata lists local call number `MS E.5.1, pt. 2, p. 117`.
+- Repository metadata and IIIF manifest state no known copyright restrictions
+  and no known restrictions on use.
+
+Verification caveats:
+
+- No repository transcription was advertised.
+- Local manuscript OCR is noisy and discovery-only.
+- Quote, segmentation, and coding work must be done from page-image
+  verification in Goal 20.
+
+Permitted next use:
+
+Use this as a Tier 1 prison-period Brown-authored witness for Goal 20
+transcription verification and segmentation.
