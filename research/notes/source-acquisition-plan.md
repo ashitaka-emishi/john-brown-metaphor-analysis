@@ -43,3 +43,27 @@ acquisition, or a required period lacks adequate evidence.
 - Later editorial shaping of Brown's prison language
 - Copyright restrictions in modern editions
 - Preservation bias in surviving correspondence
+
+## Initial Source Queue
+
+Status: added after corpus approval, unverified.
+
+The initial queue in `research/data/source-register.csv` includes:
+
+- `SRC-0001`: Digital Commonwealth / Boston Public Library John Brown
+  correspondence collection.
+- `SRC-0002`: National Archives / DocsTeach Provisional Constitution and
+  Ordinances, National Archives Identifier 3819337.
+- `SRC-0003`: Internet Archive / Boston Public Library Samuel May manuscript
+  extracts from Brown letters.
+- `SRC-0004`: House Divided derivative transcription of Brown's courtroom
+  statement.
+- `SRC-0005`: Famous Trials trial source guide and derivative transcription
+  target.
+- `SRC-0006`: National Archives guide to Senate select committee Harpers Ferry
+  investigation records.
+- `SRC-0007`: Atlanta University Center finding aid for the John Brown
+  collection.
+
+Derivative or reported texts remain discovery targets until source-substitution
+approval or stronger provenance review clears them for thesis-bearing use.

@@ -7,9 +7,10 @@ corpus source has yet been acquired under this project.
 
 ## Next checkpoint
 
-Create or approve a concrete Goal 10 source queue in
-`research/data/source-register.csv` before acquisition. Do not mark sources
-verified, populate evidence rows, form a thesis, or publish findings.
+Begin Goal 10 acquisition from the approved source queue, starting with Tier 1
+or strongest-provenance public sources. Do not mark sources verified, populate
+evidence rows, form a thesis, or publish findings until acquisition and
+verification criteria are met.
 
 ### 2026-07-21 - Corpus and codebook approval gate
 
@@ -24,6 +25,25 @@ verified, populate evidence rows, form a thesis, or publish findings.
 - Stop condition remains before actual acquisition: `research/data/source-register.csv`
   is currently header-only, so there is no concrete approved source queue to
   acquire from without adding and reviewing proposed source rows.
+
+### 2026-07-21 - Goal 10 source queue setup
+
+- Checkpoint scope: begin Goal 10 by creating a concrete source-register queue
+  from the approved corpus design before downloading source files.
+- Added seven unverified acquisition targets to
+  `research/data/source-register.csv` across the approved corpus periods and
+  source hierarchy.
+- Updated `research/notes/source-acquisition-plan.md` with the initial source
+  queue.
+- Candidate repositories include Digital Commonwealth / Boston Public Library,
+  National Archives / DocsTeach, Internet Archive / Boston Public Library,
+  House Divided / Dickinson College, Famous Trials, National Archives Senate
+  records guides, and Atlanta University Center.
+- Several entries are collection guides, derivative transcriptions, or
+  reported statements; they require item-level review, stronger provenance, or
+  source-substitution approval before thesis-bearing use.
+- No source was downloaded, normalized, hashed, or marked verified during this
+  checkpoint.
 
 ## Migration Record
 
